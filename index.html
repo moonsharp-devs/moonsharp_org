@@ -1,78 +1,89 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
+<head>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Moon# : GitHub pages website for the Moon# project (https://github.com/xanathar/moonsharp)" />
+    <meta name="description" content="Moon# : A Lua-like language for scripting C# applications" />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <title>Moon#</title>
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/xanathar/moonsharp_org">View on GitHub</a>
+    <div id="header">
+        <nav>
+            <li class="fork"><a href="https://github.com/xanathar/moonsharp">View On GitHub</a></li>
+            <li class="downloads"><a href="https://github.com/xanathar/moonsharp/releases">Binaries</a></li>
+            <li class="downloads"><a href="https://github.com/xanathar/moonsharp/tarball/master">Sources</a></li>
+            <li class="title">DOWNLOADS</li>
+        </nav>
+    </div><!-- end header -->
 
-          <h1 id="project_title">Moon#</h1>
-          <h2 id="project_tagline">Official Website of the Moon# project</h2>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/xanathar/moonsharp/releases">Latest release on GitHub</a>
-             <!--  <a class="tar_download_link" href="https://github.com/xanathar/moonsharp_org/tarball/master">Download this project as a tar.gz file</a> -->
-            </section>
-        </header>
+    <div class="wrapper">
+        <section>
+            <div id="title">
+                <h1>Moon#</h1>
+                <p>An interpreter for a very close cousin of the Lua language, written entirely in C# for the .NET, Mono, Xamarin and Unity3D platforms.</p>
+                <hr>
+                <span class="credits left">Project written&amp;maintained by <a href="https://github.com/mattgraham">Marco Mastropaolo</a></span>
+                <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+            </div>
+        </section>
+
+        <h1>Project Status</h1>
+
+        <p>The project has just been started,  yet it is able to parse most Lua structures and execute them correctly. </p>
+		<p>Version 0.1.9 has been rewritten using a VM for faster interpretation and will be released shortly. </p>
+		
+		<hr />
+		
+        <h2>Roadmap</h2>
+
+        <ul>
+            <li>support for all core language structures (see documentation for differences between Moon# and Lua)</li>
+            <li>optimizations </li>
+            <li>better integration between Lua/Moon# tables and CLR objects</li>
+            <li>debugger embeddable in applications using Moon# </li>
+            <li>REPL interpreter</li>
+            <li>standard library </li>
+        </ul>
+		
+		<hr />
+
+		<h2>Associated Resources</h2>
+
+        <ul>
+            <li>
+                You can see the future backlog and status on <a href="https://www.pivotaltracker.com/n/projects/1082626" title="Moon# Backlog on Pivotal Tracker">https://www.pivotaltracker.com/n/projects/1082626</a>
+            </li>
+            <li>
+                You can read some posts about the design choices of Moon# on my blog: <a href="http://www.mastropaolo.com/category/programming/moonsharp/">http://www.mastropaolo.com/category/programming/moonsharp/</a>
+            </li>
+        </ul>
+		
+		<hr />
+		<h2>License</h2>
+
+        <p>The program and libraries are released under a 3-clause BSD license - see the license section.</p>
+
+        <p>This work is based on the ANTLR4 Lua grammar Copyright (c) 2013, Kazunori Sakamoto.</p>
     </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a name="moon" class="anchor" href="#moon"><span class="octicon octicon-link"></span></a>Moon#</h1>
 
-<p>An interpreter for a very close cousin of the Lua language, written entirely in C# for the .NET, Mono, Xamarin and Unity3D platforms.</p>
 
-<p><strong>Project Status</strong></p>
-
-<p>The project has just been started,  yet it is able to parse most Lua structures and execute them correctly. The code is,  however,  heavily unoptimized. </p>
-
-<p><strong>Roadmap</strong></p>
-
-<ul>
-<li>support for all core language structures (see documentation for differences between Moon# and Lua)</li>
-<li>optimizations </li>
-<li>better integration between Lua/Moon# tables and CLR objects</li>
-<li>debugger embeddable in applications using Moon# </li>
-<li>REPL interpreter</li>
-<li>standard library </li>
-</ul><p><strong>Associated Resources</strong></p>
-
-<ul>
-<li>You can see the future backlog and status on <a href="https://www.pivotaltracker.com/n/projects/1082626" title="Moon# Backlog on Pivotal Tracker">https://www.pivotaltracker.com/n/projects/1082626</a>
-</li>
-<li>You can read some posts about the design choices of Moon# on my blog: <a href="http://www.mastropaolo.com/category/programming/moonsharp/">http://www.mastropaolo.com/category/programming/moonsharp/</a>
-</li>
-</ul><p><strong>License</strong></p>
-
-<p>The program and libraries are released under a 3-clause BSD license - see the license section.</p>
-
-<p>This work is based on the ANTLR4 Lua grammar Copyright (c) 2013, Kazunori Sakamoto.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Moon# maintained by <a href="https://github.com/xanathar">xanathar</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+</body>
 </html>
