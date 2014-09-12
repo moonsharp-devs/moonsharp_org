@@ -3,7 +3,7 @@ layout: default
 ---
 Moon# 
 ========= 
-http://www.moonsharp.org  IDXxx
+http://www.moonsharp.org
 
 
 A Lua interpreter written entirely in C# for the .NET, Mono, Xamarin and Unity3D platforms.
