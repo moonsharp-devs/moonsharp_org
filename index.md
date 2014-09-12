@@ -25,11 +25,6 @@ It aims at language compatibility with Lua 5.2 and, in the long run, some nifty 
 
 Moon# is very easy to use. At its minimum a script can be run like this:
 
-{% highlight ruby %}
-def foo
-  puts 'foo'
-end
-{% endhighlight %}
 
  
 
