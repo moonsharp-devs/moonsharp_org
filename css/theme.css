@@ -3,6 +3,7 @@ body {
     padding-bottom: 60px;
 }
 
+/*
 .copyright {
     color: #ffffff;
 }
@@ -15,11 +16,12 @@ body {
     color: #ee4444;
 }
 
-.sidebar h1 {
+/* .sidebar h1 {
     color: #ee4444;
     font-size: 1.3em;
-}
+} */
 
+/*
 .sidebar a {
     color: #428bca;
 }
@@ -38,14 +40,15 @@ body {
 }
 
 .well h1 {
-    color: #ee4444;
+    color: #444;
     font-size: 1.3em;
 }
 
 .author {
-    color: #ee4444;
+    color: #444;
 }
 
 .author a {
-    color: #ee4444;
+    color: #444;
 }
+*/
