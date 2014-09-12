@@ -25,7 +25,8 @@ It aims at language compatibility with Lua 5.2 and, in the long run, some nifty 
 
 Moon# is very easy to use. At its minimum a script can be run like this:
 
-```C#
+~~~ csharp
+
 	string script = @"    
 	-- defines a factorial function
 	function fact (n)
@@ -38,8 +39,9 @@ Moon# is very easy to use. At its minimum a script can be run like this:
 
 	return fact(5)";
 
-DynValue res = Script.RunString(script);
-``` 
+	DynValue res = Script.RunString(script);
+
+~~~ 
 
  
 
