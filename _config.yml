@@ -22,7 +22,7 @@ disqus: ''
 comments: true
 
 permalink: /:year/:month/:title
-paginate: 3
+# paginate: 3
 
 highlighter: rouge
 markdown: redcarpet
