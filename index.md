@@ -21,6 +21,27 @@ It aims at language compatibility with Lua 5.2 and, in the long run, some nifty 
 * The debugger "almost" works on the bytecode level. Source level is not yet supported. Currently as a Windows.Forms application, a better solution might be planned sooner or later - TBC
 * Coroutines and state-save support has not been started yet.
  
+**Usage example**
+
+Moon# is very easy to use. At its minimum a script can be run like this:
+
+```C#
+	string script = @"    
+	-- defines a factorial function
+	function fact (n)
+		if (n == 0) then
+			return 1
+		else
+			return n*fact(n - 1)
+		end
+	end
+
+	return fact(5)";
+
+DynValue res = Script.RunString(script);
+``` 
+
+ 
 
 **Roadmap**
 
