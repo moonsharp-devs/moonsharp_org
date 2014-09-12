@@ -25,23 +25,23 @@ It aims at language compatibility with Lua 5.2 and, in the long run, some nifty 
 
 Moon# is very easy to use. At its minimum a script can be run like this:
 
-~~~ csharp
+{% highlight lua   %}
 
-	string script = @"    
-	-- defines a factorial function
-	function fact (n)
-		if (n == 0) then
-			return 1
-		else
-			return n*fact(n - 1)
-		end
+string script = @"    
+-- defines a factorial function
+function fact (n)
+	if (n == 0) then
+		return 1
+	else
+		return n*fact(n - 1)
 	end
+end
 
-	return fact(5)";
+return fact(5)";
 
-	DynValue res = Script.RunString(script);
+DynValue res = Script.RunString(script);
 
-~~~ 
+{% endhighlight %}
 
  
 
