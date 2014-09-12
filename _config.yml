@@ -1,0 +1,32 @@
+# Jekyll configuration
+
+name: Moon#
+description: A Lua interpreter written entirely in C# for the .NET, Mono, Xamarin and Unity3D platforms.
+
+# url is currently only used only for the RSS feed in feed.xml
+# url: http://scotte.github.io
+
+# baseurl will usually be ''
+# baseurl: http://127.0.0.1:4000
+
+# This can be '' to hide the Github nav button
+github: 'xanathar/moonsharp'
+
+# Set this to your UA-# value, or '' to disable the block completely
+gaaccount: ''
+
+# Set this to your disqus shortname to enable comments. Note that the 'comments'
+# setting below must also be true. Individual posts can override 'comments' to
+# disable on a post-by-post basis
+disqus: ''
+comments: true
+
+permalink: /:year/:month/:title
+paginate: 3
+
+highlighter: rouge
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+
+exclude: ['README.md', 'LICENSE']
