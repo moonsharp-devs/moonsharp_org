@@ -7,15 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
     <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
+	
     <link href="{{ site.baseurl }}/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ site.baseurl }}/css/theme.css" rel="stylesheet">
 </head>
 
 <body>
 
+
 <div class="container-fluid">
     <div class="row-fluid">
-        <div class="navbar  navbar-fixed-top" role="navigation">
+        <div class="navbar  navbar-fixed-top " role="navigation">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                   <span class="sr-only">Toggle navigation</span>
@@ -37,6 +39,7 @@
                     {% if site.github != '' %}
                       <li class="active"><a href="https://github.com/{{ site.github }}">Github</a></li>
                     {% endif %}
+				  <li class="active"><a href="reference/index.html">Reference</a></li>
                 </ul>
               </div>
         </div>

@@ -1,62 +1,28 @@
-body {
-    padding-top: 60px;
-    padding-bottom: 60px;
+html, body { height: 100% }
+
+body 
+{ 
+	padding-top: 52px; 
+	font-family: 'Segoe UI' , 'Lucida Grande' , Verdana, Arial, Helvetica, sans-serif;
+	font-size:15px;
 }
 
-/*
-.copyright {
-    color: #ffffff;
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 
+{
+	font-family: 'Segoe UI' , 'Lucida Grande' , Verdana, Arial, Helvetica, sans-serif;
+	color: #beb2e1; 
+} 
+
+.jumbotron-text, .jumbotron h1, .jumbotron .h1  {
+	color : #000;
 }
 
-.footer {
-    text-align: center;
-}
-
-.footer a {
-    color: #ee4444;
-}
-
-/* .sidebar h1 {
-    color: #ee4444;
-    font-size: 1.3em;
-} */
-
-/*
-.sidebar a {
-    color: #428bca;
-}
-
-.sidebar li {
-    margin-top: .7em;
-    line-height: 1em;
-}
-
-.sidebar a:hover {
-    color: #3071a9;
-}
-
-.container-left {
-    margin: 0;
-}
-
-.well h1 {
-    color: #444;
-    font-size: 1.3em;
-}
-
-.author {
-    color: #444;
-}
-
-.author a {
-    color: #444;
-}
-*/ 
 
 
-pre {
-background-color: #1c1e22;
-color: #aaa;
+pre 
+{
+	background-color: #1c1e22;
+	color: #aaa;
 }
 
 .highlight .hll { background-color: #49483e }
@@ -122,3 +88,16 @@ color: #aaa;
 .highlight .gu { color: #75715e; } /* Generic.Subheading & Diff Unified/Comment? */
 .highlight .gd { color: #f92672; } /* Generic.Deleted & Diff Deleted */
 .highlight .gi { color: #a6e22e; } /* Generic.Inserted & Diff Inserted */
+
+.jumbotron{
+background: rgba(233,230,255,1);
+background: -moz-linear-gradient(top, rgba(233,230,255,1) 0%, rgba(211,198,250,1) 42%, rgba(196,184,249,1) 53%, rgba(177,174,250,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(233,230,255,1)), color-stop(42%, rgba(211,198,250,1)), color-stop(53%, rgba(196,184,249,1)), color-stop(100%, rgba(177,174,250,1)));
+background: -webkit-linear-gradient(top, rgba(233,230,255,1) 0%, rgba(211,198,250,1) 42%, rgba(196,184,249,1) 53%, rgba(177,174,250,1) 100%);
+background: -o-linear-gradient(top, rgba(233,230,255,1) 0%, rgba(211,198,250,1) 42%, rgba(196,184,249,1) 53%, rgba(177,174,250,1) 100%);
+background: -ms-linear-gradient(top, rgba(233,230,255,1) 0%, rgba(211,198,250,1) 42%, rgba(196,184,249,1) 53%, rgba(177,174,250,1) 100%);
+background: linear-gradient(to bottom, rgba(233,230,255,1) 0%, rgba(211,198,250,1) 42%, rgba(196,184,249,1) 53%, rgba(177,174,250,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9e6ff', endColorstr='#b1aefa', GradientType=0 );
+}
+
+
