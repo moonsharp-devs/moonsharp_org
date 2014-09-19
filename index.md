@@ -2,10 +2,19 @@
 layout: home
 ---
 
+<div class="alert alert-danger" role="alert">
+The website is under construction - information contained within might refer to a version not yet released!
+</div>
+
 <div class="alert alert-info" role="alert">
 A new release is coming soon!!
 </div>
 
+### Features
+* Easy to use
+* Written completely in C# + ANTLR, for the biggest portability in CLR systems (.NET, Mono, Xamarin, Unity)
+* Covers all Lua 5.2 constructs except goto/labels (for now)
+* Works on .NET 3.5 and Mono 2.6. In roadmap will come a .NET 4.x portable class library version for Windows Phones and Silverlight.
 
 
 ### Project Status
@@ -26,28 +35,6 @@ A new release is coming soon!!
 * REPL interpreter
 * standard library  
  
- 
-### Usage example
-
-Moon# is very easy to use. At its minimum a script can be run like this:
-
-{% highlight csharp %}
- 
-string script = @"    
--- defines a factorial function
-function fact (n)
-	if (n == 0) then
-		return 1
-	else
-		return n*fact(n - 1)
-	end
-end
- 
-return fact(5)";
-
-DynValue res = Script.RunString(script);
-
-{% endhighlight %}
 
  
 ### License

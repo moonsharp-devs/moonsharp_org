@@ -3,15 +3,32 @@ html, body { height: 100% }
 body 
 { 
 	padding-top: 52px; 
-	font-family: 'Segoe UI' , 'Lucida Grande' , Verdana, Arial, Helvetica, sans-serif;
-	font-size:15px;
+	font-family: "Ubuntu","Liberation Sans",sans-serif;
+    font-size: 12pt;
+	/* font-size:15px; */
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 
 {
-	font-family: 'Segoe UI' , 'Lucida Grande' , Verdana, Arial, Helvetica, sans-serif;
+/*	font-family: 'Segoe UI' , 'Lucida Grande' , Verdana, Arial, Helvetica, sans-serif; */
+	font-family: "Ubuntu","Liberation Sans",sans-serif;
 	color: #beb2e1; 
 } 
+
+h4, .h4
+{
+font-size:21px;
+padding-top: 18px;
+} 
+
+h5, .h5
+{
+font-size:18px;
+padding-top: 12px;
+} 
+
+
+
 
 .jumbotron-text, .jumbotron h1, .jumbotron .h1  {
 	color : #000;

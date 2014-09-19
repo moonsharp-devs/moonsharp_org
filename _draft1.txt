@@ -1,0 +1,52 @@
+
+#### Step 2: Directly calling functions
+
+We learned how to have Moon# calculate a factorial of a number chosen from the outside. But well, done like that smells like a dirty hack (still, it's an important technique we'll use a lot).
+
+Here it's how to call a Lua function from C#.
+
+{% highlight csharp %}
+
+double MoonSharpFactorial()
+{
+	string scriptCode = @"    
+		-- defines a factorial function
+		function fact (n)
+			if (n == 0) then
+				return 1
+			else
+				return n*fact(n - 1)
+			end
+		end";
+
+	Script script = new Script();
+
+	script.DoString(scriptCode);
+
+	DynValue luaFactFunction = script.Globals.Get("fact");
+	
+	DynValue res = script.Call(luaFactFunction, 4);
+
+	return res.Number;
+}
+
+{% endhighlight %}
+
+Ok, we changed a little but here things get a lot harder. Let's see what we did.
+
+First of all, we removed the return at the end of the script - we could have kept that, but it was going to be useless as we want to call *fact* with parameters of our choice.
+
+Then we introduced this line:
+
+{% highlight csharp %}
+DynValue luaFactFunction = script.Globals.Get("fact");
+{% endhighlight %}
+
+This gets the *fact* function from the script globals. You might ask why we didn't just use *script.Globals["fact"]*.. the reason is that the indexer property does a
+great job of converting from Moon# values to CLR (C#) objects, but here we want a Moon# value (an object of type DynValue) so we use the Get method which performs no conversions.
+
+After this we can call the function with our chosen number - 4:
+
+{% highlight csharp %}
+DynValue res = script.Call(luaFactFunction, 4);
+{% endhighlight %}
