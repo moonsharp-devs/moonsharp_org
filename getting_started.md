@@ -4,6 +4,11 @@ title: Getting Started
 subtitle: A quick guide to your first Moon# project
 ---
 
+<div class="alert alert-info" role="alert">
+The tutorials on this site assume you know Lua *and* a managed language, preferrably C#. It's hard to follow the examples if you don't know at least the basis of Lua
+and you have a good knowledge of some .NET language.
+</div>
+
 This procedure will just give you a taste of Moon# and its simplicity and power.
 There are better ways to use Moon#, but this is the easiest one.
 
@@ -17,6 +22,10 @@ Examples, however, will only be produced for C# (and in the case of this introdu
 keeping examples in all languages is a huge effort.
 
 </div>
+
+
+
+
 
 
 #### Step 1: getting Moon# in your IDE

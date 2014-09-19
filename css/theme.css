@@ -40,6 +40,8 @@ pre
 {
 	background-color: #1c1e22;
 	color: #aaa;
+	border-color:#000;
+	    font-size: 11pt;
 }
 
 .highlight .hll { background-color: #49483e }

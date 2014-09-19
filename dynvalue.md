@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 title: DynValue revealed
-subtitle: Everything is a DynValue
+subtitle: Everything is a DynValue is a DynValue
 ---
 
 The DynValue concept is quite at the root of all Moon#, and while we have managed to have little to do with it so far, in fact it's not so feasible to go very far
