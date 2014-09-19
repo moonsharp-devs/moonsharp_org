@@ -20,7 +20,8 @@ A new release is coming soon!!
 ### Project Status
 
  
-* All Lua 5.2 language constructs are implemented, except goto/labels. See [the wiki](https://github.com/xanathar/moonsharp/wiki/Differences-between-Moon%23-and-Lua) for known differences.
+* Some language differences exist - [see here](moonluadifferences.html)
+* All Lua 5.2 language constructs are implemented, except goto/labels. 
 * Development of the standard library is almost finished. Updated situation on [googledocs](https://docs.google.com/spreadsheets/d/1Iw8YMSY8N0tGEyaD-vmmJnlaQ5te4P4CqTXYpEiSEL8/edit#gid=0)
 * Moon#/.NET integration is 99% completed (and works great).
 * The debugger "almost" works on the bytecode level. Source level is not yet supported. Currently as a Windows.Forms application, a better solution might be planned sooner or later - TBC
