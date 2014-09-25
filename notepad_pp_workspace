@@ -1,0 +1,38 @@
+<NotepadPlus>
+    <Project name="Moonsharp.org">
+        <Folder name="Content">
+            <File name="callback.md" />
+            <File name="dynvalue.md" />
+            <File name="faq.md" />
+            <File name="getting_started.md" />
+            <File name="index.md" />
+            <File name="moonluadifferences.md" />
+            <File name="notyet.md" />
+            <File name="README.md" />
+            <File name="reference.md" />
+            <File name="tutorial2.md" />
+        </Folder>
+        <Folder name="Includes">
+            <File name="_includes\analytics.html" />
+            <File name="_includes\disqus-comments.html" />
+            <File name="_includes\disqus-counts.html" />
+            <File name="_includes\footer.html" />
+            <File name="_includes\header.html" />
+            <File name="_includes\jumbotron.html" />
+            <File name="_includes\links-list.html" />
+            <File name="_includes\sidebar.html" />
+            <File name="_includes\tutorialtoc.html" />
+        </Folder>
+        <Folder name="Layouts">
+            <File name="_layouts\default.html" />
+            <File name="_layouts\home.html" />
+            <File name="_layouts\post.html" />
+            <File name="_layouts\reference.html" />
+            <File name="_layouts\tutorial.html" />
+        </Folder>
+        <Folder name="Css">
+            <File name="css\bootstrap.min.css" />
+            <File name="css\theme.css" />
+        </Folder>
+    </Project>
+</NotepadPlus>

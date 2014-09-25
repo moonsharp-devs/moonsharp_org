@@ -6,8 +6,7 @@ subtitle: Freaky answers questioned.
 
 ##### What is the development status ?
 
-The interpreter runs correctly and fast enough for the common needs. In most cases it's faster than at least some of its competitors (I'm not good 
-at advertising..).
+The interpreter runs correctly and fast enough for the common needs. It strikes a unique balance in performance and ease of use, specially when heavy interoperation with CLR code is needed.
 
 The error handling is to be improved, specially in parsing/compilation stages.
 
