@@ -36,11 +36,15 @@ padding-top: 12px;
 
 
 
-pre 
+pre, .panel-body
 {
 	background-color: #1c1e22;
 	color: #aaa;
 	border-color:#000;
+}
+
+pre 
+{
 	    font-size: 11pt;
 }
 
@@ -108,7 +112,7 @@ pre
 .highlight .gd { color: #f92672; } /* Generic.Deleted & Diff Deleted */
 .highlight .gi { color: #a6e22e; } /* Generic.Inserted & Diff Inserted */
 
-.jumbotron{
+.jumbotron, .panel-default .panel-heading {
 background: rgba(233,230,255,1);
 background: -moz-linear-gradient(top, rgba(233,230,255,1) 0%, rgba(211,198,250,1) 42%, rgba(196,184,249,1) 53%, rgba(177,174,250,1) 100%);
 background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(233,230,255,1)), color-stop(42%, rgba(211,198,250,1)), color-stop(53%, rgba(196,184,249,1)), color-stop(100%, rgba(177,174,250,1)));
@@ -117,6 +121,7 @@ background: -o-linear-gradient(top, rgba(233,230,255,1) 0%, rgba(211,198,250,1) 
 background: -ms-linear-gradient(top, rgba(233,230,255,1) 0%, rgba(211,198,250,1) 42%, rgba(196,184,249,1) 53%, rgba(177,174,250,1) 100%);
 background: linear-gradient(to bottom, rgba(233,230,255,1) 0%, rgba(211,198,250,1) 42%, rgba(196,184,249,1) 53%, rgba(177,174,250,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9e6ff', endColorstr='#b1aefa', GradientType=0 );
+color: #000;
 }
 
 

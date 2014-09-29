@@ -15,6 +15,8 @@ Here is a list of differences between Moon# and Lua. This is of course subject t
 * Compatibility only at the source level - no luac, no saved state compatibility, no lua binaries
 * Error messages are at times different 
 * Hexadecimal floats are not supported
+* Parts of the standard library are intentionally not implemented or behave differently.
+
 
 #### List of additions
 

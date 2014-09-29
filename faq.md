@@ -32,8 +32,9 @@ no, I didn't know the language well enough.
 
 ##### Is Moon# usable only in videogames ?
 
-No technology ever can be used only in one programming scenarios, though some are better fits than others. A business application running Lua
-is surely more common than videogames running XSLTs or Razor, anyway. 
+No technology ever can be used only in one programming scenarios, though some are better fits than others. 
+
+A business application running Lua is surely more common than videogames running XSLTs or Razor, anyway. 
 
 I, for one, am using Moon# in business-line applications, and so can you, if you want.
 

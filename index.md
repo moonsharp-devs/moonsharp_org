@@ -2,12 +2,8 @@
 layout: home
 ---
 
-<div class="alert alert-danger" role="alert">
-The website is under construction - information contained within might refer to a version not yet released!
-</div>
-
-<div class="alert alert-info" role="alert">
-A new release is coming soon!!
+<div class="alert alert-success" role="alert">
+Version 0.5.0 has just been released!.
 </div>
 
 ### Features
