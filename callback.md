@@ -20,23 +20,23 @@ Let's catch base with the standard factorial script we used so far:
 
 private static double CallbackTest()
 {
-	string scriptCode = @"    
-		-- defines a factorial function
-		function fact (n)
-			if (n == 0) then
-				return 1
-			else
-				return n * fact(n - 1);
-			end
-		end";
+    string scriptCode = @"    
+        -- defines a factorial function
+        function fact (n)
+            if (n == 0) then
+                return 1
+            else
+                return n * fact(n - 1);
+            end
+        end";
 
-	Script script = new Script();
+    Script script = new Script();
 
-	script.DoString(scriptCode);
+    script.DoString(scriptCode);
 
-	DynValue res = script.Call(script.Globals["fact"], 4);
+    DynValue res = script.Call(script.Globals["fact"], 4);
 
-	return res.Number;
+    return res.Number;
 }
 
 {% endhighlight %}
@@ -51,30 +51,30 @@ In this case there's obviously no purpose in doing so, but we are here to learn,
 
 private static int Mul(int a, int b)
 {
-	return a * b;
+    return a * b;
 }
 
 private static double CallbackTest()
 {
-	string scriptCode = @"    
-		-- defines a factorial function
-		function fact (n)
-			if (n == 0) then
-				return 1
-			else
-				return Mul(n, fact(n - 1));
-			end
-		end";
+    string scriptCode = @"    
+        -- defines a factorial function
+        function fact (n)
+            if (n == 0) then
+                return 1
+            else
+                return Mul(n, fact(n - 1));
+            end
+        end";
 
-	Script script = new Script();
+    Script script = new Script();
 
-	script.Globals["Mul"] = (Func<int, int, int>)Mul;
+    script.Globals["Mul"] = (Func<int, int, int>)Mul;
 
-	script.DoString(scriptCode);
+    script.DoString(scriptCode);
 
-	DynValue res = script.Call(script.Globals["fact"], 4);
+    DynValue res = script.Call(script.Globals["fact"], 4);
 
-	return res.Number;
+    return res.Number;
 }
 
 {% endhighlight %}
@@ -99,29 +99,29 @@ Problem: have an API function which returns a sequence of integers. The script w
 
 private static IEnumerable<int> GetNumbers()
 {
-	for (int i = 1; i <= 10; i++)
-		yield return i;
+    for (int i = 1; i <= 10; i++)
+        yield return i;
 }
 
 private static double EnumerableTest()
 {
-	string scriptCode = @"    
-		total = 0;
-		
-		for i in getNumbers() do
-			total = total + i;
-		end
+    string scriptCode = @"    
+        total = 0;
+        
+        for i in getNumbers() do
+            total = total + i;
+        end
 
-		return total;
-	";
+        return total;
+    ";
 
-	Script script = new Script();
+    Script script = new Script();
 
-	script.Globals["getNumbers"] = (Func<IEnumerable<int>>)GetNumbers;
+    script.Globals["getNumbers"] = (Func<IEnumerable<int>>)GetNumbers;
 
-	DynValue res = script.DoString(scriptCode);
+    DynValue res = script.DoString(scriptCode);
 
-	return res.Number;
+    return res.Number;
 }
 
 {% endhighlight %}
@@ -141,35 +141,35 @@ Problem: have an API function which returns a sequence of integers, this time in
 
 private static List<int> GetNumberList()
 {
-	List<int> lst = new List<int>();
-	
-	for (int i = 1; i <= 10; i++)
-		lst.Add(i);
+    List<int> lst = new List<int>();
+    
+    for (int i = 1; i <= 10; i++)
+        lst.Add(i);
 
-	return lst;
+    return lst;
 }
 
 private static double TableTest1()
 {
-	string scriptCode = @"    
-		total = 0;
+    string scriptCode = @"    
+        total = 0;
 
-		tbl = getNumbers()
-		
-		for _, i in ipairs(tbl) do
-			total = total + i;
-		end
+        tbl = getNumbers()
+        
+        for _, i in ipairs(tbl) do
+            total = total + i;
+        end
 
-		return total;
-	";
+        return total;
+    ";
 
-	Script script = new Script();
+    Script script = new Script();
 
-	script.Globals["getNumbers"] = (Func<List<int>>)GetNumberList;
+    script.Globals["getNumbers"] = (Func<List<int>>)GetNumberList;
 
-	DynValue res = script.DoString(scriptCode);
+    DynValue res = script.DoString(scriptCode);
 
-	return res.Number;
+    return res.Number;
 }
 
 {% endhighlight %}
@@ -182,35 +182,35 @@ We can do better, however. We can directly build a Lua table inside our function
 
 private static Table GetNumberTable(Script script)
 {
-	Table tbl = new Table(script);
+    Table tbl = new Table(script);
 
-	for (int i = 1; i <= 10; i++)
-		tbl[i] = i;
+    for (int i = 1; i <= 10; i++)
+        tbl[i] = i;
 
-	return tbl;
+    return tbl;
 }
 
 private static double TableTest2()
 {
-	string scriptCode = @"    
-		total = 0;
+    string scriptCode = @"    
+        total = 0;
 
-		tbl = getNumbers()
-		
-		for _, i in ipairs(tbl) do
-			total = total + i;
-		end
+        tbl = getNumbers()
+        
+        for _, i in ipairs(tbl) do
+            total = total + i;
+        end
 
-		return total;
-	";
+        return total;
+    ";
 
-	Script script = new Script();
+    Script script = new Script();
 
-	script.Globals["getNumbers"] = (Func<Table>)(() => GetNumberTable(script));
+    script.Globals["getNumbers"] = (Func<Table>)(() => GetNumberTable(script));
 
-	DynValue res = script.DoString(scriptCode);
+    DynValue res = script.DoString(scriptCode);
 
-	return res.Number;
+    return res.Number;
 }
 
 {% endhighlight %}
@@ -231,17 +231,17 @@ Problem: have an API function which does something with a table.. in this case w
 {% highlight csharp %}
 private static double TableTestReverse()
 {
-	string scriptCode = @"    
-		return dosum { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
-	";
+    string scriptCode = @"    
+        return dosum { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
+    ";
 
-	Script script = new Script();
+    Script script = new Script();
 
-	script.Globals["dosum"] = (Func<List<object>, double>)(l => l.OfType<double>().Sum());
+    script.Globals["dosum"] = (Func<List<object>, double>)(l => l.OfType<double>().Sum());
 
-	DynValue res = script.DoString(scriptCode);
+    DynValue res = script.DoString(scriptCode);
 
-	return res.Number;
+    return res.Number;
 }
 {% endhighlight %}
 
@@ -250,25 +250,64 @@ Here we have some very bad news: tables in input can be marshalled only on a few
 We could have, of course, used a Table object:
 
 {% highlight csharp %}
+static double Sum(Table t)
+{
+    var nums = from v in t.Values
+               where v.Type == DataType.Number
+               select v.Number;
+
+    return nums.Sum();
+}
+
+
 private static double TableTestReverse2()
 {
-	string scriptCode = @"    
-		return dosum { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
-	";
+    string scriptCode = @"    
+        return dosum { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
+    ";
 
-	Script script = new Script();
+    Script script = new Script();
 
-	script.Globals["dosum"] = (Func<Table, double>)(l => l.Values.Where(v => v.Type == DataType.Number).Select(v => v.Number).Sum());
+    script.Globals["dosum"] = (Func<Table, double>)Sum;
 
-	DynValue res = script.DoString(scriptCode);
+    DynValue res = script.DoString(scriptCode);
 
-	return res.Number;
+    return res.Number;
 }
 {% endhighlight %}
 
 But here we have to deal with DynValue(s).
 
-<h1>Todo: Describe type conversion mappings</h1>
+To understand all of this, we need to dig a little deeper on how Moon# maps Lua types to C# types and viceversa.. in the next part.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -33,7 +33,33 @@ keeping examples in all languages is a huge effort.
 The first step is to get Moon# in your IDE.
 There are several paths to this, depending on what IDE you are using - Visual Studio, MonoDevelop, SharpDevelop or Unity.
 
-Refer to the documentation of your IDE to add **MoonSharp.Interpreter.dll** as a dependency. 
+##### In Visual Studio, with Nuget
+
+In the package manager, type:
+
+{% highlight PowerShell %}
+
+PM> Install-Package MoonSharp 
+
+{% endhighlight %}
+
+Otherwise, right click on "References", "Manage NuGet Packages", open the "Online" dropdown, select nuget.org and search for a 
+package named "MoonSharp".
+
+
+##### In Visual Studio and other IDEs
+
+Refer to the documentation of your IDE to add **MoonSharp.Interpreter.dll** and **Antlr4.Runtime.net35.dll**, contained in the "library" folder
+of the Moon# distribution, as dependencies.
+
+
+##### In Unity
+
+Put the **MoonSharp.Interpreter.dll** and **Antlr4.Runtime.net35.dll**, contained in the "library" folder
+of the Moon# distribution, in your Assets folder.
+
+After this, add them as references from MonoDevelop-Unity.
+
 
 
 #### Step 2: Importing the namespace
