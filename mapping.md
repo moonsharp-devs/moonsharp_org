@@ -7,6 +7,17 @@ subtitle: .. no code this time.
 Before we dig deeper in Moon# and CLR integration, we need to clarify how types are mapped back and forth.
 Sadly, back is very different from forth and so we will analyze the two separately.
 
+
+<div class="alert alert-info" role="alert">
+Isn't this a bit too complex? - you might ask.
+
+Sure it is. Automatic things are nice and good but when they fail, they fail in terribly complex ways.
+When in doubt or the thing gets too complicated, just use DynValue(s) instead. Not only you would gain in sanity and simplicity, it's also faster!
+</div>
+
+
+
+
 #### Auto-Conversion of CLR types to Moon# types
 
 This conversion is applied in the following situations:
@@ -136,8 +147,6 @@ Tables can be mapped to:
 * Types assignable from List&lt;object&gt;. Elements are mapped using the default mapping.
 * Types assignable from DynValue[].
 * Types assignable from object[]. Elements are mapped using the default mapping.
-
-
 
 
 
