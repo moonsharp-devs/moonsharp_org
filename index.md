@@ -6,6 +6,10 @@ layout: home
 Version 0.5.0 has just been released!.
 </div>
 
+<div class="alert alert-warning" role="alert">
+There is a bug in nuget package 0.5.0. Make sure you are using version 0.5.1 of the package if you have a .net 4.x project.
+</div>
+
 ### Features
 * Easy to use
 * Written completely in C# + ANTLR, for the biggest portability in CLR implementations (.NET, Mono, Xamarin, Unity)

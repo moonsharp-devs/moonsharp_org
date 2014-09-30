@@ -34,8 +34,6 @@ private static double CallbackTest()
 
 	script.DoString(scriptCode);
 
-	script.Globals["Mul"] = (Func<int, int, int>)Mul;
-
 	DynValue res = script.Call(script.Globals["fact"], 4);
 
 	return res.Number;
@@ -70,9 +68,9 @@ private static double CallbackTest()
 
 	Script script = new Script();
 
-	script.DoString(scriptCode);
-
 	script.Globals["Mul"] = (Func<int, int, int>)Mul;
+
+	script.DoString(scriptCode);
 
 	DynValue res = script.Call(script.Globals["fact"], 4);
 
@@ -130,19 +128,149 @@ private static double EnumerableTest()
 
 Here, too, nothing too difficult. You can see how an IEnumerable (or IEnumerator) is converted on the fly to a Lua iterator for the script to run.
 
-Note also how the line 
+Note also how that the scripts contains directly executable code and thus accesses the getNumbers method
+at DoString time, without needing a Call .. call. Remember this, DoString and DoFile will execute code contained in the script immediately!
+
+
+#### Returning a table
+
+Problem: have an API function which returns a sequence of integers, this time in a table.
+
 
 {% highlight csharp %}
-DynValue res = script.DoString(scriptCode);
+
+private static List<int> GetNumberList()
+{
+	List<int> lst = new List<int>();
+	
+	for (int i = 1; i <= 10; i++)
+		lst.Add(i);
+
+	return lst;
+}
+
+private static double TableTest1()
+{
+	string scriptCode = @"    
+		total = 0;
+
+		tbl = getNumbers()
+		
+		for _, i in ipairs(tbl) do
+			total = total + i;
+		end
+
+		return total;
+	";
+
+	Script script = new Script();
+
+	script.Globals["getNumbers"] = (Func<List<int>>)GetNumberList;
+
+	DynValue res = script.DoString(scriptCode);
+
+	return res.Number;
+}
+
 {% endhighlight %}
 
-is now written **after** we set up the global environment. This is because the scripts contains directly executable code and thus accesses the getNumbers method
-immediately.
+Here, we see how a List<int> gets automatically converted to a Lua table! Note that the resulting table will be 1-indexed as Lua tables usually are. 
+
+We can do better, however. We can directly build a Lua table inside our functions:
+
+{% highlight csharp %}
+
+private static Table GetNumberTable(Script script)
+{
+	Table tbl = new Table(script);
+
+	for (int i = 1; i <= 10; i++)
+		tbl[i] = i;
+
+	return tbl;
+}
+
+private static double TableTest2()
+{
+	string scriptCode = @"    
+		total = 0;
+
+		tbl = getNumbers()
+		
+		for _, i in ipairs(tbl) do
+			total = total + i;
+		end
+
+		return total;
+	";
+
+	Script script = new Script();
+
+	script.Globals["getNumbers"] = (Func<Table>)(() => GetNumberTable(script));
+
+	DynValue res = script.DoString(scriptCode);
+
+	return res.Number;
+}
+
+{% endhighlight %}
+
+You can see how easy is to operate with tables using the Table object. The only gotcha is that to create a new Table object you must have a reference to the executing script; this is the reason we are using 
+
+{% highlight csharp %}
+script.Globals["getNumbers"] = (Func<Table>)(() => GetNumberTable(script));
+{% endhighlight %}
+
+which creates a C# closure on the fly over the script variable. Your code will likely be storing the script in a field or property, thus simplifying the code.
 
 
+#### Accepting a table
+
+Problem: have an API function which does something with a table.. in this case we reverse the previous problem - we generate the numbers on the Lua side and we sum them on the C# side.
+
+{% highlight csharp %}
+private static double TableTestReverse()
+{
+	string scriptCode = @"    
+		return dosum { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
+	";
+
+	Script script = new Script();
+
+	script.Globals["dosum"] = (Func<List<object>, double>)(l => l.OfType<double>().Sum());
+
+	DynValue res = script.DoString(scriptCode);
+
+	return res.Number;
+}
+{% endhighlight %}
+
+Here we have some very bad news: tables in input can be marshalled only on a few types, one of which is List<object>. But in this way we lose the automatic conversion to int and we have to operate on doubles.
+
+We could have, of course, used a Table object:
+
+{% highlight csharp %}
+private static double TableTestReverse2()
+{
+	string scriptCode = @"    
+		return dosum { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
+	";
+
+	Script script = new Script();
+
+	script.Globals["dosum"] = (Func<Table, double>)(l => l.Values.Where(v => v.Type == DataType.Number).Select(v => v.Number).Sum());
+
+	DynValue res = script.DoString(scriptCode);
+
+	return res.Number;
+}
+{% endhighlight %}
+
+But here we have to deal with DynValue(s).
+
+<h1>Todo: Describe type conversion mappings</h1>
 
 
-<h1>To be completed...</h1>
 
 
 
