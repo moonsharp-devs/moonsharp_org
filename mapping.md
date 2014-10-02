@@ -75,9 +75,9 @@ Every value which cannot be converted using this logic will throw a ScriptRuntim
 
 The opposite conversion is quite more complex. In fact, there exist two different conversion paths - the "default" one, and the "constrained" one. The first applies everytime you ask to convert a DynValue to an object without specifying what actually you want to receive, the other when there is a target Type to match.
 
-This is roughly used:
+This is used:
 
-* When calling the ToObject member of DynValue
+* When calling the DynValue.ToObject 
 * When retrieving values from a table using indexers
 * In some specific subcase of the constrained conversion (see below)
 
@@ -104,6 +104,11 @@ Every value which cannot be converted using this logic will throw a ScriptRuntim
 
 The constrained auto-conversion is a lot more complex though. In this case a Moon# value must be stored in a CLR variable of a given Type and there are pretty much infinite ways to do these conversions. 
 
+This is used:
+
+* When calling DynValue.ToObject<T>
+* When converting a script value to a parameter in a CLR function call, or property set
+
 Moon# attempts very hard to convert values, but the conversion surely shows some limits, specially when tables are involved.
 
 In this case, the conversion is more a process than a simple table of mapping, so let's analyze the target types one by one.
@@ -116,37 +121,39 @@ In this case, the conversion is more a process than a simple table of mapping, s
 
 ##### Strings
 
-Strings are automatically mapped to System.String, System.Text.StringBuilder or System.Char.
+Strings can be automatically converted to System.String, System.Text.StringBuilder or System.Char.
 
 ##### Booleans
 
-Booleans are automatically mapped to System.Boolean and/or System.Nullable&lt;System.Boolean&gt;. They are also mapped to System.String, System.Text.StringBuilder or System.Char.
+Booleans can be automatically converted to System.Boolean and/or System.Nullable&lt;System.Boolean&gt;. They can also be converted to System.String, System.Text.StringBuilder or System.Char.
 
 ##### Numbers 
 
-Numbers are automatically mapped over System.SByte, System.Byte, System.Int16, System.UInt16, System.Int32, System.UInt32, System.Int64, System.UInt64, System.Single, System.Decimal, System.Double and their nullable counterparts. They are also mapped to System.String, System.Text.StringBuilder or System.Char.
+Numbers can be automatically converted over System.SByte, System.Byte, System.Int16, System.UInt16, System.Int32, System.UInt32, System.Int64, System.UInt64, System.Single, System.Decimal, System.Double and their nullable counterparts. They can also be converted to System.String, System.Text.StringBuilder or System.Char.
 
 ##### Functions
 
-Functions are mapped to MoonSharp.Interpreter.Closure and MoonSharp.Interpreter.ClrFunction depending on their subtype. No better mappings exist.
+Functions are converted to MoonSharp.Interpreter.Closure and MoonSharp.Interpreter.ClrFunction depending on their subtype. No better conversion exists.
 
 ##### Userdata
 
-Userdatas are mapped only if they are not "static" (see the userdata section in the tutorials).  They are mapped if the desired type can be assigned with the object to be converted.
+Userdatas are converted only if they are not "static" (see the userdata section in the tutorials).  They are converted if the desired type can be assigned with the object to be converted.
 
-They are also mapped to System.String, System.Text.StringBuilder or System.Char, by calling the object ToString() method.
+They can also be converted to System.String, System.Text.StringBuilder or System.Char, by calling the object ToString() method.
 
 ##### Tables
 
-Tables can be mapped to:
+Tables can be converted to:
 
-* MoonSharp.Interpreter.Table
+* MoonSharp.Interpreter.Table - of course
 * Types assignable from Dictionary&lt;DynValue, DynValue&gt;.
 * Types assignable from Dictionary&lt;object, object&gt;. Keys and values are mapped using the default mapping.
 * Types assignable from List&lt;DynValue&gt;.
 * Types assignable from List&lt;object&gt;. Elements are mapped using the default mapping.
 * Types assignable from DynValue[].
 * Types assignable from object[]. Elements are mapped using the default mapping.
+
+So, for example, a Table can be converted to a IList<object> but not to a IList<int>.
 
 
 
