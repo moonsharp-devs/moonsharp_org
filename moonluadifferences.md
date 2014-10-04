@@ -10,7 +10,7 @@ Here is a list of differences between Moon# and Lua. This is of course subject t
 
 * Strings are Unicode: some caution is required if code uses strings to store binary data. On the other hand, strings used as real strings are a lot easier to use.
 * Weak tables are not supported
-* The standard library may at points be wildly different - Check [here](https://docs.google.com/spreadsheets/d/1Iw8YMSY8N0tGEyaD-vmmJnlaQ5te4P4CqTXYpEiSEL8/edit#gid=0) for an overview of the standard library status.
+* The standard library may at points be wildly different - Updated situation in [this pdf](http://www.moonsharp.org/MoonSharpStdLib.pdf).
 * Garbage Collection is different, as Moon# relies on .NET/Mono standard GC
 * Compatibility only at the source level - no luac, no saved state compatibility, no lua binaries
 * Error messages are at times different 
