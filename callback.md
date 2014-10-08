@@ -278,7 +278,7 @@ private static double TableTestReverse2()
 
 But here we have to deal with DynValue(s).
 
-To understand all of this, we need to dig a little deeper on how Moon# maps Lua types to C# types and viceversa.. in the next part.
+To understand all of this, we need to dig a little deeper on how MoonSharp maps Lua types to C# types and viceversa.. in the next part.
 
 
 

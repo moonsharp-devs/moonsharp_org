@@ -3,7 +3,7 @@ layout: home
 ---
 
 <div class="alert alert-success" role="alert">
-Version 0.5.3 has just been released with some showstopping bug fixes.
+Version 0.5.5 has just been released! <a href="changelog.html" class="alert-link">See what's changed</a>.
 </div>
 
 
@@ -21,16 +21,16 @@ Version 0.5.3 has just been released with some showstopping bug fixes.
 * Some language differences exist - [see here](moonluadifferences.html)
 * All Lua 5.2 language constructs are implemented, except goto/labels. 
 * Development of the standard library is almost finished. Updated situation in [this pdf](http://www.moonsharp.org/MoonSharpStdLib.pdf)
-* Moon#/.NET integration is 99% completed (and works great).
+* MoonSharp/.NET integration is 99% completed (and works great).
 * The debugger "almost" works on the bytecode level. Source level is not yet supported. Currently as a Windows.Forms application, a better solution might be planned sooner or later - TBC
 * Coroutines and state-save support has not been started yet.
  
 
 #### Roadmap
 
-* support for all core language structures (see documentation for differences between Moon# and Lua)
+* support for all core language structures (see documentation for differences between MoonSharp and Lua)
 * compatibility with all applyable tests in [Lua Test Suite](http://www.lua.org/tests/5.2/) and [Lua Test More](http://fperrad.github.io/lua-TestMore/). Most tests of the suite are passing.
-* debugger embeddable in applications using Moon# 
+* debugger embeddable in applications using MoonSharp
 * REPL interpreter
 * standard library  
  

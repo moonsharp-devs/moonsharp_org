@@ -4,7 +4,7 @@ title: Auto-conversions explained
 subtitle: .. no code this time.
 ---
 
-Before we dig deeper in Moon# and CLR integration, we need to clarify how types are mapped back and forth.
+Before we dig deeper in MoonSharp and CLR integration, we need to clarify how types are mapped back and forth.
 Sadly, back is very different from forth and so we will analyze the two separately.
 
 
@@ -18,7 +18,7 @@ When in doubt or the thing gets too complicated, just use DynValue(s) instead. N
 
 
 
-#### Auto-Conversion of CLR types to Moon# types
+#### Auto-Conversion of CLR types to MoonSharp types
 
 This conversion is applied in the following situations:
 
@@ -71,7 +71,7 @@ In case you are writing your own collections, remember to implement one of these
 Every value which cannot be converted using this logic will throw a ScriptRuntimeException.
 
 
-#### Default Auto-Conversion of Moon# types to CLR types
+#### Default Auto-Conversion of MoonSharp types to CLR types
 
 The opposite conversion is quite more complex. In fact, there exist two different conversion paths - the "default" one, and the "constrained" one. The first applies everytime you ask to convert a DynValue to an object without specifying what actually you want to receive, the other when there is a target Type to match.
 
@@ -85,7 +85,7 @@ Here we see the default conversion. It's actually simple:
 
 <div class="table-responsive">
 <table class="table table-striped table-condensed">
-<tr><th>Moon# type</th><th>CLR type</th><th>Notes</th></tr>
+<tr><th>MoonSharp type</th><th>CLR type</th><th>Notes</th></tr>
 <tr><td>nil</td><td>null</td><td>Applied to every value which is nil.</td></tr>
 <tr><td>boolean</td><td>System.Boolean</td><td></td></tr>
 <tr><td>number</td><td>System.Double</td><td></td></tr>
@@ -100,16 +100,16 @@ Here we see the default conversion. It's actually simple:
 
 Every value which cannot be converted using this logic will throw a ScriptRuntimeException.
 
-#### Constrained Auto-Conversion of Moon# types to CLR types
+#### Constrained Auto-Conversion of MoonSharp types to CLR types
 
-The constrained auto-conversion is a lot more complex though. In this case a Moon# value must be stored in a CLR variable of a given Type and there are pretty much infinite ways to do these conversions. 
+The constrained auto-conversion is a lot more complex though. In this case a MoonSharp value must be stored in a CLR variable of a given Type and there are pretty much infinite ways to do these conversions. 
 
 This is used:
 
 * When calling DynValue.ToObject<T>
 * When converting a script value to a parameter in a CLR function call, or property set
 
-Moon# attempts very hard to convert values, but the conversion surely shows some limits, specially when tables are involved.
+MoonSharp attempts very hard to convert values, but the conversion surely shows some limits, specially when tables are involved.
 
 In this case, the conversion is more a process than a simple table of mapping, so let's analyze the target types one by one.
 

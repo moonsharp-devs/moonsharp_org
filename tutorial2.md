@@ -4,10 +4,10 @@ title: Keeping a Script around
 subtitle: Verba volant, scripts manent
 ---
 
-In the previous tutorial, you got your first contact with Moon#: you put a script in a string, run the code and took its 
+In the previous tutorial, you got your first contact with MoonSharp: you put a script in a string, run the code and took its 
 output.
 While that might occasionally be useful, the interoperability needed for most use cases require a little bit more integration
-between CLR code and Moon#.
+between CLR code and MoonSharp.
 
 
 
@@ -75,13 +75,13 @@ double MoonSharpFactorial()
 
 {% endhighlight %}
 
-As you can see, just by referencing the *script.Globals* table with a simple syntax, we can inject numbers into Moon# scripts. Actually we can pass a lot more
+As you can see, just by referencing the *script.Globals* table with a simple syntax, we can inject numbers into MoonSharp scripts. Actually we can pass a lot more
 than just numbers, but let's limit ourselves to numbers, booleans and strings for now - we'll see how to pass functions and objects later on.
 
 
 #### Step 2: Directly calling functions
 
-We learned how to have Moon# calculate a factorial of a number chosen from the outside. But well, done like that smells like a dirty hack (still, it's an important technique we'll use a lot).
+We learned how to have MoonSharp calculate a factorial of a number chosen from the outside. But well, done like that smells like a dirty hack (still, it's an important technique we'll use a lot).
 
 Here it's how to call a Lua function from C#.
 

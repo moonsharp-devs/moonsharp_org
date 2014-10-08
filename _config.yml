@@ -1,6 +1,6 @@
 # Jekyll configuration
 
-name: Moon#
+name: MoonSharp
 description: A Lua interpreter written entirely in C# for the .NET, Mono, Xamarin and Unity3D platforms.
 
 # url is currently only used only for the RSS feed in feed.xml

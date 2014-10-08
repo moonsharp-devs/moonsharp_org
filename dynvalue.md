@@ -4,10 +4,10 @@ title: DynValue revealed
 subtitle: Everything is a DynValue is a DynValue
 ---
 
-The DynValue concept is quite at the root of all Moon#, and while we have managed to have little to do with it so far, in fact it's not so feasible to go very far
+The DynValue concept is quite at the root of all MoonSharp, and while we have managed to have little to do with it so far, in fact it's not so feasible to go very far
 without touching the subject.
 
-As said in the title, (almost) everything in Moon# is an instance of a DynValue object. A DynValue represents a value in the script, whatever type it has, and so
+As said in the title, (almost) everything in MoonSharp is an instance of a DynValue object. A DynValue represents a value in the script, whatever type it has, and so
 it can be a table, a function, a number, a string and everything else too.
 
 So, to start, let's start with the latest tutorial step and change it to use DynValue(s) instead.

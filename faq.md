@@ -19,24 +19,24 @@ A debugger will sooner or later be implemented, but at the moment it's not a pri
 A version targeting .NET 4.x portable class libraries needs to be done.
 
 
-##### Are Lua and Moon# 100% compatible ?
+##### Are Lua and MoonSharp 100% compatible ?
 
 Of course not. There are many reasons for this (including bugs), but you can read more about [the differences here](moonluadifferences.html).
 The differences are unlikely to hit you on daily usage, as they are all encountered in not so common scenarios.
 
 ##### Why Lua ?
 
-It's a cool language. Moon# flirts a lot with videogame development in Unity and Xamarin, and Lua has been the scripting language of choice for
+It's a cool language. MoonSharp flirts a lot with videogame development in Unity and Xamarin, and Lua has been the scripting language of choice for
 videogames for years. Also I thought I knew Lua a lot when I started this project, so it seemed a natural choice. The first thing I learned was that,
 no, I didn't know the language well enough.
 
-##### Is Moon# usable only in videogames ?
+##### Is MoonSharp usable only in videogames ?
 
 No technology ever can be used only in one programming scenarios, though some are better fits than others. 
 
 A business application running Lua is surely more common than videogames running XSLTs or Razor, anyway. 
 
-I, for one, am using Moon# in business-line applications, and so can you, if you want.
+I, for one, am using MoonSharp in business-line applications, and so can you, if you want.
 
 
 ##### How can I receive support ?

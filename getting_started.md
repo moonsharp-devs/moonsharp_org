@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 title: Getting Started
-subtitle: A quick guide to your first Moon# project
+subtitle: A quick guide to your first MoonSharp project
 ---
 
 <div class="alert alert-info" role="alert">
@@ -9,13 +9,13 @@ The tutorials on this site assume you know Lua *and* a managed language, preferr
 and you have a good knowledge of some .NET language.
 </div>
 
-This procedure will just give you a taste of Moon# and its simplicity and power.
-There are better ways to use Moon#, but this is the easiest one.
+This procedure will just give you a taste of MoonSharp and its simplicity and power.
+There are better ways to use MoonSharp, but this is the easiest one.
 
 Most tutorials on this site are C# only - this is the only page with some pointers to get VB.NET users started.
 
 <div class="alert alert-success" role="alert">
-Moon# is compatible with all CLR languages - C#, VB.NET, C++/CLI, F#, Boo and whatever else you like. 
+MoonSharp is compatible with all CLR languages - C#, VB.NET, C++/CLI, F#, Boo and whatever else you like. 
 It could also work with DLR languages (IronPython, IronRuby, etc.).
 
 Examples, however, will only be produced for C# (and in the case of this introductory page, VB.NET) as 
@@ -28,9 +28,9 @@ keeping examples in all languages is a huge effort.
 
 
 
-#### Step 1: getting Moon# in your IDE
+#### Step 1: getting MoonSharp in your IDE
 
-The first step is to get Moon# in your IDE.
+The first step is to get MoonSharp in your IDE.
 There are several paths to this, depending on what IDE you are using - Visual Studio, MonoDevelop, SharpDevelop or Unity.
 
 ##### In Visual Studio, with Nuget
@@ -50,13 +50,13 @@ package named "MoonSharp".
 ##### In Visual Studio and other IDEs
 
 Refer to the documentation of your IDE to add **MoonSharp.Interpreter.dll** and **Antlr4.Runtime.net35.dll**, contained in the "library" folder
-of the Moon# distribution, as dependencies.
+of the MoonSharp distribution, as dependencies.
 
 
 ##### In Unity
 
 Put the **MoonSharp.Interpreter.dll** and **Antlr4.Runtime.net35.dll**, contained in the "library" folder
-of the Moon# distribution, in your Assets folder.
+of the MoonSharp distribution, in your Assets folder.
 
 After this, add them as references from MonoDevelop-Unity.
 
@@ -81,7 +81,7 @@ Imports MoonSharp.Interpreter
 {% endhighlight %}
 
 #### Step 3: Call into a script 
-Here we create a function **MoonSharpFactorial** which calculates a factorial using Moon#.
+Here we create a function **MoonSharpFactorial** which calculates a factorial using MoonSharp.
 
 In C#:
 
