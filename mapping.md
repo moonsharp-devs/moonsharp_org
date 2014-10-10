@@ -106,7 +106,7 @@ The constrained auto-conversion is a lot more complex though. In this case a Moo
 
 This is used:
 
-* When calling DynValue.ToObject<T>
+* When calling DynValue.ToObject&lt;T&gt;
 * When converting a script value to a parameter in a CLR function call, or property set
 
 MoonSharp attempts very hard to convert values, but the conversion surely shows some limits, specially when tables are involved.
