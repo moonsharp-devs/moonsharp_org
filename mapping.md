@@ -153,7 +153,7 @@ Tables can be converted to:
 * Types assignable from DynValue[].
 * Types assignable from object[]. Elements are mapped using the default mapping.
 
-So, for example, a Table can be converted to a IList<object> but not to a IList<int>.
+So, for example, a Table can be converted to a IList&gt;object&lt; but not to a IList&gt;int&lt;.
 
 
 
