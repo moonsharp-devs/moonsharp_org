@@ -9,13 +9,16 @@ toadd: Emulation of classic stack based callback mode (LuaState mode), to help i
 **Available on master branch** <span class="label label-warning">Unreleased</span>
 
 * A new DataType of Void introduced to correctly handle the no return value scenario.
+* Fixed a bug where multiple return values could not be used directly in an operation
 * New modes for easier type conversions in CallbackArguments. Plus, DynValue.CheckType method.
 * Changed "Closure" property of CallbackFunction from Table to be named AdditionalData and being an Object
+* Removed some deprecated methods from ScriptExecutionContext
 * Lots of optimizations
 * Fixed a bug where strings containing some escape sequences were not parsed correctly.
 * Improved syntax error messages
 * Made ':' calls work the same as '.' calls on userdata
-* Partial string.format implementation.
+* String library completed, with some methods importing code from KopiLua, ported to 5.2 standard
+* Fixed some bugs in the parsing of string literals escape codes
 
 
 #### Version 0.5.5 
