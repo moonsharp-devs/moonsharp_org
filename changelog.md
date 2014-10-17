@@ -19,6 +19,8 @@ toadd: Emulation of classic stack based callback mode (LuaState mode), to help i
 * Made ':' calls work the same as '.' calls on userdata
 * String library completed, with some methods importing code from KopiLua, ported to 5.2 standard
 * Fixed some bugs in the parsing of string literals escape codes
+* Started a small wrapper to interface with code using the classic stack-based API (UniLua, KopiLua or Lua itself).
+
 
 
 #### Version 0.5.5 
