@@ -2,6 +2,8 @@
 layout: home
 ---
 
+Don't know what MoonSharp is ? <a href="about.html" class="alert-link">Read here.</a>.
+
 Latest release: <a href="changelog.html" class="alert-link">0.6.0</a>.
 
 Next scheduled release: 14 Nov 2014.

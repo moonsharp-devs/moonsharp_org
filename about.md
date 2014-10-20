@@ -43,4 +43,4 @@ The program and libraries are released under a 3-clause BSD license - see the li
 
 This work is based on the ANTLR4 Lua grammar Copyright (c) 2013, Kazunori Sakamoto.
 
-Parts of the string library taken from [UniLua](https://github.com/xebecnan/UniLua)
+Some parts of the string library (parttern matching and string.format) are taken from [KopiLua](https://github.com/NLua/KopiLua)
