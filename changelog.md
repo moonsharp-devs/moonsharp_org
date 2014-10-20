@@ -8,6 +8,12 @@ toadd: Emulation of classic stack based callback mode (LuaState mode), to help i
 #### Coming soon 
 **Available on master branch** <span class="label label-warning">Unreleased</span>
 
+Nothing new yet.
+
+
+#### Version 0.6.0
+**Released on 2014-10-20** <span class="label label-success">New</span>
+
 * A new DataType of Void introduced to correctly handle the no return value scenario.
 * Fixed a bug where multiple return values could not be used directly in an operation
 * New modes for easier type conversions in CallbackArguments. Plus, DynValue.CheckType method.
@@ -24,7 +30,7 @@ toadd: Emulation of classic stack based callback mode (LuaState mode), to help i
 
 
 #### Version 0.5.5 
-**Released on 2014-10-08** <span class="label label-success">New</span>
+**Released on 2014-10-08**
 
 * Optimized parsing stage
 * Performance statistics for diagnostics

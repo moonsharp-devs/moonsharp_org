@@ -2,10 +2,19 @@
 layout: home
 ---
 
-Latest release: <a href="changelog.html" class="alert-link">0.5.5</a>.
+Latest release: <a href="changelog.html" class="alert-link">0.6.0</a>.
 
-Next scheduled release: 22 Oct 2014.
+Next scheduled release: 14 Nov 2014.
 
+
+#### 2014-10-20
+
+Version 0.6.0 has been released. This is a very big release and contains - above all - a complete string library and a vastly
+improved error reporting for both syntax and runtime errors. <a href="changelog.html" class="alert-link">See the changelog</a> for 
+a complete list of changes.
+
+Note: there are a couple of compatibility breaks in this version - nothing that can't be fixed in 5 minutes, but you've been 
+warned.
 
 
 #### 2014-10-17
