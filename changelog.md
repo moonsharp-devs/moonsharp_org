@@ -8,7 +8,9 @@ toadd: Emulation of classic stack based callback mode (LuaState mode), to help i
 #### Coming soon 
 **Available on master branch** <span class="label label-warning">Unreleased</span>
 
-Nothing new yet.
+* \u{xxx} escape to output unicode codepoints, as defined in Lua 5.3
+* Better handling of some lexer errors with invalid escape sequences
+* Solved a bug where the VM debugger crashed on inspecting globals
 
 
 #### Version 0.6.0

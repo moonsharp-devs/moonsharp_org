@@ -9,6 +9,14 @@ Latest release: <a href="changelog.html" class="alert-link">0.6.0</a>.
 Next scheduled release: 14 Nov 2014.
 
 
+#### 2014-10-21
+
+Minor changes have been done to how escape sequences in strings are managed.
+
+Also, the sharing objects and error handling tutorials have been added!
+
+
+
 #### 2014-10-20
 
 Version 0.6.0 has been released. This is a very big release and contains - above all - a complete string library and a vastly

@@ -34,6 +34,7 @@ This conversion is actually quite simple. The following table explains the conve
 <div class="table-responsive">
 <table class="table table-striped table-condensed">
 <tr><th>CLR type</th><th>C# friendly name</th><th>Lua type</th><th>Notes</th></tr>
+<tr><td>void</td><td></td><td>(no value)</td><td>This can be applied to return values of methods only.</td></tr>
 <tr><td>null</td><td></td><td>nil</td><td>Any null will be converted to nil.</td></tr>
 <tr><td>MoonSharp.Interpreter.DynValue</td><td></td><td>*</td><td>The DynValue is passed through.</td></tr>
 <tr><td>System.SByte</td><td>sbyte</td><td>number</td><td></td></tr>
@@ -118,6 +119,7 @@ In this case, the conversion is more a process than a simple table of mapping, s
 * if the target is of type MoonSharp.Interpreter.DynValue it is not converted and the original value is returned.
 * If the target is of type System.Object, the default conversion, detailed before, is applied.
 * In case of a nil value to be mapped, null is mapped to reference types and nullable value types and an attempt to match a default value is used in some cases (for example function calls for which a default is specified) for non-nullable value types, otherwise an exception is thrown.
+* In case of no value provided, the default value is used if possible.
 
 ##### Strings
 
