@@ -1,8 +1,7 @@
 ---
 layout: default
 title: Change Log
-subtitle: (since 0.5.0)
-toadd: Emulation of classic stack based callback mode (LuaState mode), to help integrating callbacks done in C for Lua and in C# for UniLua and KopiLua
+subtitle: 
 ---
 
 #### Coming soon 
@@ -11,7 +10,9 @@ toadd: Emulation of classic stack based callback mode (LuaState mode), to help i
 * \u{xxx} escape to output unicode codepoints, as defined in Lua 5.3
 * Better handling of some lexer errors with invalid escape sequences
 * Solved a bug where the VM debugger crashed on inspecting globals
+* ScriptFunctionDelegate types, and added GetDelegate methods in Closure type
 
+<hr />
 
 #### Version 0.6.0
 **Released on 2014-10-20** <span class="label label-success">New</span>
@@ -29,7 +30,7 @@ toadd: Emulation of classic stack based callback mode (LuaState mode), to help i
 * Fixed some bugs in the parsing of string literals escape codes
 * Started a small wrapper to interface with code using the classic stack-based API (UniLua, KopiLua or Lua itself).
 
-
+<hr />
 
 #### Version 0.5.5 
 **Released on 2014-10-08**
@@ -57,5 +58,6 @@ toadd: Emulation of classic stack based callback mode (LuaState mode), to help i
 * Coroutines
 * Marshalling of C# objects as userdata
 
+Previous versions are not detailed.
 
 
