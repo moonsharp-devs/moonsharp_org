@@ -10,7 +10,7 @@ Next scheduled release: 14 Nov 2014.
 
 #### 2014-11-04
 
-Version 0.7.0 will be probably out in a week, but don't hold your breath as it will be the biggest MoonSharp release so far.
+Version 0.7.0 will be probably out in a week, but don't hold your breath as it will be the biggest MoonSharp release so far, so the probability of it slipping is high.
 
 Hopefully I will be able to release MoonSharp 0.7.0 before the week of Nov 17th, otherwise it will slip for another week or two.
 
