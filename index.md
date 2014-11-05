@@ -6,11 +6,11 @@ Don't know what MoonSharp is ? <a href="about.html" class="alert-link">Read here
 
 Latest release: <a href="changelog.html" class="alert-link">0.6.0</a>.
 
-Next scheduled release: 14 Nov 2014.
+Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestones"  class="alert-link">14 Nov 2014.</a>
 
 #### 2014-11-05
 
-MoonSharp has a new logo, thanks to Voontrag, a friend in the Grimrock modding community!
+MoonSharp has a new logo, thanks to Isaac, a friend in the Grimrock modding community!
 
 On more techincal things.. as a peek of new functionality: a dynamic expression facility has been added.
 In this way, .NET code may evaluate expressions without compiling Lua bytecode using the current
