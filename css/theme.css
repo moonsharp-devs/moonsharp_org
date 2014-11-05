@@ -1,5 +1,28 @@
 html, body { height: 100% }
 
+.logo {
+    background-image: url("/logos/moonsharp.png");
+    height: 259px;
+    left: 100px;
+    position: absolute;
+    top: 70px;
+    width: 265px;
+}
+
+
+.jumbotext {
+
+
+    left: 400px;
+    position: absolute;
+	height: 800px;
+
+}
+
+.jumbotron {
+	height: 300px;
+}
+
 body 
 { 
 	padding-top: 52px; 

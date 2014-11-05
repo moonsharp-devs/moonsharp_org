@@ -10,7 +10,9 @@ Next scheduled release: 14 Nov 2014.
 
 #### 2014-11-05
 
-As a peek of new functionality: a dynamic expression facility has been added.
+MoonSharp has a new logo, thanks to Voontrag, a friend in the Grimrock modding community!
+
+On more techincal things.. as a peek of new functionality: a dynamic expression facility has been added.
 In this way, .NET code may evaluate expressions without compiling Lua bytecode using the current
 execution context, and the same can be done by Lua code.
 
