@@ -8,6 +8,18 @@ Latest release: <a href="changelog.html" class="alert-link">0.6.0</a>.
 
 Next scheduled release: 14 Nov 2014.
 
+#### 2014-11-05
+
+As a peek of new functionality: a dynamic expression facility has been added.
+In this way, .NET code may evaluate expressions without compiling Lua bytecode using the current
+execution context, and the same can be done by Lua code.
+
+The evaluation will always perform raw access and will never call any function - it can be used to implement
+debuggers or things like a data load from a table source (using tables as if it was a format like JSON.. except Lua).
+
+The evaluation is totally dynamic. So for example, if the expression contains a reference to a variable "x", and we are inside a whatsoever function, it might evaluate as a global. Reevaluate the same expression when a function with an upvalue (or local, or argument) "x" is on the stack, and "x" will refer to that upvalue/local/argument!
+
+
 #### 2014-11-04
 
 Version 0.7.0 will be probably out in a week, but don't hold your breath as it will be the biggest MoonSharp release so far, so the probability of it slipping is high.
