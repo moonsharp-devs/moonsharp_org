@@ -7,10 +7,16 @@ subtitle:
 #### Coming soon 
 **Available on master branch** <span class="label label-warning">Unreleased</span>
 
+* Remote debugger support! <a href="demo/MoonSharpDebuggerDemo.zip">Little demo here.</a>
 * \u{xxx} escape to output unicode codepoints, as defined in Lua 5.3
 * Better handling of some lexer errors with invalid escape sequences
 * Solved a bug where the VM debugger crashed on inspecting globals
 * ScriptFunctionDelegate types, and added GetDelegate methods in Closure type
+* Changed scope implementation of functions, so that _ENV is always present, either as a local or upvalue (previously, if a function never used globals, it didn't reference _ENV). This fixes sandboxing of functions calling load or equivalents in some remote scenarios.
+* Support for dynamic expressions in .NET
+* Support for dynamic expressions in standard library (addition)
+* Fixed some license issues here and there
+
 
 <hr />
 
