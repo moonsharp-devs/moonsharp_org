@@ -7,6 +7,13 @@ subtitle:
 #### Coming soon 
 **Available on master branch** <span class="label label-warning">Unreleased</span>
 
+Nothing yet.
+
+<hr />
+
+#### Version 0.7.0
+**Released on 2014-11-07** <span class="label label-success">New</span>
+
 * Remote debugger support! <a href="demo/MoonSharpDebuggerDemo.zip">Little demo here.</a>
 * \u{xxx} escape to output unicode codepoints, as defined in Lua 5.3
 * Better handling of some lexer errors with invalid escape sequences
@@ -21,7 +28,7 @@ subtitle:
 <hr />
 
 #### Version 0.6.0
-**Released on 2014-10-20** <span class="label label-success">New</span>
+**Released on 2014-10-20** 
 
 * A new DataType of Void introduced to correctly handle the no return value scenario.
 * Fixed a bug where multiple return values could not be used directly in an operation
