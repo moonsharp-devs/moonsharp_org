@@ -8,6 +8,23 @@ Latest release: <a href="changelog.html" class="alert-link">0.6.0</a>.
 
 Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestones"  class="alert-link">14 Nov 2014.</a>
 
+#### 2014-11-07
+
+Work on the debugger is almost complete!
+
+You can download a <a href="demo/MoonSharpDebuggerDemo.zip">little demo here</a>, a quick and dirty tic-tac-toe game where the AI is implemented in Lua and is completely debuggable.
+
+Otherwise you can peek at a <a href="images/MoonSharpDebugger.png" target="_blank">screenshot of the debugger</a>.
+
+How it works ? The challenge was to give a UI to a DLL which can be used in very different scenarios: GUI applications, full screen games, standalone services etc.
+
+So the debugging is remote, and upon activation of the debugger features, any web browser can be used to debug remotely!. As security measure, by default the debugger
+is enabled only for localhost, but it can be enabled for network debugging too. As now the debugger application itself is written in Flex/Flash, so a Flash player is required.
+
+Happy debugging!
+
+
+
 #### 2014-11-05
 
 MoonSharp has a new logo, thanks to Isaac, a friend in the Grimrock modding community!
