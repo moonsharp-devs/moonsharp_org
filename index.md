@@ -12,13 +12,13 @@ Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestone
 
 #### 2014-11-25
 
-Working is going on on MoonSharp. A lot of things are open actually:
+Work is going on on MoonSharp. A lot of things are open actually:
 
 * Tutorials for debugger integration
 * Unity Web Player support
 * os, io and file standard libraries
 
-On a negative side, MoonSharp has been applied for an open-source license of Xamarin (technically MoonSharp respects their acceptance criteria) but not news from them yet. Given the situation,
+On a negative side, MoonSharp has applied for an open-source license of Xamarin (technically MoonSharp respects their acceptance criteria, AFAICS) but not news from them yet. Given the situation,
 references to Xamarin on this site have been removed, as compatibility cannot be guaranteed. Hopefully our voices will be heard.
 
 <hr />
