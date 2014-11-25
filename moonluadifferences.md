@@ -22,6 +22,8 @@ Here is a list of differences between MoonSharp and Lua. This is of course subje
 * A non-yieldable __iterator metamethod has been added. It's called if the argument *f* of a "for-each" loop is not actually a function.
 * A default iterator looping over values (not keys) is provided if the argument f of a "for-each" loop is a table without __iterator or __call metamethods
 * \u{xxx} escapes, where x are up to 8 hexadecimal digits, are supported inside strings and will output the specified Unicode codepoint, as it does in Lua 5.3
+* loadsafe and loadfilesafe methods, same as load and loadfile but defaulting to the current top-of-the-stack _ENV instead of the default one, for easier sandboxing
+
 
 
 
