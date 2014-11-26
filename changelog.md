@@ -7,7 +7,10 @@ subtitle:
 #### Coming soon 
 **Available on master branch** <span class="label label-warning">Unreleased</span>
 
-Nothing yet.
+* Fixed a bug where a piece code behaved differently in .NET 4 than in .NET 2 (weird covariance stuff, this btw is interesting stuff).
+* Support for Unity Web Player and Unity Android (non-stripped)
+* Test suite runs on Unity Windows, Unity Android and Unity Web Player correctly!
+
 
 <hr />
 

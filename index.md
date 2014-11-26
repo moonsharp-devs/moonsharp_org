@@ -6,7 +6,22 @@ Don't know what MoonSharp is ? <a href="about.html" class="alert-link">Read here
 
 Latest release: <a href="changelog.html" class="alert-link">0.7.0</a>.
 
-Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestones"  class="alert-link">Still unknown.</a>
+Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestones"  class="alert-link">0.7.5 to be released around mid december.</a>
+
+<hr />
+
+#### 2014-11-26
+
+I dedicated some hours lately on getting moonsharp to work on Unity. The test suite has been completely revised and now tests run on Unity too!
+
+Here's some screenshots.. nothing exciting really, but a proof of the work done!
+
+* <a href="images/unityts_ide.png" target="_blank">MoonSharp tests running on Unity IDE</a>
+* <a href="images/unityts_web.png" target="_blank">MoonSharp tests running on Unity Web Player</a>
+* <a href="images/unityts_s3.png"  target="_blank">MoonSharp tests running on Unity Android / Samsung Galaxy S3</a>
+
+Hope to do a release soon for all you Unity dwellers.
+
 
 <hr />
 
