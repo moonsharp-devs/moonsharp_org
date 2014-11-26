@@ -22,6 +22,8 @@ Here's some screenshots.. nothing exciting really, but a proof of the work done!
 
 Hope to do a release soon for all you Unity dwellers.
 
+I have not tested other Unity targets as I don't have the devices and neither stripping as I have the free Unity not the Pro ones.. but I'll try to 
+get some Apple devices and a Unity trial later to do some tests with stripping enabled.
 
 <hr />
 
