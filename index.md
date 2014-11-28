@@ -6,7 +6,23 @@ Don't know what MoonSharp is ? <a href="about.html" class="alert-link">Read here
 
 Latest release: <a href="changelog.html" class="alert-link">0.7.0</a>.
 
-Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestones"  class="alert-link">0.7.5 to be released around mid december.</a>
+Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestones"  class="alert-link">0.8.0 to be released around mid december.</a>
+
+<hr />
+
+#### 2014-11-29
+
+Big news under the standard library side:
+
+* 'file', 'io' and 'os' are supported completely. A tutorial will follow on how to handle binary files as that is a little different from native Lua. Note that only few methods of 'os' are supported on Unity.
+* some methods from 'debug' are supported (work still in progress)! This will include debug.debug, debug.[gs]etmetatable, debug.[gs]etupvalue, debug.[gs]etuservalue, debug.getregistry, debug.upvalueid.
+
+Next on backlog for 0.8.0:
+
+* debug.traceback
+* xpcall to be completed
+* antlr redistribution issues to be solved
+
 
 <hr />
 
