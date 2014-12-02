@@ -15,6 +15,8 @@ Here is a list of differences between MoonSharp and Lua. This is of course subje
 * Compatibility only at the source level - no luac, no lua binaries
 * Error messages are at times different (though most of the times they are the same)
 * Hexadecimal floats are not supported
+* Function names are tracked at function declaration, not at function calls like in Lua (noticeable only when debugging)
+* Lua does not document (AFAIK) which functions can yield and which not. For example tostring() can yield in MoonSharp but not in Lua. See [this pdf](http://www.moonsharp.org/MoonSharpStdLib.pdf) for a documented list of what can yield in MoonSharp.
 
 
 #### List of additions

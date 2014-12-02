@@ -10,6 +10,14 @@ Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestone
 
 <hr />
 
+#### 2014-12-01
+
+Great news:
+
+* MoonSharp has been accepted in Xamarin open source program.. so Xamarin testing will start soon and hopefully a Xamarin package will be released asap!
+* xpcall and debug.traceback are in! and working! This basically completes all the work meant to be done to the standard library (actually, it's a lot more than what was meant to be done already!)
+
+
 #### 2014-11-29
 
 Big news under the standard library side:
@@ -51,8 +59,7 @@ Work is going on on MoonSharp. A lot of things are open actually:
 * Unity Web Player support
 * os, io and file standard libraries
 
-On a negative side, MoonSharp has applied for an open-source license of Xamarin (technically MoonSharp respects their acceptance criteria, AFAICS) but not news from them yet. Given the situation,
-references to Xamarin on this site have been removed, as compatibility cannot be guaranteed. Hopefully our voices will be heard.
+
 
 <hr />
 
