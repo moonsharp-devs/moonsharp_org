@@ -12,6 +12,13 @@ Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestone
 
 #### 2014-12-01
 
+Thanks to good feedback on the forums, some facilities have been added to table to ease access to subtables: now the indexers support any number of keys and resolve to subtables automagically!
+
+
+
+
+#### 2014-12-01
+
 Great news:
 
 * MoonSharp has been accepted in Xamarin open source program.. so Xamarin testing will start soon and hopefully a Xamarin package will be released asap!

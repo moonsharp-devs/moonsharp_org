@@ -11,10 +11,13 @@ subtitle:
 * Parts of the 'debug' library completed. This has been done for compatibility sake, as debuggers are implemented differently in MoonSharp.
 * Improved error messages
 * Improved options management [breaking change!]
-* 
+* Table indexers now support any number of keys and resolve to subtables automagically
 * Fixed a bug where a piece code behaved differently in .NET 4 than in .NET 2 (weird covariance stuff, this btw is interesting stuff).
 * Support for Unity Web Player and Unity Android (non-stripped)
 * Test suite runs on Unity Windows, Unity Android and Unity Web Player correctly!
+* Remote Debugger: it's now possible to attach the debugger to running scripts without having them getting paused
+* Remote Debugger: it's now possible to break on errors, and to select which errors break and which don't
+* Remote Debugger: added set breakpoint and clear breakpoint commands
 
 
 <hr />
