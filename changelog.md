@@ -7,6 +7,14 @@ subtitle:
 #### Coming soon 
 **Available on master branch** <span class="label label-warning">Unreleased</span>
 
+Nothing yet!
+
+
+<hr />
+
+#### Version 0.8.0
+**Released on 2014-12-11** <span class="label label-success">New</span>
+
 * 'os', 'io' and 'file' libraries completed. Note that in Unity some functionality is not supported.
 * Parts of the 'debug' library completed. This has been done for compatibility sake, as debuggers are implemented differently in MoonSharp.
 * Improved error messages
@@ -23,7 +31,7 @@ subtitle:
 <hr />
 
 #### Version 0.7.0
-**Released on 2014-11-07** <span class="label label-success">New</span>
+**Released on 2014-11-07** 
 
 * Remote debugger support! <a href="demo/MoonSharpDebuggerDemo.zip">Little demo here.</a>
 * \u{xxx} escape to output unicode codepoints, as defined in Lua 5.3

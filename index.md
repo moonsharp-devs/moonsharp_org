@@ -4,9 +4,9 @@ layout: home
 
 Don't know what MoonSharp is ? <a href="about.html" class="alert-link">Read here.</a>.
 
-Latest release: <a href="changelog.html" class="alert-link">0.7.0</a>.
+Latest release: <a href="changelog.html" class="alert-link">0.8.0</a>.
 
-Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestones"  class="alert-link">0.8.0 to be released around mid december.</a>
+Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestones"  class="alert-link">Unknown.</a>
 
 <hr />
 
