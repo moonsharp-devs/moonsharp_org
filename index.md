@@ -10,6 +10,32 @@ Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestone
 
 <hr />
 
+#### 2014-12-11-04
+
+MoonSharp 0.8.0 has been released, with many interesting additions, including a completed standard library, some support for Unity
+and Xamarin and debugger additions.
+
+* Support for Unity Web Player and Unity Android (non-stripped)
+* Support for Xamarin Android
+* 'os', 'io' and 'file' libraries completed. Note that in Unity and Xamarin some functionality of 'os', 'io' and 'file' are not supported.
+* Parts of the 'debug' library completed. This has been done for compatibility sake, as debuggers are implemented differently in MoonSharp.
+* Improved error messages
+* Improved options management [small breaking change]
+* Table indexers now support any number of keys and resolve to subtables automagically
+* Fixed a bug where a piece code behaved differently in .NET 4 than in .NET 2 (weird covariance stuff, this btw is interesting weird corner case).
+* Test suite runs on Xamarin Android, Unity Windows, Unity Android and Unity Web Player correctly!
+* Remote Debugger: it's now possible to attach the debugger to running scripts without having them getting paused
+* Remote Debugger: it's now possible to break on errors, and to select which errors break and which don't
+* Remote Debugger: added set breakpoint and clear breakpoint commands
+
+##### Downloads:
+
+* <a href="https://github.com/xanathar/moonsharp/releases/tag/v0.8.0">Download zip file</a>
+* <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter nuget package</a>
+* <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger nuget package</a>
+
+
+
 #### 2014-12-01
 
 Thanks to good feedback on the forums, some facilities have been added to table to ease access to subtables: now the indexers support any number of keys and resolve to subtables automagically!
