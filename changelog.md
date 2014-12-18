@@ -20,7 +20,7 @@ This is a bug fix release over 0.8.0:
 * A **lot** of bug-fixes regarding error handling on nested C# calls and coroutines
 * A bad bug involving a miscalculation of table length has been fixed (See issue #38)
 
-<a href="https://github.com/xanathar/moonsharp/releases/tag/v0.8.1">Zip file</a> \| ( <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> ).
+<a href="https://github.com/xanathar/moonsharp/releases/tag/v0.8.1">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 <hr />
