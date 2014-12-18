@@ -7,13 +7,26 @@ subtitle:
 #### Coming soon 
 **Available on master branch** <span class="label label-warning">Unreleased</span>
 
-Nothing yet!
+Nothing.. yet.
+
+
+<hr />
+
+#### Version 0.8.1
+**Released on 2014-12-18** <span class="label label-success">New</span>
+
+This is a bug fix release over 0.8.0:
+
+* A **lot** of bug-fixes regarding error handling on nested C# calls and coroutines
+* A bad bug involving a miscalculation of table length has been fixed (See issue #38)
+
+<a href="https://github.com/xanathar/moonsharp/releases/tag/v0.8.1">Zip file</a> | ( <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> | <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> ).
 
 
 <hr />
 
 #### Version 0.8.0
-**Released on 2014-12-11** <span class="label label-success">New</span>
+**Released on 2014-12-11**
 
 * 'os', 'io' and 'file' libraries completed. Note that in Unity some functionality is not supported.
 * Parts of the 'debug' library completed. This has been done for compatibility sake, as debuggers are implemented differently in MoonSharp.
