@@ -4,10 +4,26 @@ layout: home
 
 Don't know what MoonSharp is ? <a href="about.html" class="alert-link">Read here.</a>.
 
-Latest release: <a href="changelog.html" class="alert-link">0.8.1</a> \| <a href="https://github.com/xanathar/moonsharp/releases/tag/v0.8.1">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+Latest release: <a href="changelog.html" class="alert-link">0.8.2</a> \| <a href="https://github.com/xanathar/moonsharp/releases/tag/v0.8.2">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestones"  class="alert-link">Some time in January 2015.</a>
+
+
+<hr />
+
+#### 2014-12-24
+
+MoonSharp 0.8.2 has been released, with 4 bugs fixed over 0.8.1:
+
+* Function in lua which has 2 parameters with the same name throws error
+* UserData with private properties throws on UserData.RegisterType
+* table.unpack raises IndexOutOfRangeException
+* Assigning nil to a table field should delete it
+
+**Note: 0.8.2 has not been released on NuGet at the moment**
+
+<a href="https://github.com/xanathar/moonsharp/releases/tag/v0.8.2">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 <hr />
