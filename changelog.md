@@ -12,7 +12,7 @@ Nothing.. yet.
 
 <hr />
 
-#### Version 0.8.1
+#### Version 0.8.2.1
 **Released on 2014-12-24** <span class="label label-success">New</span>
 
 This is a bug fix release over 0.8.2.1:
