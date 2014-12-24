@@ -14,16 +14,17 @@ Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestone
 
 #### 2014-12-24
 
-MoonSharp 0.8.2 has been released, with 4 bugs fixed over 0.8.1:
+MoonSharp 0.8.2.1 has been released, with 4 bugs fixed over 0.8.1:
 
 * Function in lua which has 2 parameters with the same name throws error
 * UserData with private properties throws on UserData.RegisterType
 * table.unpack raises IndexOutOfRangeException
 * Assigning nil to a table field should delete it
+* Minor/partial fix on the multithread check on script execution
 
-**Note: 0.8.2 has not been released on NuGet at the moment**
+**Note: 0.8.2.1 has not been released on NuGet at the moment**
 
-<a href="https://github.com/xanathar/moonsharp/releases/tag/v0.8.2">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+<a href="https://github.com/xanathar/moonsharp/releases/tag/v0.8.2.1">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 <hr />
