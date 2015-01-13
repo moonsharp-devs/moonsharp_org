@@ -12,7 +12,7 @@ Nothing.. yet.
 
 <hr />
 
-#### Version 0.8.5
+#### Version 0.8.5.1
 **Released on 2014-01-13** <span class="label label-success">New</span>
 
 
@@ -24,7 +24,7 @@ Nothing.. yet.
 * Fixed: String patterns do not support \0 characters - %z must be used instead.  - #29
 
 
-<a href="https://github.com/xanathar/moonsharp/releases/tag/v0.8.5">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+<a href="https://github.com/xanathar/moonsharp/releases/tag/v0.8.5.1">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 <hr />
