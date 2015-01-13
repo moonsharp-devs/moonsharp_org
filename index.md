@@ -28,6 +28,7 @@ In particular userdata type descriptors are improved in this way:
 * While still considered somewhat unsafe, it's possible to use "UserData.RegistrationPolicy = InteropRegistrationPolicy.Automatic" to have unregistered types be registered just in time
 * If interfaces are registered and a type implements more than one interface, correct resolution now happens
 * Types registered with the standard descriptors support some kind of automatic member name adaptation. For example, a member called "SomeMethodWithLongName" can be accessed from a lua script also as "someMethodWithLongName" or "some_method_with_long_name" (for better consistency among coding styles in different languages).
+* Types registered with the standard descriptors and having overloaded methods will not raise an error anymore, but resolve to the first method found (quite random). Better overloads support is a task for the future.
 
 
 <a href="https://github.com/xanathar/moonsharp/releases/tag/v0.8.5">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
