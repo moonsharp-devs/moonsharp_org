@@ -12,10 +12,27 @@ Nothing.. yet.
 
 <hr />
 
-#### Version 0.8.2.1
-**Released on 2014-12-24** <span class="label label-success">New</span>
+#### Version 0.8.5
+**Released on 2014-01-13** <span class="label label-success">New</span>
 
-This is a bug fix release over 0.8.2.1:
+
+* Vastly improved type descriptors  - #39
+* Fixed: Varargs not supported on main chunk  - #46
+* Fixed: pcall returns only the first return value  - #47
+* Fixed: Threading check not working properly  - #42
+* Fixed: Exception ctor overloads revised for potential obscure bugs  - #40
+* Fixed: String patterns do not support \0 characters - %z must be used instead.  - #29
+
+
+<a href="https://github.com/xanathar/moonsharp/releases/tag/v0.8.5">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+
+
+<hr />
+
+#### Version 0.8.2.1
+**Released on 2014-12-24**
+
+This is a bug fix release over 0.8.1:
 
 * Function in lua which has 2 parameters with the same name throws error
 * UserData with private properties throws on UserData.RegisterType

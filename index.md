@@ -9,6 +9,29 @@ Latest release: <a href="changelog.html" class="alert-link">0.8.2.1</a> \| <a hr
 
 Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestones"  class="alert-link">Some time in January 2015.</a>
 
+<hr />
+
+#### 2014-01-13
+
+MoonSharp 0.8.5.1 has been released, with many bugs fixed over 0.8.2.1 and a revised userdata interfacing.
+
+* Vastly improved type descriptors  - #39
+* Fixed: Varargs not supported on main chunk  - #46
+* Fixed: pcall returns only the first return value  - #47
+* Fixed: Threading check not working properly  - #42
+* Fixed: Exception ctor overloads revised for potential obscure bugs  - #40
+* Fixed: String patterns do not support \0 characters - %z must be used instead.  - #29
+
+In particular userdata type descriptors are improved in this way:
+
+* If a customized behaviour for a given type is desired, it can be registered using a custom IUserDataDescriptor, or the object can implement IUserDataType for an even easier implementation
+* While still considered somewhat unsafe, it's possible to use "UserData.RegistrationPolicy = InteropRegistrationPolicy.Automatic" to have unregistered types be registered just in time
+* If interfaces are registered and a type implements more than one interface, correct resolution now happens
+* Types registered with the standard descriptors support some kind of automatic member name adaptation. For example, a member called "SomeMethodWithLongName" can be accessed from a lua script also as "someMethodWithLongName" or "some_method_with_long_name" (for better consistency among coding styles in different languages).
+
+
+<a href="https://github.com/xanathar/moonsharp/releases/tag/v0.8.5">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+
 
 <hr />
 
