@@ -22,5 +22,15 @@ script.Options.DebugInput = () => { return Console.ReadLine(); }
 {% endhighlight %}
 
 
+#### How can I redirect the IO streams of a Lua program ?
+
+{% highlight csharp %}
+
+IoModule.SetDefaultFile(script, IoModule.DefaultFiles.In, myInputStream);
+IoModule.SetDefaultFile(script, IoModule.DefaultFiles.Out, myInputStream);
+IoModule.SetDefaultFile(script, IoModule.DefaultFiles.Err, myInputStream);
+
+{% endhighlight %}
+
 
 

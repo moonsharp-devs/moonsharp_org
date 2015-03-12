@@ -9,6 +9,29 @@ Latest release: <a href="changelog.html" class="alert-link">0.8.5.1</a> \| <a hr
 
 Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestones"  class="alert-link">Some time in January 2015.</a>
 
+
+<hr />
+
+#### 2014-03-12
+
+Almost two months of silence! But many things happened in this time frame, even if not a lot of code was committed to the repo.
+
+I did a little summary of major outstanding issues of MoonSharp:
+
+* Incompatible with iOS (and, in general, Mono full AOT) because of how ANTLR handles things with complex generics and delegates (I worked around many of them - in mono aot as I don't have a Mac nor an iPhone - as you can read here: https://groups.google.com/forum/#!topic/moonsharp/oT4SbOFA5mE )
+* Some malformed scripts give errors with unhelpful error messages, because of the way ANTLR reports lexer errors
+* Some performance issues during lexing/parsing because of the complex ANTLR grammar and analysis. I improved them a lot by removing operator precedence in the grammar and manually handling it on the MoonSharp AST, but some still there.
+* Minor lexical problems due to a corner case ambiguity which ANTLR resolves and Lua itself not
+* A complex deployment issue. Currently ANLTR 4.3 gives different version of .NET 3.5, .NET 4, .NET 4.5, Portable .NET 4, Portable .NET 4.5 at least. This means a lot of effort on the MoonSharp side to manage builds for Windows 8 apps, Windows Phone, XBox, etc. Solved in ANTLR 4.4 but not yet released.
+
+Sense a pattern ? :)
+
+Now, don't get me wrong, ANTLR is a **wonderful** tool. Simply, I think it makes a lot more sense on DSLs enterprise scenarios rather than generic scripting languages on 3rd party lib.
+
+So, to cut short, an attempt at a custom lexer+parser is ongoing, hopefully leading to a better solution in the long run. But this is a very very long work, happening on the "remove-antlr" branch.
+
+
+
 <hr />
 
 #### 2014-01-13

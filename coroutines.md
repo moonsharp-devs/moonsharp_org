@@ -51,8 +51,6 @@ while (true)
 And here we come to the most important section of all the coroutines stuff.
 Just like in the original Lua, it's not possible to yield out of nested calls.
 
-> note: there is a known bug in 0.8.0 breaking coroutine.resume in case of errors. This will be fixed asap.
-
 In particular, in MoonSharp if you *Call* a script inside a C# function called from Lua, you can't use yield to resume to a coroutine external to the C# call.
 
 There is a way out: returning a *TailCallRequest* DynValue:
@@ -70,4 +68,5 @@ It's also possible to specify a continuation - a piece of function which will be
 99% of the time this is probably overkill - not even the Lua standard library handles callbacks+yield correctly in the vast majority of the cases. But 
 if you plan to implement APIs like *load*, *pcall* or *coroutine.resume* by yourself, this is needed.
 
+> As an aside, in some corner cases MoonSharp handles yielding in a different way (better in every case I tried so far but who knows) than standard Lua. For example, tostring() supports yielding __tostring metamethods without raising an error.
 
