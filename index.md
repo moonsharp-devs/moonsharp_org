@@ -12,7 +12,7 @@ Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestone
 
 <hr />
 
-#### 2014-03-12
+#### 2015-03-12
 
 Almost two months of silence! But many things happened in this time frame, even if not a lot of code was committed to the repo.
 
@@ -34,7 +34,7 @@ So, to cut short, an attempt at a custom lexer+parser is ongoing, hopefully lead
 
 <hr />
 
-#### 2014-01-13
+#### 2015-01-13
 
 MoonSharp 0.8.5.1 has been released, with many bugs fixed over 0.8.2.1 and a revised userdata interfacing.
 
