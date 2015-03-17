@@ -5,9 +5,27 @@ subtitle:
 ---
 
 #### Coming soon 
-**Available on master branch** <span class="label label-warning">Unreleased</span>
+**Available on remove-antlr branch** <span class="label label-warning">Unreleased</span>
 
-Nothing.. yet.
+* Removed ANTLR dependencies
+* Improved performances at load methods
+* string.dump implemented
+* Bytecode serialization supported
+* Goto statements supported
+* Hex floats support
+* Invalid comparison functions in table.sort now correctly report errors
+* Better coverage of error messages at the lexer level
+* I/O streams are now customizable.
+* Constructors can be called on userdata (by calling a fictitious __new method on a static userdata)
+* tonumber() supports all bases between 2 and 10 (thanks jerneik)
+* Fixed a bug where the debugger connected to the wrong hostname [Flash security is perverted]
+* Fixed a potential memory leak and other hypotetical issues when a deep nested *break* is executed
+
+IN PROGRESS:
+* Compatibility with mono --full-aot (which should include iOS support on Unity / Xamarin)
+* Investigation on an issue where the wrong optimization mode on userdata is chosen
+* Version for portable.NET 4.x and .NET 4.x frameworks, to support Windows Phones, Silverlight, XBox and other platforms
+
 
 
 <hr />
