@@ -20,11 +20,17 @@ subtitle:
 * tonumber() supports all bases between 2 and 10 (thanks jerneik)
 * Fixed a bug where the debugger connected to the wrong hostname [Flash security is perverted]
 * Fixed a potential memory leak and other hypotetical issues when a deep nested *break* is executed
+* Compatibility with mono --full-aot (which should include iOS support on Unity / Xamarin)
+* Test suite fixed for an issue where the wrong optimization mode on userdata is chosen
+* Version for portable.NET 4.x and .NET 4.x frameworks
+* Tested on Windows Store Apps (win8/8.1)
+* Tested on Silverlight 5
 
 IN PROGRESS:
-* Compatibility with mono --full-aot (which should include iOS support on Unity / Xamarin)
-* Investigation on an issue where the wrong optimization mode on userdata is chosen
-* Version for portable.NET 4.x and .NET 4.x frameworks, to support Windows Phones, Silverlight, XBox and other platforms
+
+* Tests on Windows Phone 8, 8.1
+* Re-testing on Unity 5 (Windows+Android+iOS+WinPhone+Windows8)
+* Re-testing on Xamarin (Android)
 
 
 

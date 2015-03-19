@@ -7,7 +7,18 @@ Don't know what MoonSharp is ? <a href="about.html" class="alert-link">Read here
 Latest release: <a href="changelog.html" class="alert-link">0.8.5.1</a> \| <a href="https://github.com/xanathar/moonsharp/releases/tag/v0.8.5.1">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
-Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestones"  class="alert-link">Some time in January 2015.</a>
+Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestones"  class="alert-link">31 March 2015.</a>
+
+
+<hr />
+
+#### 2015-03-12
+
+Wooo so many new things!
+
+MoonSharp 0.9.0 is near, with more changes than ever.
+
+Check the <a href="changelog.html">CHANGE LOG</a> to have a peek at what's coming.
 
 
 <hr />
