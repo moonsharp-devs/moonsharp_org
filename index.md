@@ -9,10 +9,21 @@ Latest release: <a href="changelog.html" class="alert-link">0.8.5.1</a> \| <a hr
 
 Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestones"  class="alert-link">31 March 2015.</a>
 
+<hr />
+
+#### 2015-03-20
+
+Time for some MoonSharp 0.9.0 teasers...
+
+* The test suite <a href="images/Lumia.jpg">running on a Nokia Lumia 620</a>
+* The test suite <a href="images/wp8.png">running on Windows 8.1 as a Windows 8 Store App</a>
+* The test suite <a href="images/sl5.png">running on Silverlight 5 on Chrome</a>
+
+
 
 <hr />
 
-#### 2015-03-12
+#### 2015-03-18
 
 Wooo so many new things!
 
