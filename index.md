@@ -16,8 +16,8 @@ Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestone
 Time for some MoonSharp 0.9.0 teasers...
 
 * The test suite <a href="images/Lumia.jpg">running on a Nokia Lumia 620</a>
-* The test suite <a href="images/wp8.png">running on Windows 8.1 as a Windows 8 Store App</a>
-* The test suite <a href="images/sl5.png">running on Silverlight 5 on Chrome</a>
+* The test suite <a href="images/w8.png">running on Windows 8.1 as a Windows 8 Store App</a>
+* The test suite <a href="images/sl5.PNG">running on Silverlight 5 on Chrome</a>
 
 
 
