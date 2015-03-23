@@ -9,9 +9,14 @@
             </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="2d5cd573-0935-8970-e806-8f12aa72d49e.htm">ReplInterpreterScriptLoader</a></td><td><div class="summary">
             A script loader loading scripts directly from the file system (does not go through platform object)
             AND starts with module paths taken from environment variables (again, not going through the platform object)
-            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="7f1c3dc6-a0d8-50f7-f5a6-a31c2f928310.htm">ScriptLoaderBase</a></td><td /></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="3cf3afb4-d074-8411-141a-8254dde30887.htm">UnityAssetsScriptLoader</a></td><td><div class="summary">
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="7f1c3dc6-a0d8-50f7-f5a6-a31c2f928310.htm">ScriptLoaderBase</a></td><td><div class="summary">
+            A base implementation of IScriptLoader, offering resolution of module names.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="3cf3afb4-d074-8411-141a-8254dde30887.htm">UnityAssetsScriptLoader</a></td><td><div class="summary">
             A script loader which can load scripts from assets in Unity3D.
-            Scripts should be saved as .txt files in a subdirectory of Assets/Resources
+            Scripts should be saved as .txt files in a subdirectory of Assets/Resources.
+            
+            When MoonSharp is activated on Unity3D and the default script loader is used,
+            scripts should be saved as .txt files in Assets/Resources/MoonSharp/Scripts.
             </div></td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID1RB')" onkeypress="SectionExpandCollapse_CheckKey('ID1RB', event)" tabindex="0"><img id="ID1RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Interfaces</span></div><div id="ID1RBSection" class="collapsibleSection"><table id="typeList" class="members"><tr><th class="iconColumn">
 					 
 				</th><th>Interface</th><th>Description</th></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="f249db20-4dce-87c0-6925-7650148e4b97.htm">IScriptLoader</a></td><td><div class="summary">

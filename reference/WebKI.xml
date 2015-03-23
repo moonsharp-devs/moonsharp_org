@@ -226,13 +226,13 @@
   <HelpKINode Title="Clone method" Url="html/5d6833d5-9ca7-a6de-ba74-68f7e955cd1c.htm" />
   <HelpKINode Title="CloneAsWritable method" Url="html/805e5655-3e0a-247c-3828-3f5fe20c86d1.htm" />
   <HelpKINode Title="Close method">
+    <HelpKINode Title="StreamFileUserDataBase.Close Method " Url="html/f0017715-8554-0ad3-28c7-a523a48798cd.htm" />
     <HelpKINode Title="FileUserDataBase.Close Method " Url="html/d570f8bf-6cc4-db78-8ca9-4ac632b44bfa.htm" />
     <HelpKINode Title="StandardIOFileUserDataBase.Close Method " Url="html/392a2d26-cbdb-ee32-860e-5f5187af8d8f.htm" />
-    <HelpKINode Title="StreamFileUserDataBase.Close Method " Url="html/f0017715-8554-0ad3-28c7-a523a48798cd.htm" />
   </HelpKINode>
   <HelpKINode Title="close method">
-    <HelpKINode Title="IoModule.close Method " Url="html/264d4946-a234-8abd-ab9b-2d8013850106.htm" />
     <HelpKINode Title="FileUserDataBase.close Method " Url="html/0be90817-7731-1978-ecda-3646e02f1ad3.htm" />
+    <HelpKINode Title="IoModule.close Method " Url="html/264d4946-a234-8abd-ab9b-2d8013850106.htm" />
   </HelpKINode>
   <HelpKINode Title="Closure class">
     <HelpKINode Title="Closure Class" Url="html/2b136bb8-2f2e-e549-ef39-7d1d1762f551.htm" />
@@ -306,8 +306,8 @@
     <HelpKINode Title="LuaState.Count Property " Url="html/d1cf96a4-cf23-c31b-8a6c-ac1c15e6ce8b.htm" />
   </HelpKINode>
   <HelpKINode Title="Counter property" Url="html/83984ec7-d937-e4be-e7d2-42b6ce57911d.htm" />
-  <HelpKINode Title="Create method" Url="html/f1a724a2-da16-0c1d-a2bd-d5758ab7442e.htm" />
   <HelpKINode Title="create method" Url="html/299e3efd-9879-f9d3-89c9-a30e7d655059.htm" />
+  <HelpKINode Title="Create method" Url="html/f1a724a2-da16-0c1d-a2bd-d5758ab7442e.htm" />
   <HelpKINode Title="CreateCallbackDynValue method" Url="html/1d1590cf-ecae-01b3-4008-b965ada5e180.htm" />
   <HelpKINode Title="CreateConstantDynamicExpression method" Url="html/82356a87-b774-1d8c-7c14-c21c147225e9.htm" />
   <HelpKINode Title="CreateCoroutine method" Url="html/0175bfee-b0ff-a2d2-f795-ab3c4732be54.htm" />
@@ -395,8 +395,8 @@
   <HelpKINode Title="Descriptor property" Url="html/798b161c-e310-0af6-5e56-3c48c95c0663.htm" />
   <HelpKINode Title="difftime method" Url="html/ce14932e-ba68-2884-176b-563d7a0b5fa0.htm" />
   <HelpKINode Title="Discard method" Url="html/ff46617e-7acb-219d-87c1-c52f79758929.htm" />
-  <HelpKINode Title="DoFile method" Url="html/9674eb07-ee9c-d937-2a0f-af1567264b7e.htm" />
   <HelpKINode Title="dofile method" Url="html/6cff9dc9-33c1-05e2-612a-e2e270f7c869.htm" />
+  <HelpKINode Title="DoFile method" Url="html/9674eb07-ee9c-d937-2a0f-af1567264b7e.htm" />
   <HelpKINode Title="DoNotDecorateMessage property" Url="html/bc42f222-1ded-69c3-41e1-095868cde260.htm" />
   <HelpKINode Title="DoStream method" Url="html/f87fae93-2efc-fce9-71cc-09c9d904391c.htm" />
   <HelpKINode Title="DoString method" Url="html/050a1f5d-38af-4b00-735b-1f14b300d80a.htm" />
@@ -577,8 +577,8 @@
     <HelpKINode Title="methods" Url="html/6f45020d-33a5-1383-5230-08e3cde8aa48.htm" />
     <HelpKINode Title="properties" Url="html/07a86cf9-d663-bd80-4547-7aa761da3e37.htm" />
   </HelpKINode>
-  <HelpKINode Title="FileUserDataBase.close method" Url="html/0be90817-7731-1978-ecda-3646e02f1ad3.htm" />
   <HelpKINode Title="FileUserDataBase.Close method" Url="html/d570f8bf-6cc4-db78-8ca9-4ac632b44bfa.htm" />
+  <HelpKINode Title="FileUserDataBase.close method" Url="html/0be90817-7731-1978-ecda-3646e02f1ad3.htm" />
   <HelpKINode Title="FileUserDataBase.Eof method" Url="html/d5078091-a6ed-d125-db6a-f4ffbdfc12b5.htm" />
   <HelpKINode Title="FileUserDataBase.FileUserDataBase constructor" Url="html/855808eb-e512-f810-be7a-08f384f1f814.htm" />
   <HelpKINode Title="FileUserDataBase.flush method" Url="html/b9f7f4ba-8153-b32b-848c-d57104755001.htm" />
@@ -592,8 +592,8 @@
   <HelpKINode Title="FileUserDataBase.seek method" Url="html/38089517-ba03-dd85-977d-a50d9c263458.htm" />
   <HelpKINode Title="FileUserDataBase.setvbuf method" Url="html/69bf32a7-3afd-beb6-10d8-48d7f84dd132.htm" />
   <HelpKINode Title="FileUserDataBase.ToString method" Url="html/b8f97b3a-683d-fb9e-60a1-fbd9f15a60b3.htm" />
-  <HelpKINode Title="FileUserDataBase.write method" Url="html/600c242f-06b7-dc1a-0051-2a335667fd76.htm" />
   <HelpKINode Title="FileUserDataBase.Write method" Url="html/9acfbdac-5cdf-c4d2-9271-15b7d3ca55e4.htm" />
+  <HelpKINode Title="FileUserDataBase.write method" Url="html/600c242f-06b7-dc1a-0051-2a335667fd76.htm" />
   <HelpKINode Title="FilterSupportedCoreModules method">
     <HelpKINode Title="IPlatformAccessor.FilterSupportedCoreModules Method " Url="html/c46315cf-3721-a2cf-33af-58c79ce5c990.htm" />
     <HelpKINode Title="LimitedPlatformAccessor.FilterSupportedCoreModules Method " Url="html/23abbf72-5aa5-1820-d9b0-b68026f5386e.htm" />
@@ -657,11 +657,11 @@
   <HelpKINode Title="GetMainChunk method" Url="html/daf98f7b-1d7f-77bd-6893-a881d143aec6.htm" />
   <HelpKINode Title="GetMetamethod method" Url="html/8cd8ce44-0e96-accc-4fd1-963d0e99a676.htm" />
   <HelpKINode Title="GetMetamethodTailCall method" Url="html/78474f7f-131b-1373-0737-50314391a11f.htm" />
+  <HelpKINode Title="GetMetatable method" Url="html/9d3a5e56-e048-3787-cd6d-b4dd60644c52.htm" />
   <HelpKINode Title="getmetatable method">
     <HelpKINode Title="DebugModule.getmetatable Method " Url="html/4bccfe1c-efbd-eb7e-9eef-5f75176bad1b.htm" />
     <HelpKINode Title="MetaTableModule.getmetatable Method " Url="html/a9ea7687-f2ae-0927-3242-30d08574fdae.htm" />
   </HelpKINode>
-  <HelpKINode Title="GetMetatable method" Url="html/9d3a5e56-e048-3787-cd6d-b4dd60644c52.htm" />
   <HelpKINode Title="GetPerformanceCounterResult method" Url="html/8e635c16-56c2-40f4-7bae-fb47221d44cc.htm" />
   <HelpKINode Title="GetPerformanceLog method" Url="html/35138f13-8ed2-a469-3fff-ec5cabfe0edd.htm" />
   <HelpKINode Title="GetPlatformName method">
@@ -933,9 +933,9 @@
   <HelpKINode Title="LinqHelpers.OfDataType method" Url="html/d7727bd9-ec40-3017-3ee7-18522b9e2db4.htm" />
   <HelpKINode Title="load method" Url="html/4d6983d2-66ef-b6fd-31cd-678188fa7c69.htm" />
   <HelpKINode Title="LoadFile method">
-    <HelpKINode Title="IScriptLoader.LoadFile Method " Url="html/4696457b-dee8-866c-fa5f-22110b69eb1f.htm" />
     <HelpKINode Title="EmbeddedResourcesScriptLoader.LoadFile Method " Url="html/fe2e0a0f-acc9-cc55-bc40-d3f07582d642.htm" />
     <HelpKINode Title="FileSystemScriptLoader.LoadFile Method " Url="html/109b82bd-6fc1-8544-ce02-c9f7a7f223a4.htm" />
+    <HelpKINode Title="IScriptLoader.LoadFile Method " Url="html/4696457b-dee8-866c-fa5f-22110b69eb1f.htm" />
     <HelpKINode Title="Script.LoadFile Method " Url="html/927c17a5-e30d-f760-87c7-d9b0f1b1ef5d.htm" />
     <HelpKINode Title="ScriptLoaderBase.LoadFile Method " Url="html/c9cb9107-9dc9-71aa-526c-f83d4f2b55d3.htm" />
     <HelpKINode Title="UnityAssetsScriptLoader.LoadFile Method " Url="html/055362b0-f8e9-9b48-ca1c-240d75fd6d46.htm" />
@@ -1666,8 +1666,8 @@
     <HelpKINode Title="IScriptLoader.ResolveModuleName Method " Url="html/3f67081c-6ba6-3e06-43cc-dbd57b969195.htm" />
     <HelpKINode Title="ScriptLoaderBase.ResolveModuleName Method " Url="html/824aba69-3f91-f585-7ee7-53e78e064248.htm" />
   </HelpKINode>
-  <HelpKINode Title="resume method" Url="html/1c278014-bc22-61b3-e998-62f73a99e2a8.htm" />
   <HelpKINode Title="Resume method" Url="html/8f613da8-d172-a921-1bb0-96a0950d8b31.htm" />
+  <HelpKINode Title="resume method" Url="html/1c278014-bc22-61b3-e998-62f73a99e2a8.htm" />
   <HelpKINode Title="RetAddress property" Url="html/5de0e9f3-3210-518b-2b20-0958279605ce.htm" />
   <HelpKINode Title="ReturnValues field" Url="html/ef76bbfb-0eba-e61d-b82e-64e0390f1ada.htm" />
   <HelpKINode Title="reverse method" Url="html/0238387a-95ce-6941-91b5-bd3e7550e652.htm" />
@@ -2181,17 +2181,17 @@
   <HelpKINode Title="Top method" Url="html/52269265-4c2f-d287-0643-04d0daa97745.htm" />
   <HelpKINode Title="ToPrintString method" Url="html/6a33fe31-58d3-bd56-b010-f37be71a6fab.htm" />
   <HelpKINode Title="ToScalar method" Url="html/0b85af5a-24a5-a61c-dcd0-b4679c7f119b.htm" />
+  <HelpKINode Title="tostring method" Url="html/039640b3-5b12-7652-39d3-008ef6044c24.htm" />
   <HelpKINode Title="ToString method">
     <HelpKINode Title="CharPtr.ToString Method " Url="html/acc7fdc1-54fe-98c6-31e1-dcb9408148a3.htm" />
     <HelpKINode Title="DebuggerAction.ToString Method " Url="html/cd574e8a-f244-fe27-b709-2fae4777b1d2.htm" />
     <HelpKINode Title="DynValue.ToString Method " Url="html/66ce4a97-e094-80d8-4bd4-78982790f9ce.htm" />
+    <HelpKINode Title="FileUserDataBase.ToString Method " Url="html/b8f97b3a-683d-fb9e-60a1-fbd9f15a60b3.htm" />
     <HelpKINode Title="PerformanceResult.ToString Method " Url="html/c0c83fa9-914f-2b59-5bbd-dfdd14608bef.htm" />
     <HelpKINode Title="SourceRef.ToString Method " Url="html/ea8f0c10-ffd5-6eb6-884d-c151d269cdff.htm" />
-    <HelpKINode Title="WatchItem.ToString Method " Url="html/eac71b59-5d93-16ae-5c35-eb039cb38977.htm" />
-    <HelpKINode Title="FileUserDataBase.ToString Method " Url="html/b8f97b3a-683d-fb9e-60a1-fbd9f15a60b3.htm" />
     <HelpKINode Title="SymbolRef.ToString Method " Url="html/a2a7ad81-77c4-f4e3-40ed-bcbbf8e8443e.htm" />
+    <HelpKINode Title="WatchItem.ToString Method " Url="html/eac71b59-5d93-16ae-5c35-eb039cb38977.htm" />
   </HelpKINode>
-  <HelpKINode Title="tostring method" Url="html/039640b3-5b12-7652-39d3-008ef6044c24.htm" />
   <HelpKINode Title="toupper method" Url="html/1893dd6f-6694-fc4d-61a6-39b4af2a1e02.htm" />
   <HelpKINode Title="traceback method" Url="html/ddf9f2c6-ac0e-8522-4f29-ea2fe25c4d59.htm" />
   <HelpKINode Title="True property" Url="html/bb21ef39-c8a8-c0ed-24c1-308fcfa7fa0d.htm" />
@@ -2299,13 +2299,13 @@
   <HelpKINode Title="WellKnownSymbols.ENV field" Url="html/86bc6252-ffba-d424-bb67-5ab2bc15953c.htm" />
   <HelpKINode Title="WellKnownSymbols.VARARGS field" Url="html/2f32bfe8-c85a-dd7d-0b2c-8e09fca95c7b.htm" />
   <HelpKINode Title="wrap method" Url="html/5e5399d3-b9a1-c6e5-57c0-c4e649dad7a2.htm" />
-  <HelpKINode Title="Write method">
-    <HelpKINode Title="FileUserDataBase.Write Method " Url="html/9acfbdac-5cdf-c4d2-9271-15b7d3ca55e4.htm" />
-    <HelpKINode Title="StreamFileUserDataBase.Write Method " Url="html/876560be-a7f4-ecb9-671a-e49b2486604e.htm" />
-  </HelpKINode>
   <HelpKINode Title="write method">
     <HelpKINode Title="FileUserDataBase.write Method " Url="html/600c242f-06b7-dc1a-0051-2a335667fd76.htm" />
     <HelpKINode Title="IoModule.write Method " Url="html/82a464f6-6698-0010-e16b-b67a1a939a8d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Write method">
+    <HelpKINode Title="FileUserDataBase.Write Method " Url="html/9acfbdac-5cdf-c4d2-9271-15b7d3ca55e4.htm" />
+    <HelpKINode Title="StreamFileUserDataBase.Write Method " Url="html/876560be-a7f4-ecb9-671a-e49b2486604e.htm" />
   </HelpKINode>
   <HelpKINode Title="xpcall method" Url="html/045e5f76-2aee-2b92-a79a-0b00d77634c3.htm" />
   <HelpKINode Title="yield method" Url="html/b830ab34-dc56-62b9-c49d-04e91460554a.htm" />
