@@ -4,17 +4,18 @@ title: Differences between MoonSharp and Lua
 subtitle: The dark side of the moon
 ---
 
-Here is a list of differences between MoonSharp and Lua. This is of course subject to heavy changes as the development on MoonSharp goes on.
+Here is a list of differences between MoonSharp and Lua. 
+This is of course subject to heavy changes as the development on MoonSharp goes on.
+
 
 #### List of differences
 
 * Strings are Unicode: some caution is required if code uses strings to store binary data. On the other hand, strings used as real strings are a lot easier to use.
 * Weak tables are not supported
-* Very minor differences in some parts of the standard library - Updated situation in [this pdf](http://www.moonsharp.org/MoonSharpStdLib.pdf).
+* Very very minor differences in some parts of the standard library - Updated situation in [this pdf](http://www.moonsharp.org/MoonSharpStdLib.pdf).
 * Garbage Collection is different, as MoonSharp relies on .NET/Mono standard GC
 * Compatibility only at the source level - no luac, no lua binaries
 * Error messages are at times different (though most of the times they are the same)
-* Hexadecimal floats are not supported
 * Function names are tracked at function declaration, not at function calls like in Lua (noticeable only when debugging)
 * Lua does not document (AFAIK) which functions can yield and which not. For example tostring() can yield in MoonSharp but not in Lua. See [this pdf](http://www.moonsharp.org/MoonSharpStdLib.pdf) for a documented list of what can yield in MoonSharp.
 

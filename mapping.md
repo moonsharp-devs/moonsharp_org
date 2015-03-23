@@ -13,8 +13,35 @@ Isn't this a bit too complex? - you might ask.
 
 Sure it is. Automatic things are nice and good but when they fail, they fail in terribly complex ways.
 When in doubt or the thing gets too complicated, just use DynValue(s) instead. Not only you would gain in sanity and simplicity, it's also faster!
+Or, use custom converters.
 </div>
 
+
+#### Custom converters
+
+It's possible to customize the conversion process, however the setting is global and affects all scripts.
+To customize conversions, simply set the appropriate callbacks to Script.GlobalOptions.CustomConverters.
+
+For example, if we want all StringBuilders to be converted to uppercase strings when conversion from CLR to script happens, do:
+
+{% highlight csharp %}
+
+Script.GlobalOptions.CustomConverters.SetClrToScriptCustomConversion<StringBuilder>(
+	v => DynValue.NewString(v.ToString().ToUpper()));
+
+{% endhighlight %}
+
+
+If we want to customize how all tables are converted when they should match a IList<int> we can write
+
+{% highlight csharp %}
+
+Script.GlobalOptions.CustomConverters.SetScriptToClrCustomConversion(DataType.Table, typeof(IList<int>),
+	v => new List<int>() { ... });
+
+{% endhighlight %}
+
+If a converter returns *null*, the system will behave as if no custom converter existed.
 
 
 
@@ -154,8 +181,15 @@ Tables can be converted to:
 * Types assignable from List&lt;object&gt;. Elements are mapped using the default mapping.
 * Types assignable from DynValue[].
 * Types assignable from object[]. Elements are mapped using the default mapping.
+* T[], IList<T>, List<T>, ICollection<T>, IEnumerable<T>, where T is a convertible type (including other lists, etc.) 
+* IDictionary<K,V>, Dictionary<K,V>, where K and V are a convertible type (including other lists, etc.)
 
-So, for example, a Table can be converted to a IList&lt;object&gt; but not to a IList&lt;int&gt;.
+Note that conversion to generics and typed arrays have the following limitations:
+
+* They are slower, as types are created at runtime through reflection
+* If the item type is a value type, there is the potential that it will introduce incompatibilities with iOS and other platforms running in AOT mode. Do tests beforehand.
+* To compensate with these problems, you can always add custom converters in a later stage of development!
+
 
 
 

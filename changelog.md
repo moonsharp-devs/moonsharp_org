@@ -13,22 +13,27 @@ subtitle:
 * Bytecode serialization supported
 * Goto statements supported
 * Hex floats support
+* Tail call optimization support
 * Invalid comparison functions in table.sort now correctly report errors
 * Better coverage of error messages at the lexer level
 * I/O streams are now customizable.
+* Support for conversions to List<T>, IList<T>, T[], Dictionary<K,V> and other generic collection types
+* Support for customizable type converters
 * Constructors can be called on userdata (by calling a fictitious __new method on a static userdata)
 * tonumber() supports all bases between 2 and 10 (thanks jerneik)
 * Fixed a bug where the debugger connected to the wrong hostname [Flash security is perverted]
 * Fixed a potential memory leak and other hypotetical issues when a deep nested *break* is executed
 * Compatibility with mono --full-aot (which should include iOS support on Unity / Xamarin)
 * Test suite fixed for an issue where the wrong optimization mode on userdata is chosen
+* A lot of reordered things in code.. a lot of easily repairable breaking changes, sorry
+* Extended XML help coverage 
 * Version for portable.NET 4.x and .NET 4.x frameworks
 * Tested on Windows Store Apps (win8/8.1)
+* Tested on Windows Phone 8.1
 * Tested on Silverlight 5
 
 IN PROGRESS:
 
-* Tests on Windows Phone 8, 8.1
 * Re-testing on Unity 5 (Windows+Android+iOS+WinPhone+Windows8)
 * Re-testing on Xamarin (Android)
 

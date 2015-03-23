@@ -20,6 +20,18 @@ Time for some MoonSharp 0.9.0 teasers...
 * The test suite <a href="images/sl5.PNG">running on Silverlight 5 on Chrome</a>
 
 
+<hr />
+
+#### 2015-03-23
+
+As the release for MoonSharp 0.9.0 is approaching, the documentation and tutorials are being updated,
+thus they might be inconsistent with what's available in 0.8.x.
+
+As soon as all the tests on iOS over Unity3D are passed, 0.9.0 will be released!
+
+Check the <a href="changelog.html">CHANGE LOG</a> to have a peek at what's coming.
+
+
 
 <hr />
 
