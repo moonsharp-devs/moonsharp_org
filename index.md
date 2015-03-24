@@ -4,10 +4,50 @@ layout: home
 
 Don't know what MoonSharp is ? <a href="about.html" class="alert-link">Read here.</a>.
 
-Latest release: <a href="changelog.html" class="alert-link">0.8.5.1</a> \| <a href="https://github.com/xanathar/moonsharp/releases/tag/v0.8.5.1">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+Latest release: <a href="changelog.html" class="alert-link">0.9.0</a> \| <a href="https://github.com/xanathar/moonsharp/releases/tag/v0.9.0">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+
+Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestones"  class="alert-link">Around mid April 2015.</a>
 
 
-Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestones"  class="alert-link">31 March 2015.</a>
+<hr />
+
+#### 2015-03-24
+
+MoonSharp 0.9.0 has been released, with a lot of new features, including support for new platforms.
+
+As the release is **BIG** it will take a few days to update the tutorials on the website.
+The reference, on the other hand, is already up to date.
+
+Changes:
+
+* Removed ANTLR dependencies
+* Improved performances at load methods
+* string.dump implemented
+* Bytecode serialization supported
+* Goto statements supported
+* Hex floats support
+* Tail call optimization support
+* Invalid comparison functions in table.sort now correctly report errors
+* Better coverage of error messages at the lexer level
+* I/O streams are now customizable.
+* Support for conversions to List<T>, IList<T>, T[], Dictionary<K,V> and other generic collection types
+* Support for customizable type converters
+* Constructors can be called on userdata (by calling a fictitious __new method on a static userdata)
+* tonumber() supports all bases between 2 and 10 (thanks jerneik)
+* Fixed a bug where the debugger connected to the wrong hostname [Flash security is perverted]
+* Fixed a potential memory leak and other hypotetical issues when a deep nested *break* is executed
+* Compatibility with mono --full-aot (which should include iOS support on Unity / Xamarin)
+* Test suite fixed for an issue where the wrong optimization mode on userdata is chosen
+* A lot of reordered things in code.. a lot of easily repairable breaking changes, sorry
+* Extended XML help coverage 
+* Version for portable.NET 4.x and .NET 4.x frameworks
+* Tested on Windows Store Apps (win8/8.1)
+* Tested on Windows Phone 8.1
+* Tested on Silverlight 5
+* Tested on iOS (minor issues still to be solved)
+
+
+<a href="https://github.com/xanathar/moonsharp/releases/tag/v0.9.0">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 <hr />

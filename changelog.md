@@ -5,7 +5,15 @@ subtitle:
 ---
 
 #### Coming soon 
-**Available on remove-antlr branch** <span class="label label-warning">Unreleased</span>
+**Available on master branch** <span class="label label-warning">Unreleased</span>
+
+* Nothing yet
+
+<hr />
+
+
+#### Version 0.9.0
+**Released on 2015-03-23** <span class="label label-success">New</span>
 
 * Removed ANTLR dependencies
 * Improved performances at load methods
@@ -31,18 +39,14 @@ subtitle:
 * Tested on Windows Store Apps (win8/8.1)
 * Tested on Windows Phone 8.1
 * Tested on Silverlight 5
-
-IN PROGRESS:
-
-* Re-testing on Unity 5 (Windows+Android+iOS+WinPhone+Windows8)
-* Re-testing on Xamarin (Android)
+* Tested on iOS (minor issues still to be solved)
 
 
 
 <hr />
 
 #### Version 0.8.5.1
-**Released on 2014-01-13** <span class="label label-success">New</span>
+**Released on 2015-01-13**
 
 
 * Vastly improved type descriptors  - #39
