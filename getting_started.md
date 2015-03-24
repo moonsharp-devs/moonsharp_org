@@ -9,10 +9,14 @@ The tutorials on this site assume you know Lua *and* a managed language, preferr
 and you have a good knowledge of some .NET language.
 </div>
 
+
 This procedure will just give you a taste of MoonSharp and its simplicity and power.
 There are better ways to use MoonSharp, but this is the easiest one.
 
+
 Most tutorials on this site are C# only - this is the only page with some pointers to get VB.NET users started.
+
+
 
 > MoonSharp is compatible with all CLR languages - C#, VB.NET, C++/CLI, F#, Boo and whatever else you like. It could also work with DLR languages (IronPython, IronRuby, etc.).
 > 
