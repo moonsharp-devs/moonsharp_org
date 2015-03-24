@@ -14,14 +14,9 @@ There are better ways to use MoonSharp, but this is the easiest one.
 
 Most tutorials on this site are C# only - this is the only page with some pointers to get VB.NET users started.
 
-<div class="alert alert-success" role="alert">
-MoonSharp is compatible with all CLR languages - C#, VB.NET, C++/CLI, F#, Boo and whatever else you like. 
-It could also work with DLR languages (IronPython, IronRuby, etc.).
-
-Examples, however, will only be produced for C# (and in the case of this introductory page, VB.NET) as 
-keeping examples in all languages is a huge effort.
-
-</div>
+> MoonSharp is compatible with all CLR languages - C#, VB.NET, C++/CLI, F#, Boo and whatever else you like. It could also work with DLR languages (IronPython, IronRuby, etc.).
+> 
+> Examples, however, will only be produced for C# (and in the case of this introductory page, VB.NET) as keeping examples in all languages is a huge effort.
 
 
 
@@ -47,16 +42,26 @@ Otherwise, right click on "References", "Manage NuGet Packages", open the "Onlin
 package named "MoonSharp".
 
 
-##### In Visual Studio and other IDEs
+##### In Xamarin Studio, with Nuget
 
-Refer to the documentation of your IDE to add **MoonSharp.Interpreter.dll** and **Antlr4.Runtime.net35.dll**, contained in the "library" folder
+Under the "Project" menu, select "Add Nuget packages...". In the following window, search for "MoonSharp".
+Select the project whose id is exactly "MoonSharp".
+
+
+##### In Visual Studio (or any other IDE) without using Nuget
+
+Refer to the documentation of your IDE to add **MoonSharp.Interpreter.dll**, contained in the "library" folder
 of the MoonSharp distribution, as dependencies.
 
 
 ##### In Unity
 
-Put the **MoonSharp.Interpreter.dll** and **Antlr4.Runtime.net35.dll**, contained in the "library" folder
-of the MoonSharp distribution, in your Assets folder.
+Put the **MoonSharp.Interpreter.dll**, contained in the "interpreter/net35" folder
+of the MoonSharp distribution, in your Assets/Plugins folder.
+
+If Windows Store apps / Windows Phone support is needed, copy **MoonSharp.Interpreter.dll** contained 
+in the interpreter/portable-net40 folder of the MoonSharp distribution, in an Assets/Plugins/WSA folder.
+Then, follow this guide: http://docs.unity3d.com/Manual/windowsstore-plugins.html
 
 After this, add them as references from MonoDevelop-Unity.
 

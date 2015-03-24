@@ -1,5 +1,10 @@
 html, body { height: 100% }
 
+blockquote {
+  font-size: 14px;
+ }
+
+
 .logo {
     background-image: url("/logos/moonsharp.png");
     height: 259px;
