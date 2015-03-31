@@ -7,7 +7,21 @@ subtitle:
 #### Coming soon 
 **Available on master branch** <span class="label label-warning">Unreleased</span>
 
-* Nothing yet
+* Support for interop with overloaded methods
+* Support for interop with fields (note 1)
+* Support for interop with methods having ref/out parameters (note 1)
+* Support for interop with C# indexers (incl. language extension)
+* Support for interop with overloaded operators and metamethods on userdata
+* Proper REPL interpreter and facilities implemented
+*
+
+* FIXED: % operator was calling the __div metamethod instead of __mod
+
+
+TODO:
+* Support for meta-lua style lambda expressions
+
+
 
 <hr />
 

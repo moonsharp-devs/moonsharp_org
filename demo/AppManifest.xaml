@@ -1,0 +1,6 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="MoonSharpSL5ReplDemo" EntryPointType="MoonSharpSL5ReplDemo.App" RuntimeVersion="5.0.61118.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="MoonSharpSL5ReplDemo" Source="MoonSharpSL5ReplDemo.dll" />
+    <AssemblyPart x:Name="MoonSharp.Interpreter" Source="MoonSharp.Interpreter.dll" />
+  </Deployment.Parts>
+</Deployment>
