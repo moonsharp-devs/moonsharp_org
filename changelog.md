@@ -13,7 +13,6 @@ subtitle:
 * Support for interop with C# indexers (incl. language extension)
 * Support for interop with overloaded operators and metamethods on userdata
 * Proper REPL interpreter and facilities implemented
-*
 
 * FIXED: % operator was calling the __div metamethod instead of __mod
 
