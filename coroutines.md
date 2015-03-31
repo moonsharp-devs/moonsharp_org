@@ -45,6 +45,44 @@ while (true)
 
 {% endhighlight %}
 
+#### Coroutines from CLR code as CLR iterator
+
+It's possible to invoke coroutines as if they were an iterator:
+
+{% highlight csharp %}
+
+string code = @"
+	return function()
+		local x = 0
+		while true do
+			x = x + 1
+			coroutine.yield(x)
+			if (x > 5) then
+				return 7
+			end
+		end
+	end
+	";
+
+// Load the code and get the returned function
+Script script = new Script();
+DynValue function = script.DoString(code);
+
+// Create the coroutine in C#
+DynValue coroutine = script.CreateCoroutine(function);
+
+// Loop the coroutine 
+string ret = "";
+
+foreach (DynValue x in coroutine.Coroutine.AsTypedEnumerable())
+{
+	ret = ret + x.ToString();
+}
+
+Assert.AreEqual("1234567", ret);
+
+{% endhighlight %}
+
 
 #### Caveats
 
