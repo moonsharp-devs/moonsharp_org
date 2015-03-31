@@ -4,10 +4,35 @@ layout: home
 
 Don't know what MoonSharp is ? <a href="about.html" class="alert-link">Read here.</a>.
 
-Latest release: <a href="changelog.html" class="alert-link">0.9.0</a> \| <a href="https://github.com/xanathar/moonsharp/releases/tag/v0.9.0">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+Latest release: <a href="changelog.html" class="alert-link">0.9.2</a> \| <a href="https://github.com/xanathar/moonsharp/releases/tag/v0.9.2">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
-Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestones"  class="alert-link">Around mid April 2015.</a>
+Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestones"  class="alert-link">Late April 2015.</a>
 
+
+<hr />
+
+#### 2015-03-31
+
+MoonSharp 0.9.2 has been released, with a lot of new features, mostly revolving around interop with userdata (C# classes).
+
+Changes:
+
+* Support for lambda style anonymous function as done by metalua (|x,y| x*y for function(x,y) return x*y end )
+* Support for interop with overloaded methods (see note 1 below)
+* Support for interop with fields (see note 2 below)
+* Support for interop with methods having ref/out parameters (see note 2 below)
+* Support for interop with C# indexers (incl. language extension)
+* Support for interop with overloaded operators and metamethods on userdata
+* Proper REPL interpreter and facilities implemented
+* FIXED: % operator was calling the __div metamethod instead of __mod
+
+Note 1: overloaded methods add computational complexity at every call to dispatch to the correct method.
+While caching exists to improve performance, please try to avoid that.
+
+Note 2: setting a field and methods with ref/out paramenters at the moment always use reflection, whatever
+the InteropAccessMode is. Use properties and/or methods returning DynValue tuples for faster access.
+
+<a href="https://github.com/xanathar/moonsharp/releases/tag/v0.9.2">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 <hr />
 

@@ -5,8 +5,18 @@
             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="7504dc16-9dfd-be67-9ace-cd8a3c8c3afb.htm">Index</a></td><td><div class="summary">
             Performs an "index" "get" operation.
             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="d191f7cf-5c76-5b39-6416-1e6781ed0813.htm">MetaIndex</a></td><td><div class="summary">
-            Gets the value of an hypothetical metatable for this userdata.
-            NOT SUPPORTED YET.
+            
+            Gets a "meta" operation on this userdata. If a descriptor does not support this functionality,
+            it should return "null" (not a nil). 
+            
+            These standard metamethods can be supported (the return value should be a function accepting the
+            classic parameters of the corresponding metamethod):
+            __add, __sub, __mul, __div, __div, __pow, __unm, __eq, __lt, __le, __lt, __len, __concat, 
+            __pairs, __ipairs, __iterator, __call
+            
+            These standard metamethods are supported through other calls for efficiency:
+            __index, __newindex, __tostring
+            
             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="0ad35f12-9aba-9695-4a92-1c5dd411dad6.htm">SetIndex</a></td><td><div class="summary">
             Performs an "index" "set" operation.
             </div></td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion" id="seeAlsoSection"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID1RB')" onkeypress="SectionExpandCollapse_CheckKey('ID1RB', event)" tabindex="0"><img id="ID1RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="ID1RBSection" class="collapsibleSection"><h4 class="subHeading">Reference</h4><div class="seeAlsoStyle"><a href="fef3382e-b174-9b7a-72c3-8fec1b0a5fab.htm">IUserDataDescriptor Interface</a></div><div class="seeAlsoStyle"><a href="61e1acd3-7c04-56e0-a2ec-66f3051efd43.htm">MoonSharp.Interpreter.Interop Namespace</a></div></div></div></div><div id="pageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to

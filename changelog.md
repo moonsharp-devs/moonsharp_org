@@ -7,26 +7,37 @@ subtitle:
 #### Coming soon 
 **Available on master branch** <span class="label label-warning">Unreleased</span>
 
-* Support for interop with overloaded methods
-* Support for interop with fields (note 1)
-* Support for interop with methods having ref/out parameters (note 1)
-* Support for interop with C# indexers (incl. language extension)
-* Support for interop with overloaded operators and metamethods on userdata
-* Proper REPL interpreter and facilities implemented
-
-* FIXED: % operator was calling the __div metamethod instead of __mod
-
-
-TODO:
-* Support for meta-lua style lambda expressions
+Nothing yet.
 
 
 
 <hr />
 
 
+#### Version 0.9.2
+**Released on 2015-03-31** <span class="label label-success">New</span>
+
+* Support for lambda style anonymous function as done by metalua (|x,y| x*y for function(x,y) return x*y end )
+* Support for interop with overloaded methods (see note 1 below)
+* Support for interop with fields (see note 2 below)
+* Support for interop with methods having ref/out parameters (see note 2 below)
+* Support for interop with C# indexers (incl. language extension)
+* Support for interop with overloaded operators and metamethods on userdata
+* Proper REPL interpreter and facilities implemented
+* FIXED: % operator was calling the __div metamethod instead of __mod
+
+Note 1: overloaded methods add computational complexity at every call to dispatch to the correct method.
+While caching exists to improve performance, please try to avoid that.
+
+Note 2: setting a field and methods with ref/out paramenters at the moment always use reflection, whatever
+the InteropAccessMode is. Use properties and/or methods returning DynValue tuples for faster access.
+
+
+<hr />
+
+
 #### Version 0.9.0
-**Released on 2015-03-23** <span class="label label-success">New</span>
+**Released on 2015-03-23** 
 
 * Removed ANTLR dependencies
 * Improved performances at load methods
