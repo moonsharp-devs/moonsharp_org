@@ -17,7 +17,7 @@ Nothing yet.
 #### Version 0.9.2
 **Released on 2015-03-31** <span class="label label-success">New</span>
 
-* Support for lambda style anonymous function as done by metalua (``|x,y| x*y for function(x,y) return x*y end`` )
+* Support for lambda style anonymous function as done by metalua (``|x,y| x*y`` for ``function(x,y) return x*y end`` )
 * Support for interop with overloaded methods (see note 1 below)
 * Support for interop with fields (see note 2 below)
 * Support for interop with methods having ref/out parameters (see note 2 below)
