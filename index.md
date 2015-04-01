@@ -23,6 +23,8 @@ Changes:
 * Support for interop with methods having ref/out parameters (see note 2 below)
 * Support for interop with C# indexers (incl. language extension)
 * Support for interop with overloaded operators and metamethods on userdata
+* Support for interop with extension methods
+* Partial support for iterating over coroutines with a for..each loop
 * Proper REPL interpreter and facilities implemented
 * FIXED: % operator was calling the __div metamethod instead of __mod
 

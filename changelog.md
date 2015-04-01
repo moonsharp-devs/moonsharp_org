@@ -7,9 +7,12 @@ subtitle:
 #### Coming soon 
 **Available on master branch** <span class="label label-warning">Unreleased</span>
 
-Nothing yet.
-
-
+* Async methods on .NET 4.x (normal and PCL) supporting async/await
+* DynValue.ToDynamic method for easier use on .NET 4.x (normal and PCL)
+* Extended support for iterating over coroutines with a for..each loop
+* Partial support to directly use a Lua coroutine as a Unity3D coroutine 
+* Fixed a bug on Unity3D where UnityAssetsScriptLoader was not available on WSA apps
+* Fixed documentation issues
 
 <hr />
 
@@ -23,6 +26,8 @@ Nothing yet.
 * Support for interop with methods having ref/out parameters (see note 2 below)
 * Support for interop with C# indexers (incl. language extension)
 * Support for interop with overloaded operators and metamethods on userdata
+* Support for interop with extension methods
+* Partial support for iterating over coroutines with a for..each loop
 * Proper REPL interpreter and facilities implemented
 * FIXED: % operator was calling the __div metamethod instead of __mod
 
