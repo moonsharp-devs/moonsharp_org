@@ -46,7 +46,7 @@ double MoonSharpFactorial()
 
 #### Step 2: Access the global environment
 
-Now that we have a script object, we can change the global environment in which functions operate. For example, we might want to change the input to the *fact* function
+Now that we have a script object, we can change the global environment in which functions operate. For example, we might want to change the input to the ``fact`` function
 so that our program can tell which number to calculate the factorial of.
 
 {% highlight csharp %}
@@ -75,7 +75,7 @@ double MoonSharpFactorial()
 
 {% endhighlight %}
 
-As you can see, just by referencing the *script.Globals* table with a simple syntax, we can inject numbers into MoonSharp scripts. Actually we can pass a lot more
+As you can see, just by referencing the ``script.Globals`` table with a simple syntax, we can inject numbers into MoonSharp scripts. Actually we can pass a lot more
 than just numbers, but let's limit ourselves to numbers, booleans and strings for now - we'll see how to pass functions and objects later on.
 
 
@@ -87,7 +87,7 @@ Here it's how to call a Lua function from C#.
 
 {% highlight csharp %}
 
-double MoonSharpFactorial()
+double MoonSharpFactorial2()
 {
 	string scriptCode = @"    
 		-- defines a factorial function
@@ -113,9 +113,9 @@ double MoonSharpFactorial()
 
 Let's see what we did.
 
-First of all, we removed the return at the end of the script - we could have kept that, but it was going to be useless as we want to call *fact* with parameters of our choice.
+First of all, we removed the return at the end of the script - we could have kept that, but it was going to be useless as we want to call ``fact`` with parameters of our choice.
 
-At this point, the *script.DoString(...)* call will execute the file, leaving a nice *fact* function in the global environment.
+At this point, the ``script.DoString(...)`` call will execute the file, leaving a nice ``fact`` function in the global environment.
 
 Then we introduced this line:
 
@@ -123,14 +123,14 @@ Then we introduced this line:
 DynValue res = script.Call(script.Globals["fact"], 4);
 {% endhighlight %}
 
-This gets the *fact* function from the script globals and then calls it with 4 as a parameter. 
+This gets the ``fact`` function from the script globals and then calls it with 4 as a parameter. 
 
 <div class="alert alert-info" role="alert">
 There are better (as in, more performing) ways to do this, but if you are not doing a lot of calls in a time sensitive loop, this is the simplest possible way, albeit a little type unsafe.
 </div>
 
 
-Note that we can call the *fact* functions however many times we want - a Script preserves its states and is ready to be executed again and again.
+Note that we can call the ``fact`` functions however many times we want - a Script preserves its states and is ready to be executed again and again.
 
 
 

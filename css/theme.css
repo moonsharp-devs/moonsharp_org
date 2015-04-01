@@ -5,6 +5,7 @@ blockquote {
  }
 
 
+
 .logo {
     background-image: url("/logos/moonsharp.png");
     height: 259px;
@@ -12,6 +13,22 @@ blockquote {
     position: absolute;
     top: 70px;
     width: 265px;
+}
+
+a code {
+	background-color: #1c1e22;
+	border-color: #000;
+	color: #66d9ef;
+	text-decoration: underline;
+	-moz-text-decoration-style: dashed; 
+	-webkit-text-decoration-style: dashed; 
+	text-decoration-style: dashed; 	
+}
+
+code {
+	background-color: #1c1e22;
+	border-color: #000;
+	color: #f8f8f2;
 }
 
 
@@ -45,14 +62,22 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
 
 h4, .h4
 {
-font-size:21px;
+color: #e7e3f4;
+font-size:24px;
 padding-top: 18px;
+margin-top: 48px;
+margin-bottom: 16px;
+padding-bottom: 8px;
+border-bottom: 1px solid #9f8dd3;
 } 
 
 h5, .h5
 {
-font-size:18px;
+font-size:20px;
+color: #e7e3f4;
+
 padding-top: 12px;
+margin-top: 32px;
 } 
 
 

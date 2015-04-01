@@ -9,7 +9,7 @@ library) and most of it has been developed by studying the specifications and th
 
 
 
-### Features
+#### Features
 * 99% compatible with Lua 5.2 (with the only unsupported feature being weak tables support) 
 * Support for metalua style anonymous functions (lambda-style)
 * Easy to use API
@@ -30,7 +30,7 @@ library) and most of it has been developed by studying the specifications and th
 
 
 
-### Project Status
+#### Project Status
 
 * Completed, barring improvements, enhancements and new features!
 * Some intentional minimal differences exist - [see here](moonluadifferences.html)
@@ -38,14 +38,14 @@ library) and most of it has been developed by studying the specifications and th
 * Development of the standard library is finished. Updated situation in [this pdf](http://www.moonsharp.org/MoonSharpStdLib.pdf)
  
 
-#### Roadmap
+##### Roadmap
 
 * Language analysis features
 * Improvements
  
 
  
-### License
+#### License
 
 The program and libraries are released under a 3-clause BSD license - see the license section.
 

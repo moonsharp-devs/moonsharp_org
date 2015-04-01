@@ -13,7 +13,7 @@ And the basic building blocks in procedural programming are functions.
 
 #### Excercise 1, Step 1: never get tired of factorials
 
-Let's catch base with the standard factorial script we used so far:
+Let's catch base with the standard factorial script we've used so far:
 
 
 {% highlight csharp %}
@@ -85,10 +85,10 @@ That's it!
 script.Globals["Mul"] = (Func<int, int, int>)Mul;
 {% endhighlight %}
 
-This sets the "Mul" variable in the global environment to point to the Mul delegate of the application. 
-We are casting the delegate to it's type of Func<int, int, int> to please the C# compiler here - whatever technique you use to cast the delegate to a System.Object is ok.
+This sets the ``Mul`` variable in the global environment to point to the ``Mul`` delegate of the application. 
+We are casting the delegate to it's type of ``Func<int, int, int>`` to please the C# compiler here - whatever technique you use to cast the delegate to a ``System.Object`` is ok.
 
-Also, note that we defined the methods to be static, but in this case there's no need at all for them to be; instance methods are good to go.
+Also, note that we defined the methods to be ``static``, but in this case there's no need at all for them to be; instance methods are good to go.
 
 
 #### Exercise 2: Returning a sequence of numbers
@@ -126,10 +126,14 @@ private static double EnumerableTest()
 
 {% endhighlight %}
 
-Here, too, nothing too difficult. You can see how an IEnumerable (or IEnumerator) is converted on the fly to a Lua iterator for the script to run.
+Here, too, nothing too difficult. You can see how an ``IEnumerable`` (or ``IEnumerator``) is converted on the fly to a Lua iterator for the script to run.
 
-Note also how that the scripts contains directly executable code and thus accesses the getNumbers method
-at DoString time, without needing a Call .. call. Remember this, DoString and DoFile will execute code contained in the script immediately!
+Note also how that the scripts contains directly executable code and thus accesses the ``getNumbers`` method
+at ``DoString`` time, without needing a ``Call`` .. call. Remember this, ``DoString`` and ``DoFile`` will execute code contained in the script immediately!
+
+> A thing which must be noticed. MoonSharp is able to convert iterators of ``System.Collections.IEnumerable`` and ``System.Collections.IEnumerator`` types.
+> That is, the non-generic variants. If for some reason you implement a generic iterator without implementing the non-generic one, the iterator will not work.
+> All standard collection types and iterator methods like the above one implement the non-generic variants by default, so there's no need to worry too much.
 
 
 #### Returning a table
@@ -174,7 +178,7 @@ private static double TableTest1()
 
 {% endhighlight %}
 
-Here, we see how a List<int> gets automatically converted to a Lua table! Note that the resulting table will be 1-indexed as Lua tables usually are. 
+Here, we see how a ``List<int>`` gets automatically converted to a Lua table! Note that the resulting table will be 1-indexed as Lua tables usually are. 
 
 We can do better, however. We can directly build a Lua table inside our functions:
 
@@ -206,7 +210,7 @@ private static double TableTest2()
 
     Script script = new Script();
 
-    script.Globals["getNumbers"] = (Func<Table>)(() => GetNumberTable(script));
+    script.Globals["getNumbers"] = (Func<Script, Table>)(GetNumberTable);
 
     DynValue res = script.DoString(scriptCode);
 
@@ -215,39 +219,62 @@ private static double TableTest2()
 
 {% endhighlight %}
 
-You can see how easy is to operate with tables using the Table object. The only gotcha is that to create a new Table object you must have a reference to the executing script; this is the reason we are using 
+You can see how easy is to operate with tables using the ``Table`` object. 
 
-{% highlight csharp %}
-script.Globals["getNumbers"] = (Func<Table>)(() => GetNumberTable(script));
-{% endhighlight %}
+There are two things to notice however:
 
-which creates a C# closure on the fly over the script variable. Your code will likely be storing the script in a field or property, thus simplifying the code.
+* To create a new ``Table`` object you must have a reference to the executing script
+* If you have a ``Script`` parameter in a CLR function which is available to the Lua script, MoonSharp will fill it for you. This also happens with the (less likely to be used this way) ``ScriptExecutionContext`` and ``CallbackArguments`` types. Don't worry if you don't know what these do, they aren't needed to get the basics of MoonSharp working!
+
+> As a good practice, always keep the ``Script`` object around, if you can. 
+> There are some things (like creating tables) which can only be done using the ``Script`` object.
 
 
 #### Accepting a table
 
-Problem: have an API function which does something with a table.. in this case we reverse the previous problem - we generate the numbers on the Lua side and we sum them on the C# side.
+A table is converted automatically to a ``List<T>``. For example:
 
 {% highlight csharp %}
-private static double TableTestReverse()
+public static double TableTestReverse()
 {
-    string scriptCode = @"    
-        return dosum { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
-    ";
+	string scriptCode = @"    
+		return dosum { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
+	";
 
-    Script script = new Script();
+	Script script = new Script();
 
-    script.Globals["dosum"] = (Func<List<object>, double>)(l => l.OfType<double>().Sum());
+	script.Globals["dosum"] = (Func<List<int>, int>)(l => l.Sum());
 
-    DynValue res = script.DoString(scriptCode);
+	DynValue res = script.DoString(scriptCode);
 
-    return res.Number;
+	return res.Number;
 }
 {% endhighlight %}
 
-Here we have some very bad news: tables in input can be marshalled only on a few types, one of which is List<object>. But in this way we lose the automatic conversion to int and we have to operate on doubles.
 
-We could have, of course, used a Table object:
+However this can potentially create problems on some platforms (read: iOS). 
+There are a ton of ways around this problem (which you'll see in other tutorials) but suffice to say that the following
+works with no issues and is faster to boot:
+
+
+{% highlight csharp %}
+public static double TableTestReverseSafer()
+{
+	string scriptCode = @"    
+		return dosum { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
+	";
+
+	Script script = new Script();
+
+	script.Globals["dosum"] = (Func<List<object>, int>)(l => l.OfType<int>().Sum());
+
+	DynValue res = script.DoString(scriptCode);
+
+	return res.Number;
+}
+{% endhighlight %}
+
+Another way around, even faster, could have been using a ``Table`` object:
 
 {% highlight csharp %}
 static double Sum(Table t)
@@ -260,7 +287,7 @@ static double Sum(Table t)
 }
 
 
-private static double TableTestReverse2()
+private static double TableTestReverseWithTable()
 {
     string scriptCode = @"    
         return dosum { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
@@ -276,7 +303,7 @@ private static double TableTestReverse2()
 }
 {% endhighlight %}
 
-But here we have to deal with DynValue(s).
+But here we have to deal with ``DynValue``(s).
 
 To understand all of this, we need to dig a little deeper on how MoonSharp maps Lua types to C# types and viceversa.. in the next part.
 

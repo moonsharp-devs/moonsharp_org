@@ -27,10 +27,17 @@ Most tutorials on this site are C# only - this is the only page with some pointe
 
 
 
+
+
+
+
+
 #### Step 1: getting MoonSharp in your IDE
 
 The first step is to get MoonSharp in your IDE.
 There are several paths to this, depending on what IDE you are using - Visual Studio, MonoDevelop, SharpDevelop or Unity.
+
+
 
 ##### In Visual Studio, with Nuget
 
@@ -46,28 +53,40 @@ Otherwise, right click on "References", "Manage NuGet Packages", open the "Onlin
 package named "MoonSharp".
 
 
+
+
 ##### In Xamarin Studio, with Nuget
 
-Under the "Project" menu, select "Add Nuget packages...". In the following window, search for "MoonSharp".
-Select the project whose id is exactly "MoonSharp".
+Under the "Project" menu, select "Add Nuget packages...". In the following window, search for ``MoonSharp``.
+Select the project whose id is exactly ``MoonSharp``.
+
+
 
 
 ##### In Visual Studio (or any other IDE) without using Nuget
 
-Refer to the documentation of your IDE to add **MoonSharp.Interpreter.dll**, contained in the "library" folder
-of the MoonSharp distribution, as dependencies.
+Refer to the documentation of your IDE to add ``MoonSharp.Interpreter.dll``, contained in the folder of the target of your choice as a dependency.
+
+
 
 
 ##### In Unity
 
-Put the **MoonSharp.Interpreter.dll**, contained in the "interpreter/net35" folder
-of the MoonSharp distribution, in your Assets/Plugins folder.
+Put the ``MoonSharp.Interpreter.dll``, contained in the ``interpreter/net35`` folder
+of the MoonSharp distribution, in your ``Assets/Plugins`` folder.
 
-If Windows Store apps / Windows Phone support is needed, copy **MoonSharp.Interpreter.dll** contained 
-in the interpreter/portable-net40 folder of the MoonSharp distribution, in an Assets/Plugins/WSA folder.
-Then, follow this guide: http://docs.unity3d.com/Manual/windowsstore-plugins.html
+If Windows Store apps / Windows Phone support is needed, copy ``MoonSharp.Interpreter.dll`` contained 
+in the ``interpreter/portable-net40`` folder of the MoonSharp distribution, in an ``Assets/Plugins/WSA`` folder.
+Then, <a href="http://docs.unity3d.com/Manual/windowsstore-plugins.html">follow this guide</a>.
 
 After this, add them as references from MonoDevelop-Unity.
+
+
+
+
+
+
+
 
 
 
@@ -88,6 +107,11 @@ In VB.NET:
 Imports MoonSharp.Interpreter
 
 {% endhighlight %}
+
+
+
+
+
 
 #### Step 3: Call into a script 
 Here we create a function **MoonSharpFactorial** which calculates a factorial using MoonSharp.
@@ -121,6 +145,7 @@ In VB.NET:
 {% highlight vbnet %}
 
 Function MoonSharpFactorial() As Double
+	' VB.NET is not very strong at embedded newlines...
 	Dim scriptCode As String = "-- defines a factorial function" & vbCrLf &
 			"function fact (n)" & vbCrLf & _
 				"if (n == 0) then" & vbCrLf & _
@@ -137,12 +162,18 @@ End Function
 
 {% endhighlight %}
 
+
+
+
+
+
+
 #### Step 4: Profit!
 
 To run your code, of course, you just have to call the MoonSharpFactorial function 
 somewhere else in your code.
 
-
+Now you are ready to jump at the other tutorials.
 
 
 

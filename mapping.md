@@ -8,21 +8,25 @@ Before we dig deeper in MoonSharp and CLR integration, we need to clarify how ty
 Sadly, back is very different from forth and so we will analyze the two separately.
 
 
-<div class="alert alert-info" role="alert">
-Isn't this a bit too complex? - you might ask.
 
-Sure it is. Automatic things are nice and good but when they fail, they fail in terribly complex ways.
-When in doubt or the thing gets too complicated, just use DynValue(s) instead. Not only you would gain in sanity and simplicity, it's also faster!
-Or, use custom converters.
-</div>
+> Isn't this a bit too complex? - you might ask.
+> 
+> Sure it is. Automatic things are nice and good but when they fail, they fail in terribly complex ways.
+> When in doubt or the thing gets too complicated, you need to simplify things.
+> 
+> There are two ways: just use ``DynValue`` instead or use custom converters. 
+> 
+> Not only you would gain in sanity and simplicity, both these solution are also sensibly **faster** than auto-conversion!
+
 
 
 #### Custom converters
 
 It's possible to customize the conversion process, however the setting is global and affects all scripts.
-To customize conversions, simply set the appropriate callbacks to Script.GlobalOptions.CustomConverters.
 
-For example, if we want all StringBuilders to be converted to uppercase strings when conversion from CLR to script happens, do:
+To customize conversions, simply set the appropriate callbacks to ``Script.GlobalOptions.CustomConverters``.
+
+For example, if we want all ``StringBuilder`` objects to be converted to uppercase strings when conversion from CLR to script happens, do:
 
 {% highlight csharp %}
 
@@ -32,7 +36,7 @@ Script.GlobalOptions.CustomConverters.SetClrToScriptCustomConversion<StringBuild
 {% endhighlight %}
 
 
-If we want to customize how all tables are converted when they should match a IList<int> we can write
+If we want to customize how all tables are converted when they should match a ``IList<int>`` we can write
 
 {% highlight csharp %}
 
@@ -41,7 +45,7 @@ Script.GlobalOptions.CustomConverters.SetScriptToClrCustomConversion(DataType.Ta
 
 {% endhighlight %}
 
-If a converter returns *null*, the system will behave as if no custom converter existed.
+If a converter returns ``null``, the system will behave as if no custom converter existed and attempt an auto-conversion.
 
 
 
@@ -52,8 +56,8 @@ This conversion is applied in the following situations:
 * When returning an object from a function called by script
 * When returning an object from a property in a user data
 * When setting a value in a table using the indexing operator
-* When calling DynValue.FromObject
-* When using any overload of functions which takes a System.Object in place of a DynValue
+* When calling ``DynValue.FromObject``
+* When using any overload of functions which takes a ``System.Object`` in place of a ``DynValue``
 
 
 This conversion is actually quite simple. The following table explains the conversions:
@@ -99,13 +103,13 @@ In case you are writing your own collections, remember to implement one of these
 Every value which cannot be converted using this logic will throw a ScriptRuntimeException.
 
 
-#### Default Auto-Conversion of MoonSharp types to CLR types
+#### Standard Auto-Conversion of MoonSharp types to CLR types
 
-The opposite conversion is quite more complex. In fact, there exist two different conversion paths - the "default" one, and the "constrained" one. The first applies everytime you ask to convert a DynValue to an object without specifying what actually you want to receive, the other when there is a target Type to match.
+The opposite conversion is quite more complex. In fact, there exist two different conversion paths - the "standard" one, and the "constrained" one. The first applies everytime you ask to convert a ``DynValue`` to an object without specifying what actually you want to receive, the other when there is a target ``System.Type`` to match.
 
 This is used:
 
-* When calling the DynValue.ToObject 
+* When calling the ``DynValue.ToObject``
 * When retrieving values from a table using indexers
 * In some specific subcase of the constrained conversion (see below)
 
@@ -134,7 +138,7 @@ The constrained auto-conversion is a lot more complex though. In this case a Moo
 
 This is used:
 
-* When calling DynValue.ToObject&lt;T&gt;
+* When calling ``DynValue.ToObject<T>``
 * When converting a script value to a parameter in a CLR function call, or property set
 
 MoonSharp attempts very hard to convert values, but the conversion surely shows some limits, specially when tables are involved.
@@ -143,46 +147,47 @@ In this case, the conversion is more a process than a simple table of mapping, s
 
 ##### Special cases
 
-* if the target is of type MoonSharp.Interpreter.DynValue it is not converted and the original value is returned.
-* If the target is of type System.Object, the default conversion, detailed before, is applied.
-* In case of a nil value to be mapped, null is mapped to reference types and nullable value types and an attempt to match a default value is used in some cases (for example function calls for which a default is specified) for non-nullable value types, otherwise an exception is thrown.
+* if the target is of type ``MoonSharp.Interpreter.DynValue`` it is not converted and the original value is returned.
+* If the target is of type ``System.Object``, the default conversion, detailed before, is applied.
+* In case of a ``nil`` value to be mapped, ``null`` is mapped to reference types and nullable value types and an attempt to match a default value is used in some cases (for example function calls for which a default is specified) for non-nullable value types, otherwise an exception is thrown.
 * In case of no value provided, the default value is used if possible.
 
 ##### Strings
 
-Strings can be automatically converted to System.String, System.Text.StringBuilder or System.Char.
+Strings can be automatically converted to ``System.String``, ``System.Text.StringBuilder`` or ``System.Char``.
 
 ##### Booleans
 
-Booleans can be automatically converted to System.Boolean and/or System.Nullable&lt;System.Boolean&gt;. They can also be converted to System.String, System.Text.StringBuilder or System.Char.
+Booleans can be automatically converted to ``System.Boolean`` and/or ``System.Nullable<System.Boolean>``. They can also be converted to ``System.String``, ``System.Text.StringBuilder`` or ``System.Char``.
 
 ##### Numbers 
 
-Numbers can be automatically converted over System.SByte, System.Byte, System.Int16, System.UInt16, System.Int32, System.UInt32, System.Int64, System.UInt64, System.Single, System.Decimal, System.Double and their nullable counterparts. They can also be converted to System.String, System.Text.StringBuilder or System.Char.
+Numbers can be automatically converted over ``System.SByte``, ``System.Byte``, ``System.Int16``, ``System.UInt16``, ``System.Int32``, ``System.UInt32``, ``System.Int64``, ``System.UInt64``, ``System.Single``, ``System.Decimal``, ``System.Double`` and their nullable counterparts. They can also be converted to ``System.String``, ``System.Text.StringBuilder`` or ``System.Char``.
 
 ##### Functions
 
-Functions are converted to MoonSharp.Interpreter.Closure and MoonSharp.Interpreter.ClrFunction depending on their subtype. No better conversion exists.
+Script functions are converted to ``MoonSharp.Interpreter.Closure`` or ``MoonSharp.Interpreter.ScriptFunctionDelegate``.
+Callback functions are converted to ``MoonSharp.Interpreter.ClrFunction`` or ``System.Func<ScriptExecutionContext, CallbackArguments, DynValue>``.
 
 ##### Userdata
 
 Userdatas are converted only if they are not "static" (see the userdata section in the tutorials).  They are converted if the desired type can be assigned with the object to be converted.
 
-They can also be converted to System.String, System.Text.StringBuilder or System.Char, by calling the object ToString() method.
+They can also be converted to ``System.String``, ``System.Text.StringBuilder`` or ``System.Char``, by calling the object ToString() method.
 
 ##### Tables
 
 Tables can be converted to:
 
-* MoonSharp.Interpreter.Table - of course
-* Types assignable from Dictionary&lt;DynValue, DynValue&gt;.
-* Types assignable from Dictionary&lt;object, object&gt;. Keys and values are mapped using the default mapping.
-* Types assignable from List&lt;DynValue&gt;.
-* Types assignable from List&lt;object&gt;. Elements are mapped using the default mapping.
-* Types assignable from DynValue[].
-* Types assignable from object[]. Elements are mapped using the default mapping.
-* T[], IList<T>, List<T>, ICollection<T>, IEnumerable<T>, where T is a convertible type (including other lists, etc.) 
-* IDictionary<K,V>, Dictionary<K,V>, where K and V are a convertible type (including other lists, etc.)
+* ``MoonSharp.Interpreter.Table`` - of course
+* Types assignable from ``Dictionary<DynValue, DynValue>``.
+* Types assignable from ``Dictionary<object, object>``. Keys and values are mapped using the default mapping.
+* Types assignable from ``List<DynValue>``.
+* Types assignable from ``List<object>``. Elements are mapped using the default mapping.
+* Types assignable from ``DynValue[]``.
+* Types assignable from ``object[]``. Elements are mapped using the default mapping.
+* ``T[]``, ``IList<T>``, ``List<T>``, ``ICollection<T>``, ``IEnumerable<T>``, where T is a convertible type (including other lists, etc.) 
+* ``IDictionary<K,V>``, ``Dictionary<K,V>``, where K and V are a convertible type (including other lists, etc.)
 
 Note that conversion to generics and typed arrays have the following limitations:
 
@@ -191,10 +196,11 @@ Note that conversion to generics and typed arrays have the following limitations
 * To compensate with these problems, you can always add custom converters in a later stage of development!
 
 
-<div class="alert alert-info" role="alert">
-Some conversions (for example to List&gt;int&lt;) might cause problems on AOT platforms like Unity/iOS. 
-Register a custom converter to workaround issues of this kind.
-</div>
+> Some conversions (for example to ``List<int>``) might cause problems on AOT platforms like Unity/iOS. 
+> Register a custom converter to workaround issues of this kind.
+>
+> If targeting AOT platforms like iOS, always be careful with generics of value types. Generics of reference types
+> do not, in general, create problems.
 
 
 
