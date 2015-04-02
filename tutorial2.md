@@ -125,9 +125,8 @@ DynValue res = script.Call(script.Globals["fact"], 4);
 
 This gets the ``fact`` function from the script globals and then calls it with 4 as a parameter. 
 
-<div class="alert alert-info" role="alert">
-There are better (as in, more performing) ways to do this, but if you are not doing a lot of calls in a time sensitive loop, this is the simplest possible way, albeit a little type unsafe.
-</div>
+> There are better (as in, more performing) ways to do this, but if you are not doing a lot of calls in a time sensitive loop, this is the simplest possible way, albeit a little type unsafe.
+
 
 
 Note that we can call the ``fact`` functions however many times we want - a Script preserves its states and is ready to be executed again and again.

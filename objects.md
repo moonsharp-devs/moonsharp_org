@@ -122,7 +122,7 @@ class MyClass
 	}
 }
 
-static double MyClass2()
+static double CallMyClass2()
 {
 	string scriptCode = @"    
 		return obj.calcHypotenuse(3, 4);
@@ -326,6 +326,8 @@ class IndexerTestClass
 {
 	Dictionary<int, int> mymap = new Dictionary<int, int>();
 
+	public int this[int idx]
+	{
 		get { return mymap[idx]; }
 		set { mymap[idx] = value; }
 	}
@@ -495,6 +497,45 @@ The first will register a single type containing extension methods, the second r
 Extension methods are resolved along with other overloads on the methods.
 
 
+#### A word on InteropAccessMode
+
+If you typed all the examples so far in an IDE you might have noticed that most methods have an optional parameter of ``InteropAccessMode`` type.
+
+An ``InteropAccessMode`` defines how the standard descriptors will handle callbacks to CLR things. The following values are available:
+
+There is a ``UserData.DefaultAccessMode`` static property to specify which value is to be considered the default (currently, it's ``LazyOptimized``, unless changed).
+
+
+<div class="table-responsive">
+	<table class="table table-striped table-condensed">
+		<tr>
+			<th>Reflection</th>
+			<td>Optimization is not performed and reflection is used everytime to access members. This is the slowest approach but saves a lot of memory if members are seldomly used.</td>
+		</tr>
+		<tr>
+			<th>LazyOptimized</th>
+			<td>This is a hint, and MoonSharp is free to "downgrade" this to <code>Reflection</code>. Optimization is done on the fly the first time a member is accessed. This saves memory for all members that are never accessed, at the cost of an increased script execution time.</td>
+		</tr>
+		<tr>
+			<th>Preoptimized</th>
+			<td>This is a hint, and MoonSharp is free to "downgrade" this to <code>Reflection</code>. Optimization is done in a background thread which starts at registration time. If a member is accessed before optimization is completed, reflection is used.</td>
+		</tr>
+		<tr>
+			<th>BackgroundOptimized</th>
+			<td>This is a hint, and MoonSharp is free to "downgrade" this to <code>Reflection</code>.  Optimization is done at registration time.</td>
+		</tr>
+		<tr>
+			<th>HideMembers</th>
+			<td>Members are simply not accessible at all. Can be useful if you need a userdata type whose members are hidden from scripts but can still be passed around to other functions. See also <code>AnonWrapper</code> and <code>AnonWrapper&lt;T&gt;</code>.</td>
+		</tr>
+		<tr>
+			<th>Default</th>
+			<td>Use the default access mode</td>
+		</tr>
+	</table>
+</div>
+
+> Note that many modes - specifically ``LazyOptimized``, ``Preoptimized`` and ``BackgroundOptimized`` - are just "hints" and MoonSharp is free to downgrade them to ``Reflection``. This happens, for example, in the case of platforms where code is compiled ahead of time, like the iPhone and the iPad.
 
 
 

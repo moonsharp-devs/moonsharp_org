@@ -59,7 +59,7 @@ static void ErrorHandling()
 
 will print:
 
-	Doh! An error occured! chunk_1:2: attempt to index a nil value
+	Doh! An error occured! chunk_1:(2,5-36): attempt to index a nil value
 	
 If we want to raise an error to Lua, we can just do the same, and raise a ``ScriptRuntimeException``. Easy.
 
