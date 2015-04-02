@@ -4,14 +4,9 @@ title: Getting Started
 subtitle: A quick guide to your first MoonSharp project
 ---
 
-<div class="alert alert-info" role="alert">
-The tutorials on this site assume you know Lua *and* a managed language, preferrably C#. It's hard to follow the examples if you don't know at least the basis of Lua
-and you have a good knowledge of some .NET language.
-</div>
-
-
-This procedure will just give you a taste of MoonSharp and its simplicity and power.
-There are better ways to use MoonSharp, but this is the easiest one.
+This walkthrough will just give you a taste of MoonSharp and its simplicity and power.
+There are better ways to use MoonSharp, but this is the easiest one. Other tutorials will dig further and teach you how to use MoonSharp at its best.
+For now, let's get started.
 
 
 Most tutorials on this site are C# only - this is the only page with some pointers to get VB.NET users started.
@@ -24,8 +19,14 @@ Most tutorials on this site are C# only - this is the only page with some pointe
 
 
 
+Most tutorials are implemented in the <a href="https://github.com/xanathar/moonsharp/tree/master/src/Tutorial/Tutorials">tutorial project on GitHub</a>.
 
 
+
+<div class="alert alert-info" role="alert">
+The tutorials on this site assume you know Lua *and* a managed language, preferrably C#. It's hard to follow the examples if you don't know at least the basis of Lua
+and you have a good knowledge of some .NET language.
+</div>
 
 
 
