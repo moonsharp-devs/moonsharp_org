@@ -11,10 +11,11 @@ subtitle:
 * DynValue.ToDynamic method for easier use on .NET 4.x (normal and PCL)
 * Extended support for iterating over coroutines with a for..each loop
 * Partial support to directly use a Lua coroutine as a Unity3D coroutine 
+* ScriptLoaderBase and all its child will not check the LUA_PATH global anymore
 * Fixed a bug on Unity3D where UnityAssetsScriptLoader was not available on WSA apps
 * Fixed documentation issues
 
-<hr />
+
 
 
 #### Version 0.9.2
@@ -38,7 +39,7 @@ Note 2: setting a field and methods with ref/out paramenters at the moment alway
 the InteropAccessMode is. Use properties and/or methods returning DynValue tuples for faster access.
 
 
-<hr />
+
 
 
 #### Version 0.9.0
@@ -72,7 +73,7 @@ the InteropAccessMode is. Use properties and/or methods returning DynValue tuple
 
 
 
-<hr />
+
 
 #### Version 0.8.5.1
 **Released on 2015-01-13**
@@ -89,7 +90,7 @@ the InteropAccessMode is. Use properties and/or methods returning DynValue tuple
 <a href="https://github.com/xanathar/moonsharp/releases/tag/v0.8.5.1">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
-<hr />
+
 
 #### Version 0.8.2.1
 **Released on 2014-12-24**
@@ -107,7 +108,7 @@ This is a bug fix release over 0.8.1:
 <a href="https://github.com/xanathar/moonsharp/releases/tag/v0.8.2.1">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
-<hr />
+
 
 #### Version 0.8.1
 **Released on 2014-12-18** 
@@ -120,7 +121,7 @@ This is a bug fix release over 0.8.0:
 <a href="https://github.com/xanathar/moonsharp/releases/tag/v0.8.1">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
-<hr />
+
 
 #### Version 0.8.0
 **Released on 2014-12-11**
@@ -138,7 +139,7 @@ This is a bug fix release over 0.8.0:
 * Remote Debugger: added set breakpoint and clear breakpoint commands
 
 
-<hr />
+
 
 #### Version 0.7.0
 **Released on 2014-11-07** 
@@ -154,7 +155,7 @@ This is a bug fix release over 0.8.0:
 * Fixed some license issues here and there
 
 
-<hr />
+
 
 #### Version 0.6.0
 **Released on 2014-10-20** 
@@ -172,7 +173,7 @@ This is a bug fix release over 0.8.0:
 * Fixed some bugs in the parsing of string literals escape codes
 * Started a small wrapper to interface with code using the classic stack-based API (UniLua, KopiLua or Lua itself).
 
-<hr />
+
 
 #### Version 0.5.5 
 **Released on 2014-10-08**
@@ -180,7 +181,7 @@ This is a bug fix release over 0.8.0:
 * Optimized parsing stage
 * Performance statistics for diagnostics
 
-<hr />
+
 
 #### Version 0.5.3 
 **Released on 2014-10-02**
@@ -189,7 +190,7 @@ This is a bug fix release over 0.8.0:
 * Fixed a nasty bug where the code accessed a "C:\temp" directory, likely failing
 * Added a bunch of helpful overloads and helper methods
 
-<hr />
+
 
 #### Version 0.5.0 
 **Released on 2014-09-30**

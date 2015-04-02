@@ -9,7 +9,7 @@ Latest release: <a href="changelog.html" class="alert-link">0.9.2</a> \| <a href
 Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestones"  class="alert-link">Late April 2015.</a>
 
 
-<hr />
+
 
 #### 2015-03-31
 
@@ -36,7 +36,7 @@ the InteropAccessMode is. Use properties and/or methods returning DynValue tuple
 
 <a href="https://github.com/xanathar/moonsharp/releases/download/0.9.2/moonsharp_release_0.9.2.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
-<hr />
+
 
 #### 2015-03-24
 
@@ -77,7 +77,7 @@ Changes:
 <a href="https://github.com/xanathar/moonsharp/releases/tag/v0.9.0">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
-<hr />
+
 
 #### 2015-03-23
 
@@ -89,7 +89,7 @@ As soon as all the tests on iOS over Unity3D are passed, 0.9.0 will be released!
 Check the <a href="changelog.html">CHANGE LOG</a> to have a peek at what's coming.
 
 
-<hr />
+
 
 #### 2015-03-20
 
@@ -100,7 +100,7 @@ Time for some MoonSharp 0.9.0 teasers...
 * The test suite <a href="images/sl5.PNG">running on Silverlight 5 on Chrome</a>
 
 
-<hr />
+
 
 #### 2015-03-18
 
@@ -111,7 +111,7 @@ MoonSharp 0.9.0 is near, with more changes than ever.
 Check the <a href="changelog.html">CHANGE LOG</a> to have a peek at what's coming.
 
 
-<hr />
+
 
 #### 2015-03-12
 
@@ -133,7 +133,7 @@ So, to cut short, an attempt at a custom lexer+parser is ongoing, hopefully lead
 
 
 
-<hr />
+
 
 #### 2015-01-13
 
@@ -158,7 +158,7 @@ In particular userdata type descriptors are improved in this way:
 <a href="https://github.com/xanathar/moonsharp/releases/tag/v0.8.5.1">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
-<hr />
+
 
 #### 2014-12-24
 
@@ -175,7 +175,7 @@ MoonSharp 0.8.2.1 has been released, with 4 bugs fixed over 0.8.1:
 <a href="https://github.com/xanathar/moonsharp/releases/tag/v0.8.2.1">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
-<hr />
+
 
 #### 2014-12-18
 
@@ -186,7 +186,7 @@ MoonSharp 0.8.1 has been released, with two critical bug fixed over 0.8.0:
 
 <a href="https://github.com/xanathar/moonsharp/releases/tag/v0.8.1">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
-<hr />
+
 
 #### 2014-12-11
 
@@ -243,7 +243,7 @@ Next on backlog for 0.8.0:
 * antlr redistribution issues to be solved
 
 
-<hr />
+
 
 #### 2014-11-26
 
@@ -260,7 +260,7 @@ Hope to do a release soon for all you Unity dwellers.
 I have not tested other Unity targets as I don't have the devices and neither stripping as I have the free Unity not the Pro ones.. but I'll try to 
 get some Apple devices and a Unity trial later to do some tests with stripping enabled.
 
-<hr />
+
 
 #### 2014-11-25
 
@@ -272,7 +272,7 @@ Work is going on on MoonSharp. A lot of things are open actually:
 
 
 
-<hr />
+
 
 #### 2014-11-07
 
@@ -303,7 +303,7 @@ private void ActivateRemoteDebugger(Script script)
 
 Yep!. It's that simple.
 
-<hr />
+
 
 #### 2014-11-06
 
@@ -320,7 +320,7 @@ is enabled only for localhost, but it can be enabled for network debugging too. 
 
 Happy debugging!
 
-<hr />
+
 
 #### 2014-11-05
 
@@ -335,7 +335,7 @@ debuggers or things like a data load from a table source (using tables as if it 
 
 The evaluation is totally dynamic. So for example, if the expression contains a reference to a variable "x", and we are inside a whatsoever function, it might evaluate as a global. Reevaluate the same expression when a function with an upvalue (or local, or argument) "x" is on the stack, and "x" will refer to that upvalue/local/argument!
 
-<hr />
+
 
 #### 2014-11-04
 
@@ -345,7 +345,7 @@ Hopefully I will be able to release MoonSharp 0.7.0 before the week of Nov 17th,
 
 That week I'll be attending O'Reilly Velocity Europe 2014 in Barcelona.. if anyone is there and wants to talk of MoonSharp things, let me know, at info@moonsharp.org.
 
-<hr />
+
 
 #### 2014-10-21
 
@@ -353,7 +353,7 @@ Minor changes have been done to how escape sequences in strings are managed.
 
 Also, the sharing objects and error handling tutorials have been added!
 
-<hr />
+
 
 #### 2014-10-20
 
@@ -364,7 +364,7 @@ a complete list of changes.
 Note: there are a couple of compatibility breaks in this version - nothing that can't be fixed in 5 minutes, but you've been 
 warned.
 
-<hr />
+
 
 #### 2014-10-17
 
@@ -377,7 +377,7 @@ On a side note, visit <a href="http://www.darkdale.net" class="alert-link">www.d
 a dungeon crawler on the spirit of Eye of the Beholder, Lands of Lore and Legend of Grimrock and it uses MoonSharp as a 
 scripting engine!
 
-<hr />
+
 
 #### 2014-10-08
 
