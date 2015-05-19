@@ -4,9 +4,11 @@ title: Sharing objects
 subtitle: Let Lua and C# speak each other.
 ---
 
+> Note : Some features listed in this page reflect the current status of the master branch (so, they might be features missing from the latest release).
+
 A handy feature of MoonSharp is the ability to share a .NET object with a script.
 
-A type by default will share all its public methods, public properties and public fields with Lua scripts.
+A type by default will share all its public methods, public properties, public events and public fields with Lua scripts. The MoonSharpVisible attribute can be used to override this default visibility. 
 
 It is recommended to use dedicated objects as an interface between CLR code and script code (as opposed to exposing the application internal model
 to the script). A number of design patterns (Adapter, Facade, Proxy, etc.) may help in designing such an interface layer. This is particularly important to:
@@ -26,13 +28,17 @@ So, let's see what we have on the menu:
 * [Let's have a word about Type descriptors first](#theory)] - a little theory explaining what happens behind the scenes and how you can override the whole interop system
 * [Keep it simple](#simple) - the simplest way to get started
 * [A little more complex](#simple2) - we dig in, adding a little more complexity and details
-* [Calling static methods and properties](#statics) - how to call statics
+* [Calling static members](#statics) - how to call statics
 * [Should ':' or '.' be used ?](#colon) - simple question about how to call methods
 * [Overloads](#overload) - how overloads are handled
 * [ByRef parameters (ref/out in C#)](#byref) - how ref/out params are handled
 * [Indexers](#indexers) - how to handle indexers
 * [Operators and metamethods on userdata](#operators) - how to overload operators, etc.
 * [Extension Methods](#extmethods) - how to use extension methods
+* [Events](#events) - how to use events
+* [Interop Access Modes](#interopaccessmode) - what the interop access mode is and how it works
+* [Changing visibility with MoonSharpVisible](#moonsharpvisible) - how to override the visibility of members
+
 
 A lot, so let's start.
 
@@ -58,6 +64,12 @@ In order to help the creation of descriptors, the following classes are availabl
 * <a href="http://www.moonsharp.org/reference/html/6f70669b-d15d-3317-6c6c-6622a5229dd7.htm">``StandardUserDataOverloadedMethodDescriptor``</a> - this is a descriptor for overloaded and/or extended methods
 * <a href="http://www.moonsharp.org/reference/html/b950e338-488b-6e4c-d6eb-bebcecc38541.htm">``StandardUserDataPropertyDescriptor``</a> - this is a descriptor for a single property
 * <a href="http://www.moonsharp.org/reference/html/a29391b0-a33d-935f-8809-6d7c3ea0f07e.htm">``StandardUserDataFieldDescriptor``</a> - this is a descriptor for a single field
+
+> A little note about interop with value types as userdata. 
+> 
+> Just as if calling a function passing a value type as a parameter, the script would operate on a copy of the userdata, so, for example, changing a field in the userdata would not reflect on the original value. Again, this is not any different from standard behavior of value types, but it's enough to catch people by surprise.
+>
+> Additionally, value types do not support the whole spectrum of optimizations as reference types do, so some operations might be slower on value types than reference types.
 
 
 
@@ -160,7 +172,7 @@ For example, a member called ``SomeMethodWithLongName`` can be accessed from a l
 
 <a name="statics"></a>
 
-#### Calling static methods and properties
+#### Calling static members
 
 Let's say our class has the ``calcHypotenuse`` method static.
 
@@ -275,6 +287,12 @@ How can MoonSharp know which method to dispatch to, given that all numbers in Lu
 
 To solve this issue, MoonSharp calculates an heuristic factor for all overloads given the input types and chooses the best overload.
 If you think MoonSharp is resolving an overload in a wrong way, please report to the forums, for the heuristic to be calibrated.
+
+> MoonSharp tries as much to be stable with the heuristic weights, and in case of a draw of scores between methods, it always deterministically choses the same one
+> (to provide a consistent experience among builds and platforms).
+>
+> This said, it's entirely possible that MoonSharp picks an overload which is different than the one you think of. It's extremely important then that overloads perform
+> equivalent jobs so that the impact of calling the wrong overload is minimized. This should be a best practice anyway, but it's worth reinforcing the concept here.
 
 
 <a name="byref"></a>
@@ -489,13 +507,79 @@ Finally the ``__iterator`` metamethod is automatically dispatched to ``GetEnumer
 
 #### Extension Methods
 
-Finally, extension methods are supported.
+Extension methods are supported.
 
 Extension methods must be registered with <a href="http://www.moonsharp.org/reference/html/c4d99b23-3d7f-4448-d942-cc19518a7633.htm">``UserData.RegisterExtensionType``</a> or through a <a href="http://www.moonsharp.org/reference/html/67401cf0-ad24-9e4e-5336-fe2d35220b9a.htm">``RegisterAssembly(<assembly>, true)``</a> .
 The first will register a single type containing extension methods, the second registers all extension types contained in the specified assembly.
 
 Extension methods are resolved along with other overloads on the methods.
 
+
+
+
+<a name="events"></a>
+
+#### Events
+
+Events are also supported, but in a rather minimalistic way.
+Only events matching these constraints are supported:
+
+* The event must be declared in a reference type
+* The event must implement both add and remove methods
+* The event handler must have a return type of System.Void (in VB.NET, must be a Sub)
+* The event handler must have 16 parameters or less
+* The event handler must not have value type parameters or by-ref parameters
+* The event handler signature must not contain pointers or unresolved generics
+* All the parameters of the event handler must be convertible to MoonSharp types
+
+These constraints are present to avoid building code at runtime as much as possible.
+
+While they might seem limiting, for the most part they actually reflect some best practices in the design of events; they are more than enough
+to support event handlers of ``EventHandler`` and ``EventHandler<T>`` types, which are by far the most common ones (provided at least ``EventArgs`` is registered as a user data). 
+
+
+Here is a simple example using an event:
+
+{% highlight csharp %}
+class MyClass
+{
+	public event EventHandler SomethingHappened;
+
+	public void RaiseTheEvent()
+	{
+		if (SomethingHappened != null)
+			SomethingHappened(this, EventArgs.Empty);
+	}
+}
+
+static void Events()
+{
+	string scriptCode = @"    
+		function handler(o, a)
+			print('handled!', o, a);
+		end
+
+		myobj.somethingHappened.add(handler);
+		myobj.raiseTheEvent();
+		myobj.somethingHappened.remove(handler);
+		myobj.raiseTheEvent();
+	";
+
+	UserData.RegisterType<EventArgs>();
+	UserData.RegisterType<MyClass>();
+	Script script = new Script();
+	script.Globals["myobj"] = new MyClass();
+	script.DoString(scriptCode);
+}
+{% endhighlight %}
+
+Note how the event is raised by Lua code this time, but it might be raised by C# as well, without any issue.
+
+> Adding and removing event handlers are slow operations, being performed with reflection under a thread lock. On the other side, there aren't big performance penalties in handling events themselves.
+
+
+
+<a name="interopaccessmode"></a>
 
 #### A word on InteropAccessMode
 
@@ -537,5 +621,66 @@ There is a ``UserData.DefaultAccessMode`` static property to specify which value
 
 > Note that many modes - specifically ``LazyOptimized``, ``Preoptimized`` and ``BackgroundOptimized`` - are just "hints" and MoonSharp is free to downgrade them to ``Reflection``. This happens, for example, in the case of platforms where code is compiled ahead of time, like the iPhone and the iPad.
 
+<a name="moonsharpvisible"></a>
 
+#### Changing visibility with MoonSharpVisible
+
+It's possible to use the MoonSharpVisible attribute to override the default visibility of members. Here are some examples with comments - nothing hard:
+
+{% highlight csharp %}
+public class SampleClass
+{
+	// Not visible - it's private
+	private void Method1() { }
+	// Visible - it's public
+	public void Method2() { }
+	// Visible - it's private but forced visible by attribute
+	[MoonSharpVisible(true)]
+	private void Method3() { }
+	// Not visible - it's public but forced hidden by attribute
+	[MoonSharpVisible(false)]
+	public void Method4() { }
+
+	// Not visible - it's private
+	private int Field1 = 0;
+	// Visible - it's public
+	public int Field2 = 0;
+	// Visible - it's private but forced visible by attribute
+	[MoonSharpVisible(true)]
+	private int Field3 = 0;
+	// Not visible - it's public but forced hidden by attribute
+	[MoonSharpVisible(false)]
+	public int Field4 = 0;
+
+	// Not visible at all - it's private
+	private int Property1 { get; set; }
+	// Read/write - it's public
+	public int Property2 { get; set; }
+	// Readonly - it's public, but the setter is private
+	public int Property3 { get; private set; }
+	// Write only! - the MoonSharpVisible makes the getter hidden and the setter visible!
+	public int Property4 { [MoonSharpVisible(false)] get; [MoonSharpVisible(true)] private set; }
+	// Write only! - the MoonSharpVisible makes the whole property hidden but another attribute resets the setter as visible!
+	[MoonSharpVisible(false)]
+	public int Property5 { get; [MoonSharpVisible(true)] private set; }
+	// Not visible at all - the MoonSharpVisible hides everything
+	[MoonSharpVisible(false)]
+	public int Property6 { get; set; }
+	
+	// Not visible - it's private
+	private event EventHandler Event1;
+	// Visible - it's public
+	public event EventHandler Event2;
+	// Visible - it's private but forced visible by attribute
+	[MoonSharpVisible(true)]
+	private event EventHandler Event3;
+	// Not visible - it's public but forced hidden by attribute
+	[MoonSharpVisible(false)]
+	public event EventHandler Event4;
+	// Not visible - visibility modifiers over add and remove are not currently supported!
+	[MoonSharpVisible(false)]
+	public event EventHandler Event5 { [MoonSharpVisible(true)] add { } [MoonSharpVisible(true)] remove { } }	
+
+}
+{% endhighlight %}
 

@@ -7,13 +7,25 @@ subtitle:
 #### Coming soon 
 **Available on master branch** <span class="label label-warning">Unreleased</span>
 
+* Interop with enums !
 * Async methods on .NET 4.x (normal and PCL) supporting async/await
+* Revised standard descriptors architecture for better extensibility
+* Improved support for nested types
+* Improved error messages when an invalid member access is made
+* Interop support improvements for value types passed as userdata
+* Interop support for events (with limitations)
+* Interop support for varargs (ParamArray) functions
+* Improved interop with const and readonly fields
+* Improved interop with mixed access properties
 * DynValue.ToDynamic method for easier use on .NET 4.x (normal and PCL)
 * Extended support for iterating over coroutines with a for..each loop
+* Adjusted constructors visibily for StandardUserDataPropertyDescriptor and StandardUserDataFieldDescriptor
 * Partial support to directly use a Lua coroutine as a Unity3D coroutine 
-* ScriptLoaderBase and all its child will not check the LUA_PATH global anymore
+* ScriptLoaderBase and all its child can optionally ignore the LUA_PATH global
+* The REPL interpreter and ReplInterpreterScriptLoader now consider the LUA_PATH_5_2 environment variable
 * Fixed a bug on Unity3D where UnityAssetsScriptLoader was not available on WSA apps
 * Fixed documentation issues
+* Workaround a Unity3D bug where optimized access on a const field crashed the editor
 
 
 
