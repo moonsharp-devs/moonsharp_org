@@ -1,6 +1,12 @@
 ﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="MoonSharpSL5ReplDemo" EntryPointType="MoonSharpSL5ReplDemo.App" RuntimeVersion="5.0.61118.0">
   <Deployment.Parts>
     <AssemblyPart x:Name="MoonSharpSL5ReplDemo" Source="MoonSharpSL5ReplDemo.dll" />
+    <AssemblyPart x:Name="Microsoft.Threading.Tasks" Source="Microsoft.Threading.Tasks.dll" />
+    <AssemblyPart x:Name="Microsoft.Threading.Tasks.Extensions" Source="Microsoft.Threading.Tasks.Extensions.dll" />
+    <AssemblyPart x:Name="Microsoft.Threading.Tasks.Extensions.Silverlight" Source="Microsoft.Threading.Tasks.Extensions.Silverlight.dll" />
     <AssemblyPart x:Name="MoonSharp.Interpreter" Source="MoonSharp.Interpreter.dll" />
+    <AssemblyPart x:Name="System.IO" Source="System.IO.dll" />
+    <AssemblyPart x:Name="System.Runtime" Source="System.Runtime.dll" />
+    <AssemblyPart x:Name="System.Threading.Tasks" Source="System.Threading.Tasks.dll" />
   </Deployment.Parts>
 </Deployment>

@@ -4,9 +4,44 @@ layout: home
 
 Don't know what MoonSharp is ? <a href="about.html" class="alert-link">Read here.</a>.
 
-Latest release: <a href="changelog.html" class="alert-link">0.9.2</a> \| <a href="https://github.com/xanathar/moonsharp/releases/download/0.9.2/moonsharp_release_0.9.2.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+Latest release: <a href="changelog.html" class="alert-link">0.9.4</a> \| <a href="https://github.com/xanathar/moonsharp/releases/download/0.9.4/moonsharp_0.9.4.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
-Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestones"  class="alert-link">Late April 2015.</a>
+Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestones"  class="alert-link">Mid July 2015.</a> (Bug fix releases may come earlier)
+
+
+#### 2015-05-20
+
+MoonSharp 0.9.4 has been released, with a lot of new features, mostly revolving around interop with userdata with elements which could not be 
+interacted with before (events, enums, vararg functions, const and readonly members, etc.).
+
+**Documentation and tutorials will be updated in the next few days to reflect the latest changes!**.
+
+Changes: 
+
+* Interop with enums !
+* Async methods on .NET 4.x (normal and PCL) supporting async/await
+* Revised standard descriptors architecture for better extensibility
+* Improved support for nested types
+* Improved error messages when an invalid member access is made
+* Interop support improvements for value types passed as userdata
+* Interop support for events (with limitations)
+* Interop support for varargs (ParamArray) functions
+* Improved interop with const and readonly fields
+* Improved interop with mixed access properties
+* DynValue.ToDynamic method for easier use on .NET 4.x (normal and PCL)
+* Extended support for iterating over coroutines with a for..each loop
+* Adjusted constructors visibily for StandardUserDataPropertyDescriptor and StandardUserDataFieldDescriptor
+* Partial support to directly use a Lua coroutine as a Unity3D coroutine 
+* ScriptLoaderBase and all its child can optionally ignore the LUA_PATH global
+* The REPL interpreter and ReplInterpreterScriptLoader now consider the LUA_PATH_5_2 environment variable
+* Fixed a bug on Unity3D where UnityAssetsScriptLoader was not available on WSA apps
+* Fixed a bug where using AutoRegistration break automatic delegates interop
+* Fixed some issues on explicitely registered collections (See github issue #88)
+* Fixed documentation issues
+* Workaround a Unity3D bug where optimized access on a const field crashed the editor
+
+
+<a href="https://github.com/xanathar/moonsharp/releases/download/0.9.4/moonsharp_0.9.4.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 

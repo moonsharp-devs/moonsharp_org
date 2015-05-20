@@ -7,6 +7,14 @@ subtitle:
 #### Coming soon 
 **Available on master branch** <span class="label label-warning">Unreleased</span>
 
+* Nothing yet.
+
+
+
+
+#### Version 0.9.4
+**Released on 2015-05-20** <span class="label label-success">New</span>
+
 * Interop with enums !
 * Async methods on .NET 4.x (normal and PCL) supporting async/await
 * Revised standard descriptors architecture for better extensibility
@@ -24,6 +32,8 @@ subtitle:
 * ScriptLoaderBase and all its child can optionally ignore the LUA_PATH global
 * The REPL interpreter and ReplInterpreterScriptLoader now consider the LUA_PATH_5_2 environment variable
 * Fixed a bug on Unity3D where UnityAssetsScriptLoader was not available on WSA apps
+* Fixed a bug where using AutoRegistration break automatic delegates interop
+* Fixed some issues on explicitely registered collections (See github issue #88)
 * Fixed documentation issues
 * Workaround a Unity3D bug where optimized access on a const field crashed the editor
 
@@ -31,7 +41,7 @@ subtitle:
 
 
 #### Version 0.9.2
-**Released on 2015-03-31** <span class="label label-success">New</span>
+**Released on 2015-03-31** 
 
 * Support for lambda style anonymous function as done by metalua (``|x,y| x*y`` for ``function(x,y) return x*y end`` )
 * Support for interop with overloaded methods (see note 1 below)
