@@ -7,8 +7,19 @@ subtitle:
 #### Coming soon 
 **Available on master branch** <span class="label label-warning">Unreleased</span>
 
-* Nothing yet.
+Nothing yet.
 
+
+#### Version 0.9.6
+**Released on 2015-05-22** <span class="label label-success">New</span>
+
+* Support for registration of generic type definitions (e.g. ``List<>``)
+* Support for registration of generic extension methods  
+* Support for registered multidimensional arrays
+* Support for user-defined member descriptors
+* Support for calling members with ``__call`` metamethod through a ``Script.Call`` method
+* Revised support for registered array types (was breaking on some Mono versions)
+* Fixed: indexers not working on multiple base type dispatch
 
 
 

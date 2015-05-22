@@ -6,8 +6,27 @@ Don't know what MoonSharp is ? <a href="about.html" class="alert-link">Read here
 
 Latest release: <a href="changelog.html" class="alert-link">0.9.4</a> \| <a href="https://github.com/xanathar/moonsharp/releases/download/0.9.4/moonsharp_0.9.4.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
+
 Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestones"  class="alert-link">Mid July 2015.</a> (Bug fix releases may come earlier)
 
+
+#### 2015-05-22
+
+Not even two days since 0.9.4 release, and 0.9.6 is out.
+
+> With this, MoonSharp goes on hold for a 2-3 weeks for personal reasons (new job..) and focus will be on updating the documentation.
+
+Changes:
+
+* Support for registration of generic type definitions (e.g. ``List<>``)
+* Support for registration of generic extension methods (beware using this on iOS)
+* Support for registered multidimensional arrays
+* Support for user-defined member descriptors
+* Support for calling members with ``__call`` metamethod through a ``Script.Call`` method
+* Revised support for registered array types (was breaking on some Mono versions)
+* Fixed: indexers not working on multiple base type dispatch
+
+<a href="https://github.com/xanathar/moonsharp/releases/download/0.9.4/moonsharp_0.9.4.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 #### 2015-05-20
 
