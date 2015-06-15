@@ -4,10 +4,20 @@ layout: home
 
 Don't know what MoonSharp is ? <a href="about.html" class="alert-link">Read here.</a>.
 
-Latest release: <a href="changelog.html" class="alert-link">0.9.6</a> \| <a href="https://github.com/xanathar/moonsharp/releases/download/0.9.6/moonsharp_0.9.6.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+Latest release: <a href="changelog.html" class="alert-link">0.9.6.2</a> \| <a href="https://github.com/xanathar/moonsharp/releases/download/0.9.6.2/moonsharp_0.9.6.2.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestones"  class="alert-link">Mid July 2015.</a> (Bug fix releases may come earlier)
+
+
+#### 2015-06-15
+
+A small, bug fix release has been released - 0.9.6.2 :
+
+* Fixed a bunch of bugs concerning tuples and variable arguments (``...``) functions (See issue #92)
+* Added checks for illegal cross-script usage of some types (See issue #93)
+
+<a href="https://github.com/xanathar/moonsharp/releases/download/0.9.6.2/moonsharp_0.9.6.2.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 #### 2015-05-22

@@ -9,9 +9,15 @@ subtitle:
 
 Nothing yet.
 
+#### Version 0.9.6.2
+**Released on 2015-06-15** <span class="label label-success">New</span>
+
+* Fixed a bunch of bugs concerning tuples and variable arguments (``...``) functions (See issue #92)
+* Added checks for illegal cross-script usage of some types (See issue #93)
+
 
 #### Version 0.9.6
-**Released on 2015-05-22** <span class="label label-success">New</span>
+**Released on 2015-05-22** 
 
 * Support for registration of generic type definitions (e.g. ``List<>``)
 * Support for registration of generic extension methods  
