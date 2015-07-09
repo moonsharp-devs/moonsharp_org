@@ -9,8 +9,19 @@ subtitle:
 
 Nothing yet.
 
+
 #### Version 0.9.6.2
 **Released on 2015-06-15** <span class="label label-success">New</span>
+
+* Fixed a major bug in how variable arguments were handled (issue #92)
+* Fixed a problem with the registration of extension types (issue #100)
+* Fixed a potential incompatibility with IronPython and assembly auto-discovery (issue #96)
+* Fixed an invalid datetime format specifier in os module (thanks edwingeng) (issue #99)
+* Ownerships checks added to scripts, tables and closures (issue #93)
+
+
+#### Version 0.9.6.2
+**Released on 2015-06-15** 
 
 * Fixed a bunch of bugs concerning tuples and variable arguments (``...``) functions (See issue #92)
 * Added checks for illegal cross-script usage of some types (See issue #93)

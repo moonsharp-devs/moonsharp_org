@@ -984,6 +984,13 @@
             <param name="mi">The mi.</param>
             <returns></returns>
         </member>
+        <member name="M:MoonSharp.Interpreter.Interop.DescriptorHelpers.SafeGetTypes(System.Reflection.Assembly)">
+            <summary>
+            Gets the Types implemented in the assembly, catching the ReflectionTypeLoadException just in case..
+            </summary>
+            <param name="asm">The assebly</param>
+            <returns></returns>
+        </member>
         <member name="M:MoonSharp.Interpreter.Interop.DescriptorHelpers.GetConversionMethodName(System.Type)">
             <summary>
             Gets the name of a conversion method to be exposed to Lua scripts
