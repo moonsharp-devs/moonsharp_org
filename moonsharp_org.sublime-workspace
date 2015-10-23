@@ -1,0 +1,316 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"xml",
+				"XML Lint: Format"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"About"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"notes",
+				"Notes: Jotter"
+			],
+			[
+				"note",
+				"Notes: Jotter"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"git",
+				"Github: Issues"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Advanced Install Package"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"markd",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markdo",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"PACKAGE",
+				"Package Control: List Packages"
+			],
+			[
+				"Pack",
+				"Package Control: Install Package"
+			],
+			[
+				"Packa",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/mmastropaolo/Desktop/hyperdrive_review",
+		"/Users/mmastropaolo/Desktop/JSON PCM/configruation.json",
+		"/Users/mmastropaolo/Desktop/JSON PCM/data.json",
+		"/Users/mmastropaolo/Desktop/JSON PCM/ESTA",
+		"/Users/mmastropaolo/Desktop/AEMP.aspx.xml",
+		"/git/my/grimoire/Grimoire3D/Assets/Resources/MoonSharp/Scripts/sdk.lua.txt",
+		"/git/my/grimoire/Grimoire3D/Assets/Resources/MoonSharp/Scripts/lvl1.lua.txt",
+		"/Users/mmastropaolo/Downloads/OutputConfigData-1.cs",
+		"/git/my/grimoire/Docs/sdk.md",
+		"/Users/mmastropaolo/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/mmastropaolo/Dropbox/Tierra/AutoDeploy_Doc.md",
+		"/Users/mmastropaolo/Library/Application Support/Sublime Text 2/Packages/User/Markdown Extended.sublime-settings",
+		"/git/my/grimoire/Docs/sample_scripts.lua",
+		"/Users/mmastropaolo/Dropbox/grimoire_docs/sdk.md",
+		"/Users/mmastropaolo/Dropbox/Grimoire3D/Assets/Resources/MoonSharp/Scripts/sdk.lua.txt",
+		"/Users/mmastropaolo/Dropbox/Grimoire3D/Assets/Resources/MoonSharp/Scripts/lvl1.lua.txt",
+		"/Users/mmastropaolo/Library/Fonts/SourceCodePro-Medium.otf",
+		"/Users/mmastropaolo/test.lua",
+		"/git/my/moonsharp/.git/COMMIT_EDITMSG",
+		"/Users/mmastropaolo/Library/Application Support/Sublime Text 2/Packages/Default/Preferences (OSX).sublime-settings",
+		"/Users/mmastropaolo/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/mmastropaolo/Dropbox/Grimoire3D/Assets/Resources/MoonSharp/Scripts/sdk.txt",
+		"/Users/mmastropaolo/Dropbox/Sublime/User/Default (OSX).sublime-keymap",
+		"/Users/mmastropaolo/Desktop/per_rossana.txt",
+		"/Users/mmastropaolo/Dropbox/Tierra/Changed conversions for AEMP.sql",
+		"/Users/mmastropaolo/Dropbox/Inventario messaggi FEP.txt",
+		"/Users/mmastropaolo/Downloads/FEP.CommController.exe.config",
+		"/Users/mmastropaolo/Desktop/List of countries from RGA.txt",
+		"/Users/mmastropaolo/Desktop/AutoDeploy_Doc.md",
+		"/Users/mmastropaolo/Desktop/Tierra ATnT CDMA IP change.sql",
+		"/Users/mmastropaolo/Desktop/wtf.xml",
+		"/Users/mmastropaolo/Desktop/TW JAVA SDK/MED-61061-CD-055_M010_ThingWorx-Java-SDK-5-0-1-103/JAVA_SDK_README.TXT",
+		"/Users/mmastropaolo/Desktop/Thingworx SDK/examples/SteamSensor/src/main.c",
+		"/Users/mmastropaolo/aws-stop-thingworx.sh",
+		"/Users/mmastropaolo/aws-start-thingworx.sh",
+		"//aws-start-thingworx.sh",
+		"/Users/mmastropaolo/.aws/credentials",
+		"/Users/mmastropaolo/.aws/config",
+		"/Users/mmastropaolo/Desktop/Various Scripts Snippets for Separation.sql",
+		"/Users/mmastropaolo/Desktop/Bring device to BETA AG.sql",
+		"/Users/mmastropaolo/Desktop/Bring device to BETA CE.sql",
+		"/Users/mmastropaolo/tools/rabbit-mq.sh",
+		"/Users/mmastropaolo/mm.cfg",
+		"/Users/mmastropaolo/Desktop/Thingworx SDK/examples/SteamSensorWithFileTransfer/src/main.c",
+		"/Users/mmastropaolo/Library/Application Support/Sublime Text 2/Packages/C#/Build.tmLanguage",
+		"/Users/mmastropaolo/Library/Application Support/Sublime Text 2/Packages/C#/C#.tmLanguage",
+		"/Users/mmastropaolo/Library/Application Support/Sublime Text 2/Packages/Default/Main.sublime-menu",
+		"/Users/mmastropaolo/Library/Application Support/Sublime Text 2/Packages/Default/Syntax.sublime-menu",
+		"/git/my/moonsharp_org/.git/COMMIT_EDITMSG",
+		"/Users/mmastropaolo/Desktop/todo test",
+		"/Users/mmastropaolo/Desktop/List devices for re-registration from DBSYS.sql",
+		"/Users/mmastropaolo/Desktop/Magnet/Cisco/Topcon VPN (connecting from anywhere).pcf",
+		"/Users/mmastropaolo/Downloads/Devices.TXT",
+		"/Users/mmastropaolo/Downloads/xml",
+		"/private/etc/mail.rc",
+		"/Users/mmastropaolo/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/mmastropaolo/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/mmastropaolo/Library/Application Support/Sublime Text 2/Packages/Default/Preferences (Windows).sublime-settings",
+		"/git/cnh-myfleet-ag/Database/3.5.13 - DML.sql",
+		"/git/cnh-myfleet-ag/Database/3.5.13 - DDL.sql",
+		"/git/cnh-myfleet-ag/Database/3.5.12 - DDL.sql",
+		"/git/cnh-myfleet-ag/Database/3.5.11 - DML.sql",
+		"/git/my/moonsharp/src/MoonSharp.Interpreter/Interop/StandardDescriptors/StandardUserDataDescriptor.cs",
+		"/Users/mmastropaolo/Library/Application Support/Sublime Text 2/Packages/Markdown Todo/readme.md",
+		"/Users/mmastropaolo/Desktop/todo test.md",
+		"/Users/mmastropaolo/Library/Application Support/Sublime Text 2/Packages/User/Package Control.sublime-settings",
+		"/git/my/moonsharp/README.md",
+		"/Users/mmastropaolo/Library/Application Support/Sublime Text 2/Packages/User/Distraction Free.sublime-settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"#offsetUTC#",
+			"#td#",
+			"#fd#",
+			"#units",
+			".git",
+			"localhost",
+			",",
+			";",
+			"gugliel",
+			"pat",
+			"patrizia",
+			"end",
+			"pdt_product_config",
+			"pdtprcf_product",
+			"pdtprcf_option",
+			"pdtprcf_id",
+			"\"",
+			"UTILI",
+			"\"",
+			"find",
+			"shift+p",
+			"∂∂",
+			"•	"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"0",
+			"'2015-09-25 10:37:00'",
+			"'2015-09-24 10:37:00'",
+			"trr-cnh-app01",
+			"\\t",
+			",",
+			"pdt_product_factoryfit",
+			"pdtprff_product",
+			"pdtprff_option",
+			"pdtprff_id",
+			"'",
+			" ",
+			"INSERT INTO public.unl_type_tdac(unltt_code, unltt_name) VALUES ('"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.jotter":
+	{
+		"height": 118.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/Users/mmastropaolo/test.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 239.0,
+	"status_bar_visible": true
+}

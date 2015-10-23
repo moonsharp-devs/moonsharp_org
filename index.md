@@ -4,10 +4,27 @@ layout: home
 
 Don't know what MoonSharp is ? <a href="about.html" class="alert-link">Read here.</a>.
 
-Latest release: <a href="changelog.html" class="alert-link">0.9.8.0</a> \| <a href="https://github.com/xanathar/moonsharp/releases/download/v0.9.8.0/moonsharp_0.9.8.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+Latest release: <a href="changelog.html" class="alert-link">1.0.0.0</a> \| <a href="https://github.com/xanathar/moonsharp/releases/download/v0.9.8.0/moonsharp_0.9.8.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
-Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestones"  class="alert-link">Mid July 2015.</a> (Bug fix releases may come earlier)
+Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestones"  class="alert-link">Who knows.</a> (Bug fix releases may come earlier)
+
+
+#### 2015-10-22
+
+There comes a time when you look at your child and you have to say.. ok you are an adult now!
+Ok, not exactly like this, but I felt it was about time to call this a 1.0 !
+
+So, MoonSharp 1.0.0.0 has been released, with a couple of new features and some bug fixes:
+
+* Added a PropertyTableAssigner facility which allows POCO objects made of properties to be filled by deserialization of a table.
+* Added a DebuggerEnabled property so that the debugger can be disabled for specific scripts invocations (issue #113)
+* Script loading now uses an access mode which allows shared operations (thanks Atom0s)
+* Fixed: Capturing varargs in table from inner scope causes null ref exception (issue #110)
+* Fixed: Event re-registration might now work (issue #112)
+* Fixed: error messages in load and loadfile functions were at times unhelpful (issue #107)
+
+<a href="https://github.com/xanathar/moonsharp/releases/download/v0.9.8.0/moonsharp_0.9.8.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 #### 2015-07-09
