@@ -4,7 +4,7 @@ layout: home
 
 Don't know what MoonSharp is ? <a href="about.html" class="alert-link">Read here.</a>.
 
-Latest release: <a href="changelog.html" class="alert-link">1.0.0.0</a> \| <a href="https://github.com/xanathar/moonsharp/releases/download/v0.9.8.0/moonsharp_0.9.8.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+Latest release: <a href="changelog.html" class="alert-link">1.0.0.0</a> \| <a href="https://github.com/xanathar/moonsharp/releases/download/v1.0.0.0/moonsharp_release_1.0.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestones"  class="alert-link">Who knows.</a> (Bug fix releases may come earlier)
@@ -24,7 +24,9 @@ So, MoonSharp 1.0.0.0 has been released, with a couple of new features and some 
 * Fixed: Event re-registration might now work (issue #112)
 * Fixed: error messages in load and loadfile functions were at times unhelpful (issue #107)
 
-<a href="https://github.com/xanathar/moonsharp/releases/download/v0.9.8.0/moonsharp_0.9.8.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+Also in the news : I'm working on Unity asset store packages. Stay tuned.
+
+<a href="https://github.com/xanathar/moonsharp/releases/download/v1.0.0.0/moonsharp_release_1.0.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 #### 2015-07-09
