@@ -33,4 +33,8 @@ IoModule.SetDefaultFile(script, IoModule.DefaultFiles.Err, myInputStream);
 {% endhighlight %}
 
 
+#### How can I limit the number of instructions a script will execute without losing state ?
+
+See <a href="coroutines.html#preemptive">Preemptive coroutines</a>.
+
 

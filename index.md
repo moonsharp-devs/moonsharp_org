@@ -4,10 +4,22 @@ layout: home
 
 Don't know what MoonSharp is ? <a href="about.html" class="alert-link">Read here.</a>.
 
-Latest release: <a href="changelog.html" class="alert-link">1.0.0.0</a> \| <a href="https://github.com/xanathar/moonsharp/releases/download/v1.0.0.0/moonsharp_release_1.0.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+Latest release: <a href="changelog.html" class="alert-link">1.1.1.0</a> \| <a href="https://github.com/xanathar/moonsharp/releases/download/v1.1.0.0/moonsharp_release_1.1.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 Next scheduled release: <a href="https://github.com/xanathar/moonsharp/milestones"  class="alert-link">Who knows.</a> (Bug fix releases may come earlier)
+
+
+#### 2015-12-08
+
+MoonSharp 1.1.0.0 has been released!
+
+* New feature: <a href="coroutines.html#preemptive">Preemptive coroutines</a> to limit time spent in scripts while preserving state.
+* Added Script parameter to custom converters - this might break compatibility if you were getting custom converters. (Issue #118)
+* Added methods to easily build an array table from a DynValue array.
+* Fixed issue #117 - long empty comments not lexed correctly.
+
+<a href="https://github.com/xanathar/moonsharp/releases/download/v1.1.0.0/moonsharp_release_1.1.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 #### 2015-10-22

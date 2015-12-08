@@ -9,6 +9,25 @@ subtitle:
 
 Nothing yet.
 
+#### Version 1.1.1.0
+** Released on 2015-12-08
+
+* New feature: <a href="coroutines.html#preemptive">Preemptive coroutines</a> to limit time spent in scripts while preserving state.
+* Added Script parameter to custom converters - this might break compatibility if you were getting custom converters. (Issue #118)
+* Added methods to easily build an array table from a DynValue array.
+* Fixed issue #117 - long empty comments not lexed correctly.
+
+
+#### Version 1.0.0.0
+** Released on 2015-10-22
+
+* Added a PropertyTableAssigner facility which allows POCO objects made of properties to be filled by deserialization of a table.
+* Added a DebuggerEnabled property so that the debugger can be disabled for specific scripts invocations (issue #113)
+* Script loading now uses an access mode which allows shared operations (thanks Atom0s)
+* Fixed: Capturing varargs in table from inner scope causes null ref exception (issue #110)
+* Fixed: Event re-registration might now work (issue #112)
+* Fixed: error messages in load and loadfile functions were at times unhelpful (issue #107)
+
 
 #### Version 0.9.6.2
 **Released on 2015-06-15** <span class="label label-success">New</span>
