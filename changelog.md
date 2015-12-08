@@ -9,7 +9,7 @@ subtitle:
 
 Nothing yet.
 
-#### Version 1.1.1.0
+#### Version 1.1.0.0
 ** Released on 2015-12-08
 
 * New feature: <a href="coroutines.html#preemptive">Preemptive coroutines</a> to limit time spent in scripts while preserving state.
