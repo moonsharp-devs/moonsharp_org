@@ -37,7 +37,8 @@ So, let's see what we have on the menu:
 * [Extension Methods](#extmethods) - how to use extension methods
 * [Events](#events) - how to use events
 * [Interop Access Modes](#interopaccessmode) - what the interop access mode is and how it works
-* [Changing visibility with MoonSharpVisible](#moonsharpvisible) - how to override the visibility of members
+* [Changing visibility with MoonSharpHidden and MoonSharpVisible](#moonsharpvisible) - how to override the visibility of members
+* [Removing members](#moonsharphide) - how to remove the visibility of members
 
 
 A lot, so let's start.
@@ -623,9 +624,9 @@ There is a ``UserData.DefaultAccessMode`` static property to specify which value
 
 <a name="moonsharpvisible"></a>
 
-#### Changing visibility with MoonSharpVisible
+#### Changing visibility with MoonSharpHidden and MoonSharpVisible
 
-It's possible to use the MoonSharpVisible attribute to override the default visibility of members. Here are some examples with comments - nothing hard:
+It's possible to use the ``MoonSharpHidden`` and/or ``MoonSharpVisible`` attribute to override the default visibility of members (``MoonSharpHidden`` is a shortcut for ``MoonSharpVisible(false)``). Here are some examples with comments - nothing hard:
 
 {% highlight csharp %}
 public class SampleClass
@@ -639,6 +640,9 @@ public class SampleClass
 	private void Method3() { }
 	// Not visible - it's public but forced hidden by attribute
 	[MoonSharpVisible(false)]
+	public void Method4() { }
+	// Not visible - it's public but forced hidden by attribute
+	[MoonSharpHidden]
 	public void Method4() { }
 
 	// Not visible - it's private
@@ -684,3 +688,25 @@ public class SampleClass
 }
 {% endhighlight %}
 
+<a name="moonsharphide"></a>
+
+#### Removing members
+
+Sometimes it's needed to remove members from a registered type to hide them from scripts.
+There are several ways of doing this. One is to remove them manually after registration of the type:
+
+
+{% highlight csharp %}
+var descr = ((StandardUserDataDescriptor)(UserData.RegisterType<SomeType>()));
+descr.RemoveMember("SomeMember");
+{% endhighlight %}
+
+Otherwise, simply add this attribute to the type declaration:
+
+{% highlight csharp %}
+[MoonSharpHide("SomeMember")]
+public class SomeType
+...
+{% endhighlight %}
+
+This is pretty important as you might wish to hide, for example, inherited members you don't override.

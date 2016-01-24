@@ -4,12 +4,6 @@ title: Script Loaders
 subtitle: How to change the way MoonSharp reads scripts from files
 ---
 
-<div class="alert alert-warning" role="alert">
-On the whole, most of this tutorial works on 0.9.2. Be aware that a couple of minor things are new to unreleased versions though.
-</div>
-
-
-
 MoonSharp is meant to support multiple platforms. It can't choose which platforms it will run on, as that's the choice of the end user of the library, so it has somehow to be able to run, say, as a daemon in Linux, as a WPF application, as an app on a mobile phone or a game on a console. For example, APIs as simple as a humble FileStream are not available on Windows Store Apps.
 
 Also, MoonSharp doesn't know how it's supposed to run and work on the app using it. For example, what if you want ``loadfile`` to load from embedded resources instead ?

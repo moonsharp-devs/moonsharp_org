@@ -7,10 +7,24 @@ subtitle:
 #### Coming soon 
 **Available on master branch** <span class="label label-warning">Unreleased</span>
 
-Nothing yet.
+* Nothing, yet.
 
-#### Version 1.1.0.0
-** Released on 2015-12-08
+
+#### Version 1.2.1.0 
+** Released on 2015-01-24 <span class="label label-success">New</span>
+
+* Support for Proxy objects 
+* Support for sub-objects in property assigners
+* MoonSharpHide attribute to specify members not to be exposed to Lua scripts
+* MoonSharpVisible attribute now can be added to constructors too
+* MoonSharpHidden attribute as a shortcut for MoonSharpVisible(false) also in an easier namespace to use
+* UnityAssetScriptLoader has new constructors which don't require reflection use (to ease IL2CPP porting)
+* Fixed a weird bug with using the same destination variable twice in a for-iterator statement (while syntax is parsed correctly, behavior is still undefined as it's not really correct Lua)
+
+
+
+#### Version 1.1.0.0 
+** Released on 2015-12-08 
 
 * New feature: <a href="coroutines.html#preemptive">Preemptive coroutines</a> to limit time spent in scripts while preserving state.
 * Added Script parameter to custom converters - this might break compatibility if you were getting custom converters. (Issue #118)
@@ -30,7 +44,7 @@ Nothing yet.
 
 
 #### Version 0.9.6.2
-**Released on 2015-06-15** <span class="label label-success">New</span>
+**Released on 2015-06-15** 
 
 * Fixed a major bug in how variable arguments were handled (issue #92)
 * Fixed a problem with the registration of extension types (issue #100)
@@ -60,7 +74,7 @@ Nothing yet.
 
 
 #### Version 0.9.4
-**Released on 2015-05-20** <span class="label label-success">New</span>
+**Released on 2015-05-20**
 
 * Interop with enums !
 * Async methods on .NET 4.x (normal and PCL) supporting async/await
@@ -156,10 +170,6 @@ the InteropAccessMode is. Use properties and/or methods returning DynValue tuple
 * Fixed: String patterns do not support \0 characters - %z must be used instead.  - #29
 
 
-<a href="https://github.com/xanathar/moonsharp/releases/tag/v0.8.5.1">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
-
-
-
 
 #### Version 0.8.2.1
 **Released on 2014-12-24**
@@ -174,9 +184,6 @@ This is a bug fix release over 0.8.1:
 
 **Note: 0.8.2.1 has not been released on NuGet at the moment**
 
-<a href="https://github.com/xanathar/moonsharp/releases/tag/v0.8.2.1">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
-
-
 
 
 #### Version 0.8.1
@@ -186,8 +193,6 @@ This is a bug fix release over 0.8.0:
 
 * A **lot** of bug-fixes regarding error handling on nested C# calls and coroutines
 * A bad bug involving a miscalculation of table length has been fixed (See issue #38)
-
-<a href="https://github.com/xanathar/moonsharp/releases/tag/v0.8.1">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 

@@ -8,12 +8,10 @@ subtitle: Freaky answers questioned.
 
 The interpreter runs correctly and fast enough for the common needs. It strikes a unique balance in performance and ease of use, specially when heavy interoperation with CLR code is needed.
 
-The standard library is missing some methods, but is converging fast enough. Still missing are io, os and file. Everything else is either there (most 
-things) or won't be (debug). See <a href="http://www.moonsharp.org/MoonSharpStdLib.pdf">this pdf for more info</a>.
+The standard library is missing only a few ``debug methods``, but is converging fast enough. See <a href="http://www.moonsharp.org/MoonSharpStdLib.pdf">this pdf for more info</a>.
 
-A version targeting .NET 4.x portable class libraries needs to be done.
+A version targeting .NET 4.x portable class libraries is included in the package.
 
-Previously on this list were coroutines, string library, debugger and other things which weren't completed. They are, now ;).
 
 
 ##### Are Lua and MoonSharp 100% compatible ?
