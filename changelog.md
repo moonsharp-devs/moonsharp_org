@@ -7,7 +7,8 @@ subtitle:
 #### Coming soon 
 **Available on master branch** <span class="label label-warning">Unreleased</span>
 
-* Nothing, yet.
+* Special syntax for table constructor ``${ ... }`` which can be used to declare a shared table.
+
 
 
 #### Version 1.2.1.0 

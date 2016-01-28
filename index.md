@@ -7,8 +7,20 @@ Don't know what MoonSharp is ? <a href="about.html" class="alert-link">Read here
 Latest release: <a href="changelog.html" class="alert-link">1.2.1.0</a> \| <a href="https://github.com/xanathar/moonsharp/releases/download/v1.2.1.0/moonsharp_release_1.2.1.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
+#### 2016-01-28
 
-#### 2015-01-24
+Just as a little peek into what is coming. Soon. 
+
+Work is going on towards reaching IL2CPP maximum compatibility. Let's clarify. As now MoonSharp has quite a good degree of compatibility with IL2CPP but it requires registering the scripts manually (or using DoString instead of DoFile) and a lot of painful fiddling with the ``link.xml`` file. 
+
+But why fiddling with reflection when one can use no reflection at all ? Soon MoonSharp will include a little utility which will take a snapshot of what types are registered for script interop, and will create a C# source file on the fly which allows for no reflection (thus maximum IL2CPP compatibility), faster startup and faster execution, specially on AOT/IL2CPP platforms (like iOS) and in corner cases. At the price of a little more workflow effort (but very little) and some little extra requirements on interop types.. which can handily be solved through proxy objects.
+
+If you are not using Unity or Xamarin, you probably have less reasons to rely on these (desktop .NET and Mono are a lot more powerful), but you'll still benefit from faster startup and execution.
+
+Stay tuned for more anticipations.
+
+
+#### 2016-01-24
 
 MoonSharp 1.2.1.0 has been released!
 
