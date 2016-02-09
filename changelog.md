@@ -7,12 +7,23 @@ subtitle:
 #### Coming soon 
 **Available on master branch** <span class="label label-warning">Unreleased</span>
 
-* Special syntax for table constructor ``${ ... }`` which can be used to declare a shared table.
+
+#### Version 1.5.0.1 
+** Released on 2015-02-09 <span class="label label-success">New</span>
+
+
+* Hardwiring.
+* DynValue.NewPrimeTable() to create a prime table, that is a table which can be shared between Scripts
+* Special syntax for table constructor ``${ ... }`` which can be used to declare a "prime" table.
+* Serialization of prime tables as exchange data format
+* Created ``IRegistrationPolicy`` interface to customize the type registration process
+* Fixed: changing the first upvalue of a chunk did not change the _ENV of that chunk (#126) 
+* Fixed: UserData.RegisterAssembly was not registering types correctly if no assembly was passed
 
 
 
 #### Version 1.2.1.0 
-** Released on 2015-01-24 <span class="label label-success">New</span>
+** Released on 2015-01-24
 
 * Support for Proxy objects 
 * Support for sub-objects in property assigners

@@ -4,7 +4,26 @@ layout: home
 
 Don't know what MoonSharp is ? <a href="about.html" class="alert-link">Read here.</a>.
 
-Latest release: <a href="changelog.html" class="alert-link">1.2.1.0</a> \| <a href="https://github.com/xanathar/moonsharp/releases/download/v1.2.1.0/moonsharp_release_1.2.1.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+Latest release: <a href="changelog.html" class="alert-link">1.5.0.1</a> \| <a href="https://github.com/xanathar/moonsharp/releases/download/v1.5.0.1/moonsharp_release_1.5.0.1.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+
+
+
+#### 2016-02-09
+
+MoonSharp 1.5.0.1 has been released!
+
+Also, check out the new tutorials sections.
+
+* Hardwiring.
+* DynValue.NewPrimeTable() to create a prime table, that is a table which can be shared between Scripts
+* Special syntax for table constructor ``${ ... }`` which can be used to declare a "prime" table.
+* Serialization of prime tables as exchange data format
+* Created ``IRegistrationPolicy`` interface to customize the type registration process
+* Fixed: changing the first upvalue of a chunk did not change the _ENV of that chunk (#126) 
+* Fixed: UserData.RegisterAssembly was not registering types correctly if no assembly was passed
+
+<a href="https://github.com/xanathar/moonsharp/releases/download/v1.5.0.1/moonsharp_release_1.5.0.1.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+
 
 
 #### 2016-01-28
