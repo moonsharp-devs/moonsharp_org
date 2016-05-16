@@ -4,8 +4,26 @@ layout: home
 
 Don't know what MoonSharp is ? <a href="about.html" class="alert-link">Read here.</a>.
 
-Latest release: <a href="changelog.html" class="alert-link">1.5.0.1</a> \| <a href="https://github.com/xanathar/moonsharp/releases/download/v1.5.0.1/moonsharp_release_1.5.0.1.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+Latest release: <a href="changelog.html" class="alert-link">1.6.0.0</a> \| <a href="https://github.com/xanathar/moonsharp/releases/download/v1.6.0.0/moonsharp_release_1.6.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
+
+#### 2016-05-16
+
+MoonSharp 1.6.0.0 released:
+
+* Added a ``RethrowExceptionNested`` option to ``Script.GlobalOptions`` which instead of doing a plain re-throw of exceptions, embeds them in the InnerException property of a new exception object. Useful to simplify handling (newer exceptions are automatically decorated) and to preserve stack traces on Mono/Unity (annoying Mono bug..)
+* Removed _ENV tables from serialized bytecode (thanks Matija Hustić)
+* Added non-standard ``contains``, ``startsWith`` and ``endsWith`` methods to ``string`` module.
+* Refactored the Table class's ``Set``/``Get`` methods to be more symmetrical, with added ``RawGet``, ``Remove`` and ``Append`` methods (thanks Francois Retief)
+* Added strong names (thanks Fernando P. Najera Cano)
+* Fixed : Events missing add or remove methods could cause a NullReferenceException
+* Fixed : ``__newindex`` metamethod can completely break the MoonSharp VM (bad bad bug)
+* Fixed : Lexer matched non-western digits as valid numbers (if you are a .NET developer, recommended read: <a href="https://blogs.msdn.microsoft.com/oldnewthing/20040309-00/?p=40333/">this</a> - ouch)
+
+<a href="https://github.com/xanathar/moonsharp/releases/download/v1.6.0.0/moonsharp_release_1.6.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+
+
+*As a reminder : if you want to send a pull request, please check that it doesn't break unit tests before sending!*
 
 
 #### 2016-02-09

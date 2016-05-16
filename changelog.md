@@ -8,8 +8,23 @@ subtitle:
 **Available on master branch** <span class="label label-warning">Unreleased</span>
 
 
+#### Version 1.6.0.0 
+** Released on 2016-05-16 <span class="label label-success">New</span>
+
+
+* Added a ``RethrowExceptionNested`` option to ``Script.GlobalOptions`` which instead of doing a plain re-throw of exceptions, embeds them in the InnerException property of a new exception object. Useful to simplify handling (newer exceptions are automatically decorated) and to preserve stack traces on Mono/Unity (annoying Mono bug..)
+* Removed _ENV tables from serialized bytecode (thanks Matija Hustić)
+* Added non-standard ``contains``, ``startsWith`` and ``endsWith`` methods to ``string`` module.
+* Refactored the Table class's ``Set``/``Get`` methods to be more symmetrical, with added ``RawGet``, ``Remove`` and ``Append`` methods (thanks Francois Retief)
+* Added strong names (thanks Fernando P. Najera Cano)
+* Fixed : Events missing add or remove methods could cause a NullReferenceException
+* Fixed : ``__newindex`` metamethod can completely break the MoonSharp VM (bad bad bug)
+* Fixed : Lexer matched non-western digits as valid numbers (if you are a .NET developer, recommended read: <a href="https://blogs.msdn.microsoft.com/oldnewthing/20040309-00/?p=40333/">this</a> - ouch)
+
+
+
 #### Version 1.5.0.1 
-** Released on 2015-02-09 <span class="label label-success">New</span>
+** Released on 2016-02-09 
 
 
 * Hardwiring.
@@ -23,7 +38,7 @@ subtitle:
 
 
 #### Version 1.2.1.0 
-** Released on 2015-01-24
+** Released on 2016-01-24
 
 * Support for Proxy objects 
 * Support for sub-objects in property assigners
