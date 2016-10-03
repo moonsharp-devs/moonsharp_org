@@ -82,11 +82,15 @@ Then, <a href="http://docs.unity3d.com/Manual/windowsstore-plugins.html">follow 
 
 After this, add them as references from MonoDevelop-Unity.
 
+Note: if you are going to use MoonSharp in IL2CPP projects, also create/edit a link.xml inside your Assets directory with this contents:
 
-
-
-
-
+{% highlight xml %}
+<linker>
+    <assembly fullname="MoonSharp.Interpreter">
+        <type fullname="MoonSharp.*" preserve="all" />
+    </assembly>
+</linker> 
+{% endhighlight %}
 
 
 

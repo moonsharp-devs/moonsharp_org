@@ -18,6 +18,15 @@ Of course, other types of exceptions could be generated, due to bugs in calling 
 
 They also support a ``DecoratedMessage`` property which contains the error message, decorated with the reference in the source code which generated the error (if available).
 
+
+##### Script.GlobalOptions.RethrowExceptionNested
+
+A global option named ``RethrowExceptionNested`` is available. If set to ``false`` (the default), exceptions are rethrown preserving the stack, and the decorated message is available in the ``DecoratedMessage`` property. If set to ``true``, a new exception is thrown with the older exception being in the ``InnerException`` property, and the decorated message will be available both in the ``DecoratedMessage`` and in the ``Message`` property as well. 
+
+You can set ``RethrowExceptionNested`` however it suites your tastes but generally it works better if set to ``false`` when working with .NET and if set to ``true`` when working with Mono, Xamarin and Unity.
+
+
+
 #### InternalErrorException
 
 An ``InternalErrorException`` is thrown when the interpreter encounters an internal error. 

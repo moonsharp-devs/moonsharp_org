@@ -9,7 +9,23 @@ subtitle:
 
 
 #### Version 1.6.0.0 
-** Released on 2016-05-16 <span class="label label-success">New</span>
+** Released on 2016-10-03 <span class="label label-success">New</span>
+
+* Behaviour of C# functions called using the colon ':' operator can be chosen using the ``ColonOperatorClrCallbackBehaviour`` Script option (see also #149).
+* Vastly improved performance of table insertion #144 (thanks nshibano)
+* Vastly improved performance of table appends (somewhat related to #144)
+* Added disposability to debugger host chain #150 (thanks aravol)
+* Fixed : ``require`` didn't always skip loading already loaded modules
+* Fixed : Table.Clear crashing #151 (thanks JokieW)
+* Fixed : Error loading moonsharp.exe #148 (thanks InfectedBytes)
+* Fixed : Script processing fails on files smaller than 8 bytes ... #145 (thanks nagblock)
+* Fixed : SyntaxErrorException On valid lua syntax #147 (thanks andreluis034)
+* Fixed : Hexadecimal numbers were accepted with weird prefixes (like 5x1234)
+* Fixed : MoonSharp clobber syntex error details during require #121 (thanks fgretief)
+
+
+#### Version 1.6.0.0 
+** Released on 2016-05-16 
 
 
 * Added a ``RethrowExceptionNested`` option to ``Script.GlobalOptions`` which instead of doing a plain re-throw of exceptions, embeds them in the InnerException property of a new exception object. Useful to simplify handling (newer exceptions are automatically decorated) and to preserve stack traces on Mono/Unity (annoying Mono bug..)

@@ -110,11 +110,13 @@
 	},
 	"file_history":
 	[
-		"/git/my/moonsharp_org/changelog.md",
+		"/git/my/moonsharp_org/hardwire.md",
+		"/git/my/moonsharp_org/archive.md",
+		"/git/my/moonsharp_org/errors.md",
 		"/git/my/moonsharp_org/index.md",
+		"/git/my/moonsharp_org/changelog.md",
 		"/git/my/moonsharp_org/tutorial2.md",
 		"/git/my/moonsharp_org/mapping.md",
-		"/git/my/moonsharp_org/hardwire.md",
 		"/git/my/moonsharp_org/objects.md",
 		"/git/my/moonsharp_org/_includes/tutorialtoc.html",
 		"/git/my/moonsharp_org/proxy.md",
@@ -126,7 +128,6 @@
 		"/git/my/moonsharp_org/unitytips.md",
 		"/git/my/moonsharp_org/_includes/header.html",
 		"/git/my/moonsharp_org/_includes/analytics.html",
-		"/git/my/moonsharp_org/archive.md",
 		"/git/my/moonsharp/src/TestRunners/ConsoleTestRunner/aottest.sh",
 		"/git/my/moonsharp/.travis.yml",
 		"/git/my/moonsharp/README.md",
@@ -341,7 +342,7 @@
 		[
 			[
 				"",
-				"/Users/mmastropaolo/test.sublime-project"
+				"/git/my/grimoire/grimoire2d.sublime-project"
 			]
 		],
 		"width": 380.0

@@ -4,7 +4,28 @@ layout: home
 
 Don't know what MoonSharp is ? <a href="about.html" class="alert-link">Read here.</a>.
 
-Latest release: <a href="changelog.html" class="alert-link">1.6.0.0</a> \| <a href="https://github.com/xanathar/moonsharp/releases/download/v1.6.0.0/moonsharp_release_1.6.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+Latest release: <a href="changelog.html" class="alert-link">1.7.0.0</a> \| <a href="https://github.com/xanathar/moonsharp/releases/download/v1.7.0.0/moonsharp_release_1.7.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+
+
+#### 2016-10-03
+
+After a time of hiatus on the project, MoonSharp 1.7.0.0 got released:
+
+* Behaviour of C# functions called using the colon ':' operator can be chosen using the ``ColonOperatorClrCallbackBehaviour`` Script option (see also #149).
+* Vastly improved performance of table insertion #144 (thanks nshibano)
+* Vastly improved performance of table appends (somewhat related to #144)
+* Added disposability to debugger host chain #150 (thanks aravol)
+* Fixed : ``require`` didn't always skip loading already loaded modules
+* Fixed : Table.Clear crashing #151 (thanks JokieW)
+* Fixed : Error loading moonsharp.exe #148 (thanks InfectedBytes)
+* Fixed : Script processing fails on files smaller than 8 bytes ... #145 (thanks nagblock)
+* Fixed : SyntaxErrorException On valid lua syntax #147 (thanks andreluis034)
+* Fixed : Hexadecimal numbers were accepted with weird prefixes (like 5x1234)
+* Fixed : MoonSharp clobber syntex error details during require #121 (thanks fgretief)
+
+<a href="https://github.com/xanathar/moonsharp/releases/download/v1.7.0.0/moonsharp_release_1.7.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+
+
 
 
 #### 2016-05-16
