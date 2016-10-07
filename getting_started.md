@@ -73,6 +73,9 @@ Refer to the documentation of your IDE to add ``MoonSharp.Interpreter.dll``, con
 
 ##### In Unity
 
+>> A Unity asset store package is pending approval now and will be at <a href="https://www.assetstore.unity3d.com/#!/content/33776">this URL</a> as soon as it gets approved. As soon as it gets approved, using it becomes the recommended way to install MoonSharp in Unity. 
+
+
 Put the ``MoonSharp.Interpreter.dll``, contained in the ``interpreter/net35`` folder
 of the MoonSharp distribution, in your ``Assets/Plugins`` folder.
 
