@@ -54,7 +54,7 @@ script.AttachDebugger(server.GetDebugger());
 script.DoFile("fact.lua");
 
 server.Start();
-{% highlight csharp %}
+{% endhighlight %}
 
 Another example, this uses the friendlyName parameter of LoadString to avoid the problem altogether:
 
@@ -67,7 +67,7 @@ script.AttachDebugger(server.GetDebugger());
 script.DoString(File.ReadAllText(@"/temp/lua/fact.lua"), null, @"/temp/lua/fact.lua");
 
 server.Start();
-{% highlight csharp %}
+{% endhighlight %}
 
 
 
