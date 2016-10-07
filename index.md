@@ -4,7 +4,7 @@ layout: home
 
 Don't know what MoonSharp is ? <a href="about.html" class="alert-link">Read here.</a>.
 
-Latest release: <a href="changelog.html" class="alert-link">1.7.0.0</a> \| <a href="https://github.com/xanathar/moonsharp/releases/download/v1.7.0.0/moonsharp_release_1.7.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+Latest release: <a href="changelog.html" class="alert-link">1.8.0.0</a> \| <a href="https://github.com/xanathar/moonsharp/releases/download/v1.8.0.0/moonsharp_release_1.8.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 #### 2016-10-07
@@ -23,7 +23,7 @@ Here it is MoonSharp 1.8.0.0 with a lot of changes and new features!
 
 >> Warning : this version has some minor but breaking changes for custom debuggers. If you have implemented a custom debugger, be prepared to add a couple of new methods to your object (empty methods are enough). 
 
-<a href="https://github.com/xanathar/moonsharp/releases/download/v1.7.0.0/moonsharp_release_1.7.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+<a href="https://github.com/xanathar/moonsharp/releases/download/v1.8.0.0/moonsharp_release_1.8.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 
