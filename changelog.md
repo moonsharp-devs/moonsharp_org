@@ -7,9 +7,20 @@ subtitle:
 #### Coming soon 
 **Available on master branch** <span class="label label-warning">Unreleased</span>
 
+#### Version 1.8.0.0 
+** Released on 2016-10-07 <span class="label label-success">New</span>
 
-#### Version 1.6.0.0 
-** Released on 2016-10-03 <span class="label label-success">New</span>
+* Support for debugging from Visual Studio Code (<a href="debugger.html">see here for details</a>)
+* Serialization/Deserialization of tables and objects to JSON 
+* JSON library added
+* Unity Asset Store package - now in "pending approval" stage
+* Various (breaking) changes to debugger infrastructure
+* Added some overloads to ``Script.DoFile``, ``Script.DoString`` and ``Script.DoStream`` methods
+* Fixed : minor bug in table serialization of string fields  
+
+
+#### Version 1.7.0.0 
+** Released on 2016-10-03
 
 * Behaviour of C# functions called using the colon ':' operator can be chosen using the ``ColonOperatorClrCallbackBehaviour`` Script option (see also #149).
 * Vastly improved performance of table insertion #144 (thanks nshibano)

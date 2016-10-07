@@ -40,7 +40,7 @@ I, for one, am using MoonSharp in business-line applications, and so can you, if
 
 ##### How can I receive support ?
 
-Write on the forums. Hopefully somebody - maybe me - will answer. 
+Write on the forums (google group) or on github issues. Hopefully somebody - maybe me - will answer. 
 
 
 ##### Can I help edit this website ? How was the website built ?

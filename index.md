@@ -7,6 +7,27 @@ Don't know what MoonSharp is ? <a href="about.html" class="alert-link">Read here
 Latest release: <a href="changelog.html" class="alert-link">1.7.0.0</a> \| <a href="https://github.com/xanathar/moonsharp/releases/download/v1.7.0.0/moonsharp_release_1.7.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
+#### 2016-10-07
+
+MoonSharp 1.7.0.0 was quite short lived and focused on bug fixes.
+Here it is MoonSharp 1.8.0.0 with a lot of changes and new features!
+
+* Support for debugging from Visual Studio Code (<a href="debugger.html">see here for details</a>)
+* Serialization/Deserialization of tables and objects to JSON 
+* JSON library added
+* Unity Asset Store package - now in "pending approval" stage
+* Various (breaking) changes to debugger infrastructure
+* Added optional args to ``Script.DoFile``, ``Script.DoString`` and ``Script.DoStream`` methods
+* Fixed issues and added optional args to ``Script.DoFileAsync``, ``Script.DoStringAsync`` and ``Script.DoStreamAsync`` methods (.NET 4.x and PCL targets only)
+* Fixed a minor bug in table serialization of string fields  
+
+>> Warning : this version has some minor but breaking changes for custom debuggers. If you have implemented a custom debugger, be prepared to add a couple of new methods to your object (empty methods are enough). 
+
+<a href="https://github.com/xanathar/moonsharp/releases/download/v1.7.0.0/moonsharp_release_1.7.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+
+
+
+
 #### 2016-10-03
 
 After a time of hiatus on the project, MoonSharp 1.7.0.0 got released:
