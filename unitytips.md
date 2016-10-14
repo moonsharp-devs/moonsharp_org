@@ -4,6 +4,31 @@ title: Tips and tricks for Unity3D
 subtitle: A collection of quick tips for those using MoonSharp on Unity
 ---
 
+#### Supported platforms
+
+Generally, MoonSharp aims at supporting all platforms.
+However it's very hard - next to impossible - to test MoonSharp on all platforms in Unity.
+
+Platforms are thus divided in tiers.
+
+Tier 1 - expect full support
+    * Standalone Windows, Linux and OS/X
+    * Android
+    * iOS
+    * tvOS
+
+Tier 2 - expect sporadic support, will test when possible, minor problems/unsupported features
+    * WebGL
+    * Windows Store Applications
+    * Windows Phone
+
+Tier 3 - should work, but it's hard for me to give support
+    * Anything else not in the other tiers
+
+Tier 4 - not supported, you're on your own
+    * None known so far, will update in case
+
+
 #### Miscellaneous recommendations
 
 * Don't expose Unity types, if possible

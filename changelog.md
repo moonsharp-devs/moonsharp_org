@@ -7,8 +7,25 @@ subtitle:
 #### Coming soon 
 **Available on master branch** <span class="label label-warning">Unreleased</span>
 
+#### Version 2.0.0.0
+** Released on 2016-10-14 <span class="label label-success">New</span>
+
+* Visual Studio Code debugging now supports multiple script objects
+* Support for .NET Core
+* Support for Unity WebGL 
+* Support for WSA targets at source level 
+* Improved support of other Unity targets
+* Unity package is now included inside distribution zip file (easier to use and faster to deploy than the asset store)
+* Stripped source distribution is now included inside distribution zip file (to ease custom framework builds)
+* Improved compatibility layer for API changes between .NET framework releases
+* Fixed : NuGet packages for VsCode debugger were broken 
+* Fixed : VsCode debugger breakpoints might get missed 
+* Fixed : VsCode debugger keeps the program running on exit because of a foreground thread
+* Fixed an issue where hardwiring a delegate generated invalid ctor calls #158 (thanks issingle) 
+
+
 #### Version 1.8.0.0 
-** Released on 2016-10-07 <span class="label label-success">New</span>
+** Released on 2016-10-07
 
 * Support for debugging from Visual Studio Code (<a href="debugger.html">see here for details</a>)
 * Serialization/Deserialization of tables and objects to JSON 

@@ -4,7 +4,33 @@ layout: home
 
 Don't know what MoonSharp is ? <a href="about.html" class="alert-link">Read here.</a>.
 
-Latest release: <a href="changelog.html" class="alert-link">1.8.0.0</a> \| <a href="https://github.com/xanathar/moonsharp/releases/download/v1.8.0.0/moonsharp_release_1.8.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger.VsCode/">VsCode Debugger NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Remote Debugger NuGet</a> 
+Latest release: <a href="changelog.html" class="alert-link">2.0.0.0</a> \| <a href="https://github.com/xanathar/moonsharp/releases/download/v2.0.0.0/moonsharp_release_2.0.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger.VsCode/">VsCode Debugger NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Remote Debugger NuGet</a> 
+
+
+#### 2016-10-14
+
+MoonSharp goes 2.0!
+
+A lot of great features. First of all, MoonSharp is switching to a model where sources are provided for Unity. Second, a lot of platforms previously totally unsupported (WebGL, Unity WSA, .NET Core) are now working great. Third, the Visual Studio Code debugger becomes the "default" supported debugger. The remote, flash based debugger will still be maintained, but no new features will be added and testing on it will be little. 
+
+What's new:
+
+* Visual Studio Code debugging now supports multiple script objects
+* Support for .NET Core
+* Support for Unity WebGL 
+* Support for WSA targets at source level 
+* Improved support of other Unity targets
+* Unity package is now included inside distribution zip file (easier to use and faster to deploy than the asset store)
+* Stripped source distribution is now included inside distribution zip file (to ease custom framework builds)
+* Improved compatibility layer for API changes between .NET framework releases
+* Fixed : NuGet packages for VsCode debugger were broken 
+* Fixed : VsCode debugger breakpoints might get missed 
+* Fixed : VsCode debugger keeps the program running on exit because of a foreground thread
+* Fixed an issue where hardwiring a delegate generated invalid ctor calls #158 (thanks issingle) 
+
+<a href="https://github.com/xanathar/moonsharp/releases/download/v2.0.0.0/moonsharp_release_2.0.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger.VsCode/">VsCode Debugger NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Remote Debugger NuGet</a> 
+
+
 
 
 #### 2016-10-07

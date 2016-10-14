@@ -28,6 +28,7 @@ The global namespace will contain a new ``_MOONSHARP`` table which exposes some 
 * ``is_mono`` : a boolean - true if running on Mono 
 * ``is_clr4`` : a boolean - true if running on .NET 4.x 
 * ``is_pcl`` : a boolean - true if running as a portable class library 
+* ``banner`` : a banner similar to the one in the REPL interpreter
 
 
 #### New functions in the global namespace

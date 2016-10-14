@@ -20,55 +20,68 @@ Overall, the VSCode debugger is friendlier and easier to use, but it requires th
 #### Using the Visual Studio Code based debugger
 
 To use it, you have to reference ``MoonSharp.VsCodeDebugger.dll`` either manually or through <a href="https://www.nuget.org/packages/MoonSharp.Debugger.VsCode/">NuGet</a>.
+If you use the Unity package, it's already included. 
 
-After that, setting it up for a first use is very very simple. Simple as:
 
+<div class="alert alert-info" role="alert">
+NOTE : Your users will have to install the <a href="https://marketplace.visualstudio.com/items?itemName=xanathar.moonsharp-debug">MoonSharp Debug extension for VsCode.
+
+Unlike other debug extensions, The MoonSharp VSCode debugger extension supports commands from the Debug Console window. Type ``!help`` to get a list of available commands.
+</div>
+
+Once you have the DLLs referenced, setting it up for a first use is very very simple. 
+As simple as:
 
 {% highlight csharp %}
 
-Script script = new Script();
-MoonSharpVsCodeDebugServer server = new MoonSharpVsCodeDebugServer(script, 41912);
-
-script.AttachDebugger(server.GetDebugger());
-
+// Create the debugger server
+MoonSharpVsCodeDebugServer server = new MoonSharpVsCodeDebugServer();
+// Start the debugger server
 server.Start();
+
+// Create a script
+Script script = new Script();
+// Attach the script to the debugger
+server.AttachToScript(script1, "Name for the script");
 
 {% endhighlight %}
 
->> Your users will have to install the <a href="https://marketplace.visualstudio.com/items?itemName=xanathar.moonsharp-debug">MoonSharp Debug extension for VsCode</a>.
+##### Using the VSCode debugger with multiple script
+
+You can attach multiple scripts to the VSCode debugger without any constraints - although, the more you add, the more you should use meaningful names to avoid confusing your users.
+
+You can switch the script which will be debugged first when a new debugger client is attached by setting the ``Current`` property on the ``MoonSharpVsCodeDebugServer`` object; users can switch the script from the VsCode Debug Console, in any case, using the ``!list`` and ``!switch`` commands.
+
+If a script becomes obsolete and there is no reason to debug it anymore, call the ``Detach`` method on the ``MoonSharpVsCodeDebugServer`` object; this will disconnect any debugger currently debugging that obsolete script object, allowing memory to be freed up and avoiding polluting the script list. 
+
 
 ##### Mapping VSCode debugger to file system files
 
 VSCode debugging relies on the usage of files on the filesystem. If a source file cannot be found, a temporary file is saved on the fly on the local machine with the contents of the script. This for examples happens if the directory where the files are located is different from the relative path used by the application to load, or if the scripts are embedded resources of some kind, or if they are loaded using ``LoadString`` even if they are files.
 
-Luckily ``MoonSharpVsCodeDebugServer`` accepts a third parameter in the constructor which is a function mapping a ``SourceCode`` object to a filename. For example, this piece of code uses ``LoadFile`` to load relative source code, but is still compatible with the debugger:
+Luckily ``MoonSharpVsCodeDebugServer`` accepts a third parameter in the ``AttachToScript`` method, which is a function mapping a ``SourceCode`` object to a filename. For example, this piece of code uses ``LoadFile`` to load relative source code, but is still compatible with the debugger:
 
 
 {% highlight csharp %}
+var server = new MoonSharpVsCodeDebugServer().Start();
 var script  = new Script();
 
-var server = new MoonSharpVsCodeDebugServer(script, 41912, s => "/temp/lua/" + s.Name);
-
-script.AttachDebugger(server.GetDebugger());
+server.AttachToScript(script, "My script", s => "/temp/lua/" + s.Name);
 
 script.DoFile("fact.lua");
 
-server.Start();
 {% endhighlight %}
 
 Another example, this uses the friendlyName parameter of LoadString to avoid the problem altogether:
 
 {% highlight csharp %}
+var server = new MoonSharpVsCodeDebugServer().Start();
 var script  = new Script();
-var server = new MoonSharpVsCodeDebugServer(script, 41912);
 
-script.AttachDebugger(server.GetDebugger());
+server.AttachToScript(script, "My script");
 
 script.DoString(File.ReadAllText(@"/temp/lua/fact.lua"), null, @"/temp/lua/fact.lua");
-
-server.Start();
 {% endhighlight %}
-
 
 
 
