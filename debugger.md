@@ -24,7 +24,7 @@ If you use the Unity package, it's already included.
 
 
 <div class="alert alert-info" role="alert">
-NOTE : Your users will have to install the <a href="https://marketplace.visualstudio.com/items?itemName=xanathar.moonsharp-debug">MoonSharp Debug extension for VsCode.
+NOTE : Your users will have to install the <a href="https://marketplace.visualstudio.com/items?itemName=xanathar.moonsharp-debug">MoonSharp Debug extension for VsCode.</a>
 
 Unlike other debug extensions, The MoonSharp VSCode debugger extension supports commands from the Debug Console window. Type ``!help`` to get a list of available commands.
 </div>
