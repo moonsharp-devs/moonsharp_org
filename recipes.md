@@ -26,9 +26,9 @@ script.Options.DebugInput = () => { return Console.ReadLine(); }
 
 {% highlight csharp %}
 
-IoModule.SetDefaultFile(script, IoModule.DefaultFiles.In, myInputStream);
-IoModule.SetDefaultFile(script, IoModule.DefaultFiles.Out, myInputStream);
-IoModule.SetDefaultFile(script, IoModule.DefaultFiles.Err, myInputStream);
+IoModule.SetDefaultFile(script, Platforms.StandardFileType.StdIn, myInputStream);
+IoModule.SetDefaultFile(script, Platforms.StandardFileType.StdOut, myOutputStream);
+IoModule.SetDefaultFile(script, Platforms.StandardFileType.StdErr, myErrorStream);
 
 {% endhighlight %}
 
