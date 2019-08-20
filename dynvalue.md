@@ -17,7 +17,7 @@ So, to start, let's start with the latest tutorial step and change it to use Dyn
 
 Again, we start from the last step of the previous one. You did it, right ?
 
-Also keep a tab handy to the [DynValue reference page](reference/html/b4040a8c-9d07-b73a-1789-e316a55e8e49.htm)
+You can get the reference document [here](https://www.moonsharp.org/MoonSharp.chm).
 
 
 #### Step 2: Get the fact function in a DynValue
