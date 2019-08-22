@@ -45,18 +45,18 @@ Write on the forums (google group) or on github issues. Hopefully somebody - may
 
 ##### Can I help edit this website ? How was the website built ?
 
-Sure! Just fork [https://github.com/xanathar/moonsharp_org](https://github.com/xanathar/moonsharp_org) on GitHub.
+Sure! Just fork [https://github.com/moonsharp-devs/moonsharp_org](https://github.com/moonsharp-devs/moonsharp_org) on GitHub.
 
 It's a website built using [Jekyll](http://jekyllrb.com/) and [GitHub Pages](https://pages.github.com/). 
 
-Send me a merge request after the edits have been done.
+Send us a merge request after the edits have been done.
 
 
 ##### Can I help the project ?
 
-Again, sure! Just fork [https://github.com/xanathar/moonsharp](https://github.com/xanathar/moonsharp) on GitHub.
+Again, sure! Just fork [https://github.com/moonsharp-devs/moonsharp](https://github.com/moonsharp-devs/moonsharp) on GitHub.
 
-Send me a merge request after the edits have been done.
+Send us a merge request after the edits have been done.
 
 
 

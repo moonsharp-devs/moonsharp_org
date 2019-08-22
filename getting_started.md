@@ -19,7 +19,7 @@ Most tutorials on this site are C# only - this is the only page with some pointe
 
 
 
-Most tutorials are implemented in the <a href="https://github.com/xanathar/moonsharp/tree/master/src/Tutorial/Tutorials">tutorial project on GitHub</a>.
+Most tutorials are implemented in the <a href="https://github.com/moonsharp-devs/moonsharp/tree/master/src/Tutorial/Tutorials">tutorial project on GitHub</a>.
 
 
 

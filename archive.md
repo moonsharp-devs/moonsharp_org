@@ -79,7 +79,7 @@ In particular userdata type descriptors are improved in this way:
 * Types registered with the standard descriptors and having overloaded methods will not raise an error anymore, but resolve to the first method found (quite random). Better overloads support is a task for the future.
 
 
-<a href="https://github.com/xanathar/moonsharp/releases/tag/v0.8.5.1">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+<a href="https://github.com/moonsharp-devs/moonsharp/releases/tag/v0.8.5.1">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 
@@ -96,7 +96,7 @@ MoonSharp 0.8.2.1 has been released, with 4 bugs fixed over 0.8.1:
 
 **Note: 0.8.2.1 has not been released on NuGet at the moment**
 
-<a href="https://github.com/xanathar/moonsharp/releases/tag/v0.8.2.1">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+<a href="https://github.com/moonsharp-devs/moonsharp/releases/tag/v0.8.2.1">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 

@@ -10,7 +10,7 @@ description: A Lua interpreter written entirely in C# for the .NET, Mono, Xamari
 # baseurl: http://127.0.0.1:4000
 
 # This can be '' to hide the Github nav button
-github: 'xanathar/moonsharp'
+github: 'moonsharp-devs/moonsharp'
 
 # Set this to your UA-# value, or '' to disable the block completely
 gaaccount: ''
