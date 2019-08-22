@@ -287,7 +287,7 @@ void DoSomething(float f) { ... }
 How can MoonSharp know which method to dispatch to, given that all numbers in Lua are *double* ? 
 
 To solve this issue, MoonSharp calculates an heuristic factor for all overloads given the input types and chooses the best overload.
-If you think MoonSharp is resolving an overload in a wrong way, please report to the forums, for the heuristic to be calibrated.
+If you think MoonSharp is resolving an overload in a wrong way, please report to the forums or discord, for the heuristic to be calibrated.
 
 > MoonSharp tries as much to be stable with the heuristic weights, and in case of a draw of scores between methods, it always deterministically choses the same one
 > (to provide a consistent experience among builds and platforms).

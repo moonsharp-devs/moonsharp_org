@@ -31,7 +31,7 @@ You can set ``RethrowExceptionNested`` however it suites your tastes but general
 
 An ``InternalErrorException`` is thrown when the interpreter encounters an internal error. 
 There's not really much which can be done, usually this should be considered a fatal error of the scripting engine. 
-Please report in the forums if it happens, with all possible information to reproduce it, if possible.
+Please report in the forums or discord if it happens, with all possible information to reproduce it, if possible.
 
 #### ``SyntaxErrorException``
 

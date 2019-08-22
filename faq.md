@@ -19,7 +19,7 @@ A version targeting .NET 4.x portable class libraries is included in the package
 Of course not. There are many reasons for this (including bugs), but you can read more about [the differences here](moonluadifferences.html).
 The differences are unlikely to hit you on daily usage, as they are all encountered in not so common scenarios.
 
-If you find any program which runs differently on the two system and it's not cited in the differences page, please report on the forums!
+If you find any program which runs differently on the two system and it's not cited in the differences page, please report on the forums or discord!
 
 
 ##### Why Lua ?
