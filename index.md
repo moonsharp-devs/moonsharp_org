@@ -4,7 +4,18 @@ layout: home
 
 Don't know what MoonSharp is ? <a href="about.html" class="alert-link">Read here.</a>.
 
-Latest release: <a href="changelog.html" class="alert-link">2.0.0.0</a> \| <a href="https://github.com/xanathar/moonsharp/releases/download/v2.0.0.0/moonsharp_release_2.0.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger.VsCode/">VsCode Debugger NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Remote Debugger NuGet</a> 
+Latest release: <a href="changelog.html" class="alert-link">2.0.0.0</a> \| <a href="https://github.com/moonsharp-devs/moonsharp/releases/download/v2.0.0.0/moonsharp_release_2.0.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger.VsCode/">VsCode Debugger NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Remote Debugger NuGet</a> 
+
+
+#### 2019-08-22
+
+Given the lack of updates in the last ... "let's not count" years (ugh!) we are moving moonsharp to a github organization (<a href="https://github.com/moonsharp-devs">moonsharp-devs</a>). 
+More people will join the project and hopefully give a needed helping hand.
+
+Also, if you feel like discussing the future of the project, ask question etc. there's a <a href="https://discord.gg/gEEHs6F">Discord channel</a> you can join to chat in real time.
+
+Links in this website are slowly being updated to refer to the org.
+
 
 
 #### 2016-10-14
@@ -28,7 +39,7 @@ What's new:
 * Fixed : VsCode debugger keeps the program running on exit because of a foreground thread
 * Fixed an issue where hardwiring a delegate generated invalid ctor calls #158 (thanks issingle) 
 
-<a href="https://github.com/xanathar/moonsharp/releases/download/v2.0.0.0/moonsharp_release_2.0.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger.VsCode/">VsCode Debugger NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Remote Debugger NuGet</a> 
+<a href="https://github.com/moonsharp-devs/moonsharp/releases/download/v2.0.0.0/moonsharp_release_2.0.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger.VsCode/">VsCode Debugger NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Remote Debugger NuGet</a> 
 
 
 
@@ -49,7 +60,7 @@ Here it is MoonSharp 1.8.0.0 with a lot of changes and new features!
 
 >> Warning : this version has some minor but breaking changes for custom debuggers. If you have implemented a custom debugger, be prepared to add a couple of new methods to your object (empty methods are enough). 
 
-<a href="https://github.com/xanathar/moonsharp/releases/download/v1.8.0.0/moonsharp_release_1.8.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger.VsCode/">VsCode Debugger NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Remote Debugger NuGet</a> 
+<a href="https://github.com/moonsharp-devs/moonsharp/releases/download/v1.8.0.0/moonsharp_release_1.8.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger.VsCode/">VsCode Debugger NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Remote Debugger NuGet</a> 
 
 
 
@@ -71,7 +82,7 @@ After a time of hiatus on the project, MoonSharp 1.7.0.0 got released:
 * Fixed : Hexadecimal numbers were accepted with weird prefixes (like 5x1234)
 * Fixed : MoonSharp clobber syntex error details during require #121 (thanks fgretief)
 
-<a href="https://github.com/xanathar/moonsharp/releases/download/v1.7.0.0/moonsharp_release_1.7.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+<a href="https://github.com/moonsharp-devs/moonsharp/releases/download/v1.7.0.0/moonsharp_release_1.7.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 
@@ -89,7 +100,7 @@ MoonSharp 1.6.0.0 released:
 * Fixed : ``__newindex`` metamethod can completely break the MoonSharp VM (bad bad bug)
 * Fixed : Lexer matched non-western digits as valid numbers (if you are a .NET developer, recommended read: <a href="https://blogs.msdn.microsoft.com/oldnewthing/20040309-00/?p=40333/">this</a> - ouch)
 
-<a href="https://github.com/xanathar/moonsharp/releases/download/v1.6.0.0/moonsharp_release_1.6.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+<a href="https://github.com/moonsharp-devs/moonsharp/releases/download/v1.6.0.0/moonsharp_release_1.6.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 *As a reminder : if you want to send a pull request, please check that it doesn't break unit tests before sending!*
@@ -109,7 +120,7 @@ Also, check out the new tutorials sections.
 * Fixed: changing the first upvalue of a chunk did not change the _ENV of that chunk (#126) 
 * Fixed: UserData.RegisterAssembly was not registering types correctly if no assembly was passed
 
-<a href="https://github.com/xanathar/moonsharp/releases/download/v1.5.0.1/moonsharp_release_1.5.0.1.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+<a href="https://github.com/moonsharp-devs/moonsharp/releases/download/v1.5.0.1/moonsharp_release_1.5.0.1.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 
@@ -138,7 +149,7 @@ MoonSharp 1.2.1.0 has been released!
 * UnityAssetScriptLoader has new constructors which don't require reflection use (to ease IL2CPP porting, which is a pain in any case)
 * Fixed a weird bug with using the same destination variable twice in a for-iterator statement (while syntax is parsed correctly, behavior is still undefined as it's not really correct Lua)
 
-<a href="https://github.com/xanathar/moonsharp/releases/download/v1.2.1.0/moonsharp_release_1.2.1.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+<a href="https://github.com/moonsharp-devs/moonsharp/releases/download/v1.2.1.0/moonsharp_release_1.2.1.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 
@@ -152,7 +163,7 @@ MoonSharp 1.1.0.0 has been released!
 * Added methods to easily build an array table from a DynValue array.
 * Fixed issue #117 - long empty comments not lexed correctly.
 
-<a href="https://github.com/xanathar/moonsharp/releases/download/v1.1.0.0/moonsharp_release_1.1.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+<a href="https://github.com/moonsharp-devs/moonsharp/releases/download/v1.1.0.0/moonsharp_release_1.1.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 #### 2015-10-22
@@ -171,7 +182,7 @@ So, MoonSharp 1.0.0.0 has been released, with a couple of new features and some 
 
 Also in the news : I'm working on Unity asset store packages. Stay tuned.
 
-<a href="https://github.com/xanathar/moonsharp/releases/download/v1.0.0.0/moonsharp_release_1.0.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+<a href="https://github.com/moonsharp-devs/moonsharp/releases/download/v1.0.0.0/moonsharp_release_1.0.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 #### 2015-07-09
@@ -184,7 +195,7 @@ MoonSharp 0.9.8.0 released with mostly bugfixes.
 * Fixed an invalid datetime format specifier in os module (thanks edwingeng) (issue #99)
 * Ownerships checks added to scripts, tables and closures (issue #93)
 
-<a href="https://github.com/xanathar/moonsharp/releases/download/v0.9.8.0/moonsharp_0.9.8.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+<a href="https://github.com/moonsharp-devs/moonsharp/releases/download/v0.9.8.0/moonsharp_0.9.8.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 
@@ -195,7 +206,7 @@ A small, bug fix release has been released - 0.9.6.2 :
 * Fixed a bunch of bugs concerning tuples and variable arguments (``...``) functions (See issue #92)
 * Added checks for illegal cross-script usage of some types (See issue #93)
 
-<a href="https://github.com/xanathar/moonsharp/releases/download/0.9.6.2/moonsharp_0.9.6.2.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+<a href="https://github.com/moonsharp-devs/moonsharp/releases/download/0.9.6.2/moonsharp_0.9.6.2.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 #### 2015-05-22
@@ -214,7 +225,7 @@ Changes:
 * Revised support for registered array types (was breaking on some Mono versions)
 * Fixed: indexers not working on multiple base type dispatch
 
-<a href="https://github.com/xanathar/moonsharp/releases/download/0.9.6/moonsharp_0.9.6.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+<a href="https://github.com/moonsharp-devs/moonsharp/releases/download/0.9.6/moonsharp_0.9.6.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 #### 2015-05-20
 
@@ -248,7 +259,7 @@ Changes:
 * Workaround a Unity3D bug where optimized access on a const field crashed the editor
 
 
-<a href="https://github.com/xanathar/moonsharp/releases/download/0.9.4/moonsharp_0.9.4.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+<a href="https://github.com/moonsharp-devs/moonsharp/releases/download/0.9.4/moonsharp_0.9.4.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 
@@ -276,7 +287,7 @@ While caching exists to improve performance, please try to avoid that.
 Note 2: setting a field and methods with ref/out paramenters at the moment always use reflection, whatever
 the InteropAccessMode is. Use properties and/or methods returning DynValue tuples for faster access.
 
-<a href="https://github.com/xanathar/moonsharp/releases/download/0.9.2/moonsharp_release_0.9.2.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+<a href="https://github.com/moonsharp-devs/moonsharp/releases/download/0.9.2/moonsharp_release_0.9.2.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 
@@ -316,7 +327,7 @@ Changes:
 * Tested on iOS (minor issues still to be solved)
 
 
-<a href="https://github.com/xanathar/moonsharp/releases/tag/v0.9.0">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
+<a href="https://github.com/moonsharp-devs/moonsharp/releases/tag/v0.9.0">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Debugger NuGet</a> 
 
 
 
