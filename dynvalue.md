@@ -105,9 +105,9 @@ DynValue has a lot of factory methods, all starting with "New" (like ``NewString
 It also has a handy ``FromObject`` method, which creates a ``DynValue`` from object and is just what ``Call`` was using, under the hood, to ease our lives.
 
 
-#### Step 3: Understanding DataType (s)
+#### Step 4: Understanding DataType (s)
 
-One of the most important properties in ``DynValue`` is [Type](reference/html/b3642bf3-cb09-67c5-17d4-d36a6c1ef364.htm).
+One of the most important properties in ``DynValue`` is Type.
 
 The ``Type`` property is an enumeration telling us what kind of data is contained in a ``DynValue``.
 
@@ -135,7 +135,7 @@ guaranteed to have a meaningful value only if the type is ``DataType.Number``, a
 > Assuming a ``DynValue`` contains a given type while it contains another, is a common source of mistakes and errors.
 
 
-#### Step 4: Tuples
+#### Step 5: Tuples
 
 As you (should) know, Lua can return multiple values from a function (and in other situations).
 
