@@ -159,7 +159,7 @@ for (int i = 0; i < ret.Tuple.Length; i++)
 
 #### Closing
 
-We are done with DynValues .. there's a lot more to learn, but this should be enough to get you started on the topic.
+We are done with DynValues. There's a lot more to learn, but this should be enough to get you started on the topic.
 
 Keep all this in mind, as this is the core everything revolves around.
 
