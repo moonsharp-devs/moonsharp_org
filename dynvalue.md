@@ -17,7 +17,7 @@ So, to start, let's start with the latest tutorial step and change it to use Dyn
 
 Again, we start from the last step of the previous one. You did it, right ?
 
-Also keep a tab handy to the [DynValue reference page](reference/html/b4040a8c-9d07-b73a-1789-e316a55e8e49.htm)
+You can get the reference document [here](https://www.moonsharp.org/MoonSharp.chm).
 
 
 #### Step 2: Get the fact function in a DynValue
@@ -105,9 +105,9 @@ DynValue has a lot of factory methods, all starting with "New" (like ``NewString
 It also has a handy ``FromObject`` method, which creates a ``DynValue`` from object and is just what ``Call`` was using, under the hood, to ease our lives.
 
 
-#### Step 3: Understanding DataType (s)
+#### Step 4: Understanding DataType (s)
 
-One of the most important properties in ``DynValue`` is [Type](reference/html/b3642bf3-cb09-67c5-17d4-d36a6c1ef364.htm).
+One of the most important properties in ``DynValue`` is Type.
 
 The ``Type`` property is an enumeration telling us what kind of data is contained in a ``DynValue``.
 
@@ -135,7 +135,7 @@ guaranteed to have a meaningful value only if the type is ``DataType.Number``, a
 > Assuming a ``DynValue`` contains a given type while it contains another, is a common source of mistakes and errors.
 
 
-#### Step 4: Tuples
+#### Step 5: Tuples
 
 As you (should) know, Lua can return multiple values from a function (and in other situations).
 
@@ -159,7 +159,7 @@ for (int i = 0; i < ret.Tuple.Length; i++)
 
 #### Closing
 
-We are done with DynValues .. there's a lot more to learn, but this should be enough to get you started on the topic.
+We are done with DynValues. There's a lot more to learn, but this should be enough to get you started on the topic.
 
 Keep all this in mind, as this is the core everything revolves around.
 
