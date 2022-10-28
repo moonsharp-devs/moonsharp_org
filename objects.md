@@ -704,7 +704,7 @@ descr.RemoveMember("SomeMember");
 Otherwise, simply add this attribute to the type declaration:
 
 {% highlight csharp %}
-[MoonSharpHide("SomeMember")]
+[MoonSharpHideMember("SomeMember")]
 public class SomeType
 ...
 {% endhighlight %}
