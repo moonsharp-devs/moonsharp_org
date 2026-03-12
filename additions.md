@@ -11,7 +11,8 @@ During implementation of the standard library, several additions have been made,
 #### Language differences
 
 * Multiple expressions can be used as indices but the value to be indexed must be a userdata, or a table resolving to userdata through the metatable (but without using metamethods). So, for example, ``x[1,2,i]`` is parsed correctly but might raise an error if ``x`` is not a userdata.
-* Metalua short anonymous functions (lambda-style) are supported. So ``|x, y| x + y`` is shorthand for ``function(x,y) return x+y end``. 
+* Metalua short anonymous functions (lambda-style) are supported. So ``|x, y| x + y`` is shorthand for ``function(x,y) return x+y end``.
+* Prime Tables (tables that can only hold nil, boolean, number, string, prime table, and userdata values, but can be shared between scripts) are supported, and can be constructed with ``${ ... }`` instead of ``{ ... }``
 * A non-yieldable ``__iterator`` metamethod has been added. It's called if the argument ``f`` of a ``for ... in ... `` loop is not actually a function.
 * A default iterator looping over values (not keys) is provided if the argument ``f`` of a ``for ... in ...`` loop is a table without ``__iterator`` or ``__call`` metamethods
 * ``\u{xxx}`` escapes, where x are up to 8 hexadecimal digits, are supported inside strings and will output the specified Unicode codepoint, as it does in Lua 5.3
