@@ -7,6 +7,16 @@ Don't know what MoonSharp is ? <a href="about.html" class="alert-link">Read here
 Latest release: <a href="changelog.html" class="alert-link">2.0.0.0</a> \| <a href="https://github.com/moonsharp-devs/moonsharp/releases/download/v2.0.0.0/moonsharp_release_2.0.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger.VsCode/">VsCode Debugger NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Remote Debugger NuGet</a> 
 
 
+#### 2026-07-03
+
+Great news: MoonSharp has a new maintainer/owner!
+
+Max Hayman is the founder of Return of Reckoning and Lead Programmer at Kinetic Games, specialising in game development, cybersecurity, and reverse engineering. He holds a PhD from the University of Southampton, where he developed formal methods for reverse engineering, creating a systematic, domain-independent framework for analysing and reconstructing complex black-box systems such as video games, network protocols, file formats, and hardware.
+
+Welcome Max, and thank you for injecting new life into this project!
+
+
+
 #### 2019-08-22
 
 Given the lack of updates in the last ... "let's not count" years (ugh!) we are moving moonsharp to a github organization (<a href="https://github.com/moonsharp-devs">moonsharp-devs</a>). 
