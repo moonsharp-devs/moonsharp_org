@@ -13,6 +13,8 @@ Great news: MoonSharp has a new maintainer/owner!
 
 Max Hayman is the founder of Return of Reckoning and Lead Programmer at Kinetic Games, specialising in game development, cybersecurity, and reverse engineering. He holds a PhD from the University of Southampton, where he developed formal methods for reverse engineering, creating a systematic, domain-independent framework for analysing and reconstructing complex black-box systems such as video games, network protocols, file formats, and hardware.
 
+The transition might take some weeks to fully happen.
+
 Welcome Max, and thank you for injecting new life into this project!
 
 
