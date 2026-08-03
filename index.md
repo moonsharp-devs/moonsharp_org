@@ -4,7 +4,22 @@ layout: home
 
 Don't know what MoonSharp is ? <a href="about.html" class="alert-link">Read here.</a>.
 
-Latest release: <a href="changelog.html" class="alert-link">2.0.0.0</a> \| <a href="https://github.com/moonsharp-devs/moonsharp/releases/download/v2.0.0.0/moonsharp_release_2.0.0.0.zip">Zip file</a> \| <a href="https://www.nuget.org/packages/MoonSharp/">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger.VsCode/">VsCode Debugger NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger/">Remote Debugger NuGet</a> 
+#### Downloads
+
+| Channel | Version | Release notes | Download | Interpreter NuGet |
+|:--|:--|:--|:--|:--|
+| **Stable** | 2.0.0.0 | [What's new](changelog.html#v2000) | [Zip file](https://github.com/moonsharp-devs/moonsharp/releases/download/v2.0.0.0/moonsharp_release_2.0.0.0.zip) / [All assets](https://github.com/moonsharp-devs/moonsharp/releases/tag/v2.0.0.0) | [MoonSharp 2.0.0](https://www.nuget.org/packages/MoonSharp/2.0.0) |
+| **Beta** | 3.0.0-beta.1 | [What's new](changelog.html#v300beta1) | [All assets](https://github.com/moonsharp-devs/moonsharp/releases/tag/v3.0.0-beta.1) | [MoonSharp 3.0.0-beta.1](https://www.nuget.org/packages/MoonSharp/3.0.0-beta.1) |
+{: .table .table-condensed}
+
+**Debuggers** (<a href="debugger.html">how to use them</a>)
+
+| Package | Stable | Beta |
+|:--|:--|:--|
+| VsCode Debugger | [NuGet 2.0.0](https://www.nuget.org/packages/MoonSharp.Debugger.VsCode/2.0.0) | [NuGet 3.0.0-beta.1](https://www.nuget.org/packages/MoonSharp.Debugger.VsCode/3.0.0-beta.1) |
+| VS Code extension (.vsix) | — | [moonsharp-debug.vsix](https://github.com/moonsharp-devs/moonsharp/releases/download/v3.0.0-beta.1/moonsharp-debug.vsix) |
+| Remote Debugger | [NuGet 2.0.0](https://www.nuget.org/packages/MoonSharp.Debugger/2.0.0) | — |
+{: .table .table-condensed}
 
 
 #### 2026-07-03

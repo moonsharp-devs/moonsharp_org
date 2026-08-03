@@ -7,7 +7,25 @@ subtitle:
 #### Coming soon 
 **Available on master branch** <span class="label label-warning">Unreleased</span>
 
-#### Version 2.0.0.0
+#### Version 3.0.0-beta.1 {#v300beta1}
+** Released on 2026-03-03 <span class="label label-warning">Beta</span>
+
+* **Dropped support for .NET &lt; 4.5 and consequently old Unity builds (&lt; 2019).**
+* Newly added ``json.emptyarray()`` which is a special (userdata) token which will be encoded in JSON as ``[]``. This is in contrast to an empty Lua table which is encoded in JSON as ``{}``.
+* Newly added ``json.isemptyarray(obj)`` which will return true if ``obj`` is our JSON empty array token.
+* ``json.parse`` now optionally takes a second parameter, i.e. the signature is ``json.parse(str, empty_array_tokens = false)``. When ``empty_array_tokens`` is true, all ``[]`` are decoded as ``json.emptyarray()`` as opposed to an empty Lua table. Handling empty array tokens does take some care, so the default behaviour of ``json.parse(str)`` is unchanged.
+* Added debugger support for closure vars, globals and REPL at various stack frames.
+* Added support for conditional breakpoints.
+* Added support for delayed stack trace loading.
+* Multiple ``Script`` are now represented as threads when debugging, so you can properly debug multiple scripts simultaneously.
+* Fixed : Unity's ToString() throwing an exception broke the debugger's ability to fetch variables.
+* Fixed : expression evaluation when debugging a coroutine.
+* Fixed : MoonSharp breaking at the same breakpoint after continuing, but not informing VSCode that execution has paused.
+
+<a href="https://github.com/moonsharp-devs/moonsharp/releases/tag/v3.0.0-beta.1">All assets</a> \| <a href="https://www.nuget.org/packages/MoonSharp/3.0.0-beta.1">Interpreter NuGet</a> \| <a href="https://www.nuget.org/packages/MoonSharp.Debugger.VsCode/3.0.0-beta.1">VsCode Debugger NuGet</a>
+
+
+#### Version 2.0.0.0 {#v2000}
 ** Released on 2016-10-14 <span class="label label-success">New</span>
 
 * Visual Studio Code debugging now supports multiple script objects
