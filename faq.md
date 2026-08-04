@@ -8,7 +8,7 @@ subtitle: Freaky answers questioned.
 
 The interpreter runs correctly and fast enough for the common needs. It strikes a unique balance in performance and ease of use, specially when heavy interoperation with CLR code is needed.
 
-The standard library is missing only a few ``debug methods``, but is converging fast enough. See <a href="http://www.moonsharp.org/MoonSharpStdLib.pdf">this pdf for more info</a>.
+The standard library is missing only a few ``debug methods``, but is converging fast enough. See <a href="stdlib.html">the standard library page for more info</a>.
 
 A version targeting .NET 4.x portable class libraries is included in the package.
 

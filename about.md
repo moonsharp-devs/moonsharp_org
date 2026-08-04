@@ -40,7 +40,7 @@ library) and most of it has been developed by studying the specifications and th
 * Completed, barring improvements, enhancements and new features!
 * Some intentional minimal differences exist - [see here](moonluadifferences.html)
 * All Lua 5.2 language constructs are implemented, except weak tables.
-* Development of the standard library is finished. Updated situation in [this pdf](http://www.moonsharp.org/MoonSharpStdLib.pdf)
+* Development of the standard library is finished. Updated situation in [the standard library page](stdlib.html)
  
 
 ##### Roadmap
